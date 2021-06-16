@@ -1,0 +1,6 @@
+Adaptive Tactic Selection in First Person Shooter (FPS) Games
+-------------------------------------------------------------
+
+This folder contains the code for this gem.
+
+AdaptiveTacticSelection.cpp - This file contains the the algorithms for the Adaptive Tactic Selection in First Person Shooter (FPS) Games gem.

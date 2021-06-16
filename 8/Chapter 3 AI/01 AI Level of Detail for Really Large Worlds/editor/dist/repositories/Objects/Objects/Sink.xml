@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObjectTemplate name="Sink" existenceLevel="5" viewLevel="5" objectClass="/object/sink" substantial="true">
+  <attributes />
+  <graphicInfo template="GrSink" />
+</ObjectTemplate>
+

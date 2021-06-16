@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObjectTemplate name="SofaL" existenceLevel="4" viewLevel="4" objectClass="/object/sofa/L" substantial="true">
+  <attributes>
+    <FuzzyAttribute name="empty" value="true" />
+  </attributes>
+  <graphicInfo template="GrSofaL" />
+</ObjectTemplate>
+

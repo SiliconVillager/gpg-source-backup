@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObjectTemplate name="CoalPile" existenceLevel="5" viewLevel="5" objectClass="/object/CoalPile" substantial="false">
+  <attributes>
+    <IntAttribute name="coal" value="3" />
+  </attributes>
+  <graphicInfo template="GrCoalPile" className="cz.ive.gui.AnimatedGraphicInfo" />
+</ObjectTemplate>
+

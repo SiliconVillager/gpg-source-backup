@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <xs:group name="FUZZY">
+        <xs:choice>
+            <xs:element ref="fuzzy"/>
+            <xs:element ref="fuzzylink"/>
+            <xs:element ref="boolobjectlink"/>
+            <xs:element ref="empty"/>
+            <xs:element ref="notempty"/>
+            <xs:element ref="contains"/>
+            <xs:element ref="near"/>
+            <xs:element ref="notnear"/>
+            <xs:element ref="eq"/>
+            <xs:element ref="noteq"/>
+            <xs:element ref="lt"/>
+            <xs:element ref="gt"/>
+            <xs:element ref="timeinterval"/>
+            <xs:element ref="timer"/>
+            <xs:element ref="and"/>
+            <xs:element ref="or"/>
+            <xs:element ref="multiand"/>
+            <xs:element ref="multior"/>
+            <xs:element ref="doisee"/>
+            <xs:element ref="emptysource"/>
+            <xs:element ref="notin"/>
+            <xs:element ref="not"/>
+            <xs:element ref="defined"/>
+        </xs:choice>
+    </xs:group>
+    <xs:group name="OBJECT">
+        <xs:choice>
+            <xs:element name="objectlink">
+                <xs:complexType>
+                    <xs:attributeGroup ref="link_attrs"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="source">
+                <xs:complexType>
+                    <xs:attribute name="role" type="xs:string" use="required"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:choice>
+    </xs:group>
+    <xs:group name="SET">
+        <xs:annotation>
+            <xs:documentation>is not needed any more and is deprecated</xs:documentation>
+        </xs:annotation>
+        <xs:choice>
+            <xs:element name="managerquery">
+                <xs:annotation>
+                    <xs:documentation>result of the manager of senses query</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:group ref="FUZZY"/>
+                    <xs:attribute name="role" type="xs:string" use="required"/>
+                    <xs:attribute name="goal" type="xs:string" default=""/>
+                    <xs:attribute name="process" type="xs:string" default=""/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="setlink">
+                <xs:annotation>
+                    <xs:documentation>reference to the set attribute of some source</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:attributeGroup ref="link_attrs"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="sub">
+                <xs:annotation>
+                    <xs:documentation>substraction of two sets</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:group ref="SET"/>
+                        <xs:group ref="SET"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="intersection">
+                <xs:annotation>
+                    <xs:documentation>intersection of two sets</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:group ref="SET"/>
+                        <xs:group ref="SET"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="union">
+                <xs:annotation>
+                    <xs:documentation>union of two sets</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:group ref="SET"/>
+                        <xs:group ref="SET"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:choice>
+    </xs:group>
+    <xs:group name="INTEGER">
+        <xs:choice>
+            <xs:element name="add">
+                <xs:annotation>
+                    <xs:documentation>addition of two operands</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:group ref="INTEGER"/>
+                        <xs:group ref="INTEGER"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="sub">
+                <xs:annotation>
+                    <xs:documentation>substraction of two operands</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:group ref="INTEGER"/>
+                        <xs:group ref="INTEGER"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="mult">
+                <xs:annotation>
+                    <xs:documentation>multiplication of two operands</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:group ref="INTEGER"/>
+                        <xs:group ref="INTEGER"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="div">
+                <xs:annotation>
+                    <xs:documentation>division of two operands</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:group ref="INTEGER"/>
+                        <xs:group ref="INTEGER"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="mod">
+                <xs:annotation>
+                    <xs:documentation>modulo of two operands</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:group ref="INTEGER"/>
+                        <xs:group ref="INTEGER"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="neg">
+                <xs:annotation>
+                    <xs:documentation>operand multiplied by -1</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:group ref="INTEGER"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="abs">
+                <xs:annotation>
+                    <xs:documentation>absolute value</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:group ref="INTEGER"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="int">
+                <xs:annotation>
+                    <xs:documentation>integer constant</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:attribute name="value" type="xs:int" use="required"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="intlink">
+                <xs:annotation>
+                    <xs:documentation>reference to the integer attribute of some source</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:attributeGroup ref="link_attrs"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:choice>
+    </xs:group>
+    <xs:attributeGroup name="link_attrs">
+        <xs:attribute name="role" type="xs:string" use="required"/>
+        <xs:attribute name="attrib" type="xs:string" use="required"/>
+    </xs:attributeGroup>
+    <xs:element name="fuzzy">
+        <xs:annotation>
+            <xs:documentation>fuzzy constant</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:attribute name="value" use="required">
+                <xs:simpleType>
+                    <xs:union memberTypes="xs:short xs:boolean"/>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="fuzzylink">
+        <xs:annotation>
+            <xs:documentation>reference to the fuzzy attribute of some source</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:attributeGroup ref="link_attrs"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="boolobjectlink">
+        <xs:annotation>
+            <xs:documentation>reference to the fuzzy attribute of some source</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:attributeGroup ref="link_attrs"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="empty">
+        <xs:annotation>
+            <xs:documentation>is true if result of the set expression is empty</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:group ref="SET"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="notempty">
+        <xs:annotation>
+            <xs:documentation>is false if result of the set expression is empty</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:group ref="SET"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="contains">
+        <xs:annotation>
+            <xs:documentation>Is true if set contains the Object that is stored in attribute attrib of Object that is stored in source target</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:group ref="SET"/>
+            <xs:attribute name="target"/>
+            <xs:attribute name="attrib"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="near">
+        <xs:annotation>
+            <xs:documentation>Is true whenever obj1 and obj2 are on the same waypoint or on neighbour waypoints</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:attribute name="obj1" type="xs:string" use="required"/>
+            <xs:attribute name="obj2" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="notnear">
+        <xs:annotation>
+            <xs:documentation>Is false whenever obj1 and obj2 are on the same waypoint or on neighbour waypoints</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:attribute name="obj1" type="xs:string" use="required"/>
+            <xs:attribute name="obj2" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="notin">
+        <xs:annotation>
+            <xs:documentation>is true if the object is not in the waypoint or it's descendant</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:attribute name="obj" type="xs:string" use="required"/>
+            <xs:attribute name="waypoint" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="emptysource">
+        <xs:annotation>
+            <xs:documentation>is true if the given source is empty</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:attribute name="source" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="doisee">
+        <xs:annotation>
+            <xs:documentation>asks manager for all visible objects that matches the given goal/process/role and holds the condition in subtree
+It is true if there is such pobject.
+As sideeffect it assign the found object into substitution.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:group ref="FUZZY" minOccurs="0"/>
+            <xs:attribute name="role" type="xs:string" use="required"/>
+            <xs:attribute name="goal" type="xs:string" default=""/>
+            <xs:attribute name="process" type="xs:string" default=""/>
+            <!--<xs:attribute name="source" type="xs:string" use="required"/>-->
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="eq">
+        <xs:annotation>
+            <xs:documentation>true if the first operand equals to the second</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:choice>
+                <xs:sequence>
+                    <xs:group ref="FUZZY"/>
+                    <xs:group ref="FUZZY"/>
+                </xs:sequence>
+                <xs:sequence>
+                    <xs:group ref="INTEGER"/>
+                    <xs:group ref="INTEGER"/>
+                </xs:sequence>
+                <xs:sequence>
+                    <xs:group ref="OBJECT"/>
+                    <xs:group ref="OBJECT"/>
+                </xs:sequence>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="not">
+        <xs:annotation>
+            <xs:documentation>fuzzy not  1 - operand value</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:group ref="FUZZY"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="defined">
+        <xs:annotation>
+            <xs:documentation>defined  True if subtype has defined value</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:choice>
+                <xs:group ref="FUZZY"/>
+                <xs:group ref="INTEGER"/>
+                <xs:group ref="OBJECT"/>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="noteq">
+        <xs:annotation>
+            <xs:documentation>true if the first operand does not equal to the second</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:choice>
+                <xs:sequence>
+                    <xs:group ref="FUZZY"/>
+                    <xs:group ref="FUZZY"/>
+                </xs:sequence>
+                <xs:sequence>
+                    <xs:group ref="INTEGER"/>
+                    <xs:group ref="INTEGER"/>
+                </xs:sequence>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="lt">
+        <xs:annotation>
+            <xs:documentation>true if the first operand is smaller than the second</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:choice>
+                <xs:sequence>
+                    <xs:group ref="FUZZY"/>
+                    <xs:group ref="FUZZY"/>
+                </xs:sequence>
+                <xs:sequence>
+                    <xs:group ref="INTEGER"/>
+                    <xs:group ref="INTEGER"/>
+                </xs:sequence>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="gt">
+        <xs:annotation>
+            <xs:documentation>true if the first operand is greater than the second</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:choice>
+                <xs:sequence>
+                    <xs:group ref="FUZZY"/>
+                    <xs:group ref="FUZZY"/>
+                </xs:sequence>
+                <xs:sequence>
+                    <xs:group ref="INTEGER"/>
+                    <xs:group ref="INTEGER"/>
+                </xs:sequence>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="timeinterval">
+        <xs:annotation>
+            <xs:documentation>is true within specified time interval</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:group ref="INTEGER"/>
+                <xs:group ref="INTEGER"/>
+            </xs:sequence>
+            <xs:attribute name="units" default="hour">
+                <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                        <xs:enumeration value="hour"/>
+                        <xs:enumeration value="day_in_week"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="timer">
+        <xs:annotation>
+            <xs:documentation>starts to be true after specified time from the instantiation</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <!--<xs:sequence>
+                <xs:group ref="INTEGER"/>
+            </xs:sequence>-->
+            <xs:attribute name="time" type="xs:int" use="required"/>
+            <xs:attribute name="inaccuracy" type="xs:int" default="0"/>
+            <xs:attribute name="units" use="optional">
+                <xs:simpleType>
+                    <xs:restriction base="xs:NMTOKEN">
+                        <xs:enumeration value="day"/>
+                        <xs:enumeration value="hour"/>
+                        <xs:enumeration value="min"/>
+                        <xs:enumeration value="s"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="and">
+        <xs:annotation>
+            <xs:documentation>fuzzy and of two operands (minimum)</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:choice>
+                <xs:sequence>
+                    <xs:group ref="FUZZY"/>
+                    <xs:group ref="FUZZY"/>
+                </xs:sequence>
+                <xs:sequence>
+                    <xs:group ref="SET"/>
+                    <xs:group ref="SET"/>
+                </xs:sequence>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="or">
+        <xs:annotation>
+            <xs:documentation>fuzzy or of two operands (maximum)</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:choice>
+                <xs:sequence>
+                    <xs:group ref="FUZZY"/>
+                    <xs:group ref="FUZZY"/>
+                </xs:sequence>
+                <xs:sequence>
+                    <xs:group ref="SET"/>
+                    <xs:group ref="SET"/>
+                </xs:sequence>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="multiand">
+        <xs:annotation>
+            <xs:documentation>currently not supported</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence maxOccurs="unbounded">
+                <xs:group ref="FUZZY"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="multior">
+        <xs:annotation>
+            <xs:documentation>currently not supported</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence maxOccurs="unbounded">
+                <xs:group ref="FUZZY"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

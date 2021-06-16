@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObjectTemplate name="RedCarpet" existenceLevel="5" viewLevel="5" objectClass="/object/Carpet" substantial="false">
+  <attributes />
+  <graphicInfo template="GrRedCarpet" />
+</ObjectTemplate>
+

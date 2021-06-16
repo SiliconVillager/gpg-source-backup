@@ -1,0 +1,2621 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IveWorld >
+    <utterances>
+        <Utterance text="Yeah, baby!" index="101"/>
+        <Utterance text="Cool!" index="102"/>
+        <Utterance text="Beer!" index="111"/>
+        <Utterance text="Here it is." index="112"/>
+        <Utterance text="Take it out!" index="113"/>
+        <Utterance text="With pleasure." index="114"/>
+    </utterances>
+    
+    <graphicTemplates>
+        <GraphicTemplate name="GrMark" src="cz/ive/resources/images/mark.gif" center_x="16" center_y="16"/>
+        <GraphicTemplate name="GrGlasses" src="cz/ive/resources/images/glasses.gif" center_x="16" center_y="16"/>
+        <GraphicTemplate name="GrChair" src="cz/ive/resources/images/chair.gif" center_x="16" center_y="16"/>
+        <GraphicTemplate name="GrTable" src="cz/ive/resources/images/table.gif" center_x="16" center_y="16"/>
+        <GraphicTemplate name="GrPissoir1" src="cz/ive/resources/images/pissoir.gif" center_x="8" center_y="16"/>
+        <GraphicTemplate name="GrPissoir2" src="cz/ive/resources/images/pissoir2.gif" center_x="25" center_y="16"/>
+        
+        <AnimatedGraphicTemplate name="GrBeer" frameAttribute="full">
+            <image src="cz/ive/resources/images/glass.gif" center_x="8" center_y="8"/>
+            <image src="cz/ive/resources/images/beer.gif" center_x="8" center_y="8"/>
+        </AnimatedGraphicTemplate>
+        
+        <AnimatedGraphicTemplate name="GrJukebox" frameAttribute="on">
+            <image src="cz/ive/resources/images/jukebox-off.gif" center_x="16" center_y="32"/>
+            <image src="cz/ive/resources/images/jukebox-on.gif" center_x="16" center_y="32"/>
+        </AnimatedGraphicTemplate>
+        <GraphicTemplate name="GrPole" src="cz/ive/resources/images/pole.gif" center_x="16" center_y="32"/>
+        <GraphicTemplate name="GrTap" src="cz/ive/resources/images/bar-beer.gif" center_x="16" center_y="32"/>
+        <GraphicTemplate name="GrCash" src="cz/ive/resources/images/cash.gif" center_x="16" center_y="16"/>
+        
+        <AnimatedGraphicTemplate name="GrWaiter" frameAttribute="state">
+            <image src="cz/ive/resources/images/waiter.gif" center_x="16" center_y="32"/>
+            <image src="cz/ive/resources/images/waiter-sleep.gif" center_x="16" center_y="21"/>
+        </AnimatedGraphicTemplate>
+        <AnimatedGraphicTemplate name="GrSinger" frameAttribute="state">
+            <image src="cz/ive/resources/images/singer.gif" center_x="16" center_y="32"/>
+            <image src="cz/ive/resources/images/singer.gif" center_x="10" center_y="32"/>
+            <image src="cz/ive/resources/images/singer1.gif" center_x="10" center_y="32"/>
+            <image src="cz/ive/resources/images/singer1.gif" center_x="10" center_y="32"/>
+            <image src="cz/ive/resources/images/singer2.gif" center_x="10" center_y="32"/>
+            <image src="cz/ive/resources/images/singer3.gif" center_x="10" center_y="32"/>
+            <image src="cz/ive/resources/images/singer4.gif" center_x="10" center_y="32"/>
+        </AnimatedGraphicTemplate>
+        
+        <GraphicTemplate name="GrPub" src="cz/ive/resources/images/pub.gif" center_x="48" center_y="48"/>
+        <GraphicTemplate name="GrBar" src="cz/ive/resources/images/bar.gif" center_x="32" center_y="32"/>
+        <GraphicTemplate name="GrBallroom" src="cz/ive/resources/images/ballroom.gif" center_x="40" center_y="40"/>
+        
+        <GraphicTemplate name="GrWood" src="cz/ive/resources/images/wood.gif" center_x="16" center_y="16"/>
+        <GraphicTemplate name="GrJukeboxPlace" src="cz/ive/resources/images/jukebox_place.gif" center_x="16" center_y="16"/>
+    </graphicTemplates>
+    
+    <objectTemplates>
+        <ObjectTemplate name="Mark" existenceLevel="5" viewLevel="5" objectClass="/object/Mark" substantial="false">
+            <graphicInfo template="GrMark"/>            
+            <links>
+                <Link goal="*" process="*" slot="mark"/>
+            </links>
+        </ObjectTemplate>
+        
+        <ObjectTemplate name="Chair" existenceLevel="5" viewLevel="5" objectClass="/object/mount/Chair" substantial="true">
+            <graphicInfo template="GrChair"/>
+            <attributes>
+                <FuzzyAttribute name="empty" value="true"/>
+            </attributes>
+            <links>
+                <Link goal="*" process="*" slot="chair"/>
+                <Link goal="*" process="*" slot="to"/>
+                <Link goal="*" process="*" slot="targetObject"/>
+            </links>
+        </ObjectTemplate>
+        <ObjectTemplate name="Table" existenceLevel="5" viewLevel="5" objectClass="/object/Table" substantial="true">
+            <graphicInfo template="GrTable"/>
+            <attributes/>
+            <links>
+                <Link goal="*" process="*" slot="targetObject"/>
+            </links>
+        </ObjectTemplate>
+        <ObjectTemplate name="Pissoir1" existenceLevel="5" viewLevel="5" objectClass="/object/Pissoir/1" substantial="true">
+            <graphicInfo template="GrPissoir1"/>
+            <attributes>
+                <FuzzyAttribute name="empty" value="true"/>
+            </attributes>
+            <links>
+                <Link goal="*" process="*" slot="pissoir"/>
+                <Link goal="*" process="*" slot="targetObject"/>
+            </links>
+        </ObjectTemplate>
+        <ObjectTemplate name="Pissoir2" existenceLevel="5" viewLevel="5" objectClass="/object/Pissoir/2" substantial="true">
+            <graphicInfo template="GrPissoir2"/>
+            <attributes>
+                <FuzzyAttribute name="empty" value="true"/>
+            </attributes>
+            <links>
+                <Link goal="*" process="*" slot="pissoir"/>
+                <Link goal="*" process="*" slot="targetObject"/>
+            </links>
+        </ObjectTemplate>
+        <EntTemplate name="Jukebox" existenceLevel="4" viewLevel="4" objectClass="/object/Jukebox" substantial="true">
+            <graphicInfo template="GrJukebox"/>
+
+            <attributes>
+                <FuzzyAttribute name="on" value="false"/>
+            </attributes>
+            <sensors>
+            <Sensor name="Eye" template="SensorKnowledge" minLod="4" maxLod="5"/>
+            </sensors>
+            <links>
+                <Link goal="*" process="*" slot="jukebox"/>
+                <Link goal="*" process="*" slot="targetObject"/>
+                <Link goal="WaitGoal" process="*" slot="actor"/>
+            </links>
+            <Genius>
+                <TopLevelGoal goalId="JukeboxGoal"/>
+            </Genius>
+        </EntTemplate>
+        <ObjectTemplate name="Pole" existenceLevel="4" viewLevel="4" objectClass="/object/Pole">
+            <graphicInfo template="GrPole"/>
+            <attributes/>
+            <links>
+                <Link goal="*" process="*" slot="pole"/>
+                <Link goal="*" process="*" slot="targetObject"/>
+            </links>
+        </ObjectTemplate>
+        <ObjectTemplate name="Tap" existenceLevel="4" viewLevel="4" objectClass="/object/Tap" substantial="true">
+            <graphicInfo template="GrTap"/>
+            <attributes/>
+            <links>
+                <Link goal="*" process="*" slot="tap"/>
+            </links>
+        </ObjectTemplate>
+        <ObjectTemplate name="Cash" existenceLevel="4" viewLevel="4" objectClass="/object/Cash" substantial="true">
+            <graphicInfo template="GrCash"/>
+            <attributes/>
+            <links>
+                <Link goal="*" process="*" slot="cash"/>
+                <Link goal="*" process="Queue" slot="next"/>
+                <Link goal="*" process="*" slot="targetObject"/>
+            </links>
+        </ObjectTemplate>
+        <ObjectTemplate name="Glasses" existenceLevel="4" viewLevel="4" objectClass="/object/Glasses" substantial="true">
+            <graphicInfo template="GrGlasses"/>
+            <attributes/>
+            <links>
+                <Link goal="PickUpGlassGoal" process="*" slot="from"/>
+                <Link goal="DropGlassGoal" process="*" slot="to"/>
+                <Link goal="*" process="*" slot="glasses"/>
+            </links>
+        </ObjectTemplate>
+        <ObjectTemplate name="Beer" existenceLevel="5" viewLevel="5" objectClass="/object/Beer">
+            <graphicInfo template="GrBeer" className="cz.ive.gui.AnimatedGraphicInfo"/>
+            <attributes>
+                <FuzzyAttribute name="full" value="false"/>
+            </attributes>
+            <links>
+                <Link goal="*" process="*" slot="glass"/>
+                <Link goal="*" process="*" slot="beer"/>
+                <Link goal="ExchangeGoal" process="*" slot="offer"/>
+                <Link goal="ExchangeGoal" process="*" slot="accept"/>
+            </links>
+        </ObjectTemplate>
+        <EntTemplate name="SingerEnt" existenceLevel="3" viewLevel="3"  objectClass="/person/Singer" substantial="true" template="Person" className="cz.ive.iveobject.Human">
+            <links>
+                <Link goal="*" process="*" slot="singer"/>
+                <Link goal="*" process="PubWorkTaxi" slot="actor"/>
+                <Link goal="PubWorkGoal" process="*" slot="actor"/>
+                <Link goal="PubWorkTaxiGoal" process="BallroomWorkTaxi" slot="actor"/>
+                <Link goal="*" process="*" slot="singer"/>
+            </links>
+            <attributes>
+                <ObjectAttribute   name="address.estate" />
+                <ObjectAttribute   name="address.house"  />
+                
+                <IntAttribute   name="workBegin"  value="0"/>
+                <IntAttribute   name="workEnd"    value="2"/>
+                <IntAttribute   name="sleepBegin" value="0"/>
+                <IntAttribute   name="sleepEnd"   value="0"/>
+            </attributes>
+            <Kind>
+                <KindItem kindValue="floor"/>
+            </Kind>
+            <Genius>
+                <!--<TopLevelGoal goalId="WorkTaxiGoal"/>-->
+                <TopLevelGoal goalId="DayPlanGoal"/>
+                <TopLevelGoal goalId="LifeGoal"/>
+            </Genius>
+            <graphicInfo template="GrSinger"/>
+        </EntTemplate>
+        <EntTemplate name="WaiterEnt" existenceLevel="3" viewLevel="5" objectClass="/person/Waiter" substantial="true" template="Person" className="cz.ive.iveobject.Human">
+            <links>
+                <Link goal="*" process="*" slot="waiter"/>
+                <Link goal="*" process="PubWorkTaxi" slot="actor"/>
+                <Link goal="PubWorkGoal" process="*" slot="actor"/>
+                <Link goal="PubWorkTaxiGoal" process="BarWorkTaxi" slot="actor"/>
+
+                <Link goal="*" process="*" slot="waiter"/>
+                
+                <Link goal="ExchangeGoal" process="*" slot="actor"/>
+                <Link goal="ExchangeGoal" process="*" slot="who"/>
+                
+                <Link goal="PubCleaningTaxiGoal" process="*" slot="actor"/>
+                <Link goal="*" process="PubCleaning" slot="actor"/>
+                <Link goal="BarWorkGoal" process="*" slot="actor"/>
+                
+            </links>
+            <attributes>
+                <IntAttribute   name="workBegin"  value="0"/>
+                <IntAttribute   name="workEnd"    value="2"/>
+                <IntAttribute   name="sleepBegin" value="0"/>
+                <IntAttribute   name="sleepEnd"   value="0"/>
+                <ObjectAttribute   name="address.estate" />
+                <ObjectAttribute   name="address.house"  />
+            </attributes>
+            <Kind>
+                <KindItem kindValue="floor"/>
+            </Kind>
+
+            <Genius>
+                <TopLevelGoal goalId="DayPlanGoal"/>
+                <!--<TopLevelGoal goalId="WorkTaxiGoal"/>-->
+                <TopLevelGoal goalId="LifeGoal"/>
+            </Genius>
+            <graphicInfo template="GrWaiter"/>
+
+        </EntTemplate>
+    </objectTemplates>
+    
+    <locationTemplates>
+        <!-- Pub GridLocations at LOD 4 -->
+        <GridLocation name="Toilet" width="7" height="13" lod="4">
+            <links>
+                <Link goal="*" process="*" slot="toilet"/>
+                <Link goal="*" process="*" slot="targetPosition"/>
+            </links>
+            <inherentObjects>
+                <Object name="PissoirL" template="Pissoir2" number="3"/>
+                <Object name="PissoirR" template="Pissoir1" number="4"/>
+                <Object name="Closet" template="Closet" number="3"/>
+            </inherentObjects>
+            <subLocations>
+                <defaultGraphicInfo template="GrToiletFloor"/>
+                <defaultKind>
+                    <Kind>
+                        <KindItem kindValue="floor"/>
+                    </Kind>
+                </defaultKind>
+                <!-- Kind and Graphics-->
+                <rectangle x="1" y="1" x2="7" y2="13">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrWall"/>
+                </rectangle>
+                <rectangle x="2" y="4" x2="6" y2="12">
+                    <Kind>
+                        <KindItem kindValue="floor"/>
+                    </Kind>
+                    <graphicInfo template="GrToiletFloor"/>
+                </rectangle>
+                <rectangle x="1" y="4" y2="5">
+                    <Kind>
+                        <KindItem kindValue="floor"/>
+                    </Kind>
+                    <graphicInfo template="GrToiletFloor"/>
+                </rectangle>
+                <rectangle x="2" y="2" y2="3">
+                    <Kind>
+                        <KindItem kindValue="floor"/>
+                    </Kind>
+                    <graphicInfo template="GrToiletFloor"/>
+                </rectangle>
+                <rectangle x="4" y="2" y2="3">
+                    <Kind>
+                        <KindItem kindValue="floor"/>
+                    </Kind>
+                    <graphicInfo template="GrToiletFloor"/>
+                </rectangle>
+                <rectangle x="6" y="2" y2="3">
+                    <Kind>
+                        <KindItem kindValue="floor"/>
+                    </Kind>
+                    <graphicInfo template="GrToiletFloor"/>
+                </rectangle>
+                <rectangle x="1" y="1">
+                    <ObjectPlacement objectTemplate="/system"/>
+                </rectangle>
+                <rectangle x="3" y="4" x2="5" y2="11">
+                    <ObjectPlacement objectTemplate="/person"/>
+                </rectangle>
+                <rectangle x="2" y="2">
+                    <ObjectPlacement objectTemplate="/object/Closet"/>
+                </rectangle>
+                <rectangle x="4" y="2">
+                    <ObjectPlacement objectTemplate="/object/Closet"/>
+                </rectangle>
+                <rectangle x="6" y="2">
+                    <ObjectPlacement objectTemplate="/object/Closet"/>
+                </rectangle>
+                <rectangle x="6" y="5">
+                    <ObjectPlacement objectTemplate="/object/Pissoir/1"/>
+                </rectangle>
+                <rectangle x="6" y="7">
+                    <ObjectPlacement objectTemplate="/object/Pissoir/1"/>
+                </rectangle>
+                <rectangle x="6" y="9">
+                    <ObjectPlacement objectTemplate="/object/Pissoir/1"/>
+                </rectangle>
+                <rectangle x="6" y="11">
+                    <ObjectPlacement objectTemplate="/object/Pissoir/1"/>
+                </rectangle>
+                <rectangle x="2" y="7">
+                    <ObjectPlacement objectTemplate="/object/Pissoir/2"/>
+                </rectangle>
+                <rectangle x="2" y="9">
+                    <ObjectPlacement objectTemplate="/object/Pissoir/2"/>
+                </rectangle>
+                <rectangle x="2" y="11">
+                    <ObjectPlacement objectTemplate="/object/Pissoir/2"/>
+                </rectangle>
+                <jointException waypoint="wp_6_5">
+                    <target waypoint="wp_5_5"/>
+                </jointException>
+                <jointException waypoint="wp_6_7">
+                    <target waypoint="wp_5_7"/>
+                </jointException>
+                <jointException waypoint="wp_6_9">
+                    <target waypoint="wp_5_9"/>
+                </jointException>
+                <jointException waypoint="wp_6_11">
+                    <target waypoint="wp_5_11"/>
+                </jointException>
+                <jointException waypoint="wp_2_7">
+                    <target waypoint="wp_3_7"/>
+                </jointException>
+                <jointException waypoint="wp_2_9">
+                    <target waypoint="wp_3_9"/>
+                </jointException>
+                <jointException waypoint="wp_2_11">
+                    <target waypoint="wp_3_11"/>
+                </jointException>
+            </subLocations>
+            <Kind>
+                <KindItem kindValue="floor"/>
+            </Kind>
+            <graphicInfo template="GrToilet"/>
+        </GridLocation>
+        <GridLocation name="Ballroom" height="17" width="11" lod="4">
+            <links>
+                <Link goal="*" process="*" slot="ballroom"/>
+                <Link goal="*" process="*" slot="targetPosition"/>
+            </links>
+            <inherentObjects>
+                <Object name="Chair" template="Chair" number="8"/>
+                <Object name="Mark" template="Mark" number="8"/>
+            </inherentObjects>
+            <objects>
+                <Object name="Pole" template="Pole" />
+            </objects>
+            <subLocations>
+                <defaultGraphicInfo template="GrWoodenFloor"/>
+                <defaultKind>
+                    <Kind>
+                        <KindItem kindValue="floor"/>
+                    </Kind>
+                </defaultKind>
+                
+                <!-- Kind and Graphics-->                
+                <rectangle x="1" y="1" x2="11" y2="17">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrWall"/>
+                </rectangle>
+                <rectangle x="11" y="8" y2="9">
+                    <Kind>
+                        <KindItem kindValue="floor"/>
+                    </Kind>
+                    <graphicInfo template="GrWoodenFloor"/>
+                </rectangle>
+                <rectangle x="2" y="2" x2="10" y2="16">
+                    <Kind>
+                        <KindItem kindValue="floor"/>
+                    </Kind>
+                    <graphicInfo template="GrWoodenFloor"/>
+                </rectangle>
+                <rectangle x="5" y="3" x2="7" y2="5">
+                    <Kind>
+                        <KindItem kindValue="floor"/>
+                    </Kind>
+                    <graphicInfo template="GrToiletFloor"/>
+                </rectangle>
+                <rectangle x="1" y="1">
+                    <ObjectPlacement objectTemplate="/system"/>
+                </rectangle>
+                <rectangle x="3" y="3">
+                    <ObjectPlacement objectTemplate="/object/mount/Chair"/>
+                </rectangle>
+                <rectangle x="3" y="5">
+                    <ObjectPlacement objectTemplate="/object/mount/Chair"/>
+                </rectangle>
+                <rectangle x="3" y="7">
+                    <ObjectPlacement objectTemplate="/object/mount/Chair"/>
+                </rectangle>
+                <rectangle x="5" y="7">
+                    <ObjectPlacement objectTemplate="/object/mount/Chair"/>
+                </rectangle>
+                <rectangle x="7" y="7">
+                    <ObjectPlacement objectTemplate="/object/mount/Chair"/>
+                </rectangle>
+                <rectangle x="9" y="7">
+                    <ObjectPlacement objectTemplate="/object/mount/Chair"/>
+                </rectangle>
+                <rectangle x="9" y="5">
+                    <ObjectPlacement objectTemplate="/object/mount/Chair"/>
+                </rectangle>
+                <rectangle x="9" y="3">
+                    <ObjectPlacement objectTemplate="/object/mount/Chair"/>
+                </rectangle>
+                
+                <rectangle x="6" y="4">
+                    <ObjectPlacement objectTemplate="/object/Pole"/>
+                </rectangle>
+                <rectangle x="3" y="8" x2="10" y2="15">
+                    <ObjectPlacement objectTemplate="/person"/>
+                </rectangle>
+                <rectangle x="4" y="10" x2="9" y2="15">                    
+                    <Kind>
+                        <KindItem kindValue="floor"/>
+                    </Kind>
+                    <ObjectPlacement objectTemplate="/object/Mark"/>
+                    <graphicInfo template="GrToiletFloor"/>
+                </rectangle>                
+                <rectangle x="2" y="13">
+                    <ObjectPlacement objectTemplate="/object/Jukebox"/>
+                    <graphicInfo template="GrJukeboxPlace"/>
+                </rectangle>
+                <rectangle x="5" y="5" x2="7">
+                    <ObjectPlacement objectTemplate="/person/Singer"/>
+                </rectangle>
+            </subLocations>
+            <Kind>
+                <KindItem kindValue="floor"/>
+            </Kind>
+            <graphicInfo template="GrBallroom"/>
+        </GridLocation>
+        <GridLocation name="Bar" height="12" width="17" lod="4">
+            <links>
+                <Link goal="*" process="*" slot="bar"/>
+                <Link goal="*" process="*" slot="targetPosition"/>
+            </links>
+            <inherentObjects>
+                <Object name="Chair" template="Chair" number="16"/>
+                <Object name="Table" template="Table" number="4"/>
+            </inherentObjects>
+            <objects>
+                <Object name="Tap" template="Tap" number="1"/>
+                <Object name="Cash" template="Cash" number="1"/>
+                <Object name="Glasses" template="Glasses" number="1"/>                
+            </objects>
+            <subLocations>
+                <defaultGraphicInfo template="GrWoodenFloor"/>
+                <defaultKind>
+                    <Kind>
+                        <KindItem kindValue="floor"/>
+                    </Kind>
+                </defaultKind>
+                
+                <!-- Kind and Graphics-->
+                <rectangle x="1" y="1" x2="17" y2="12">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrWall"/>
+                </rectangle>
+                <rectangle x="10" y="1">
+                    <graphicInfo template="GrWindow"/>
+                </rectangle>
+                <rectangle x="15" y="1">
+                    <graphicInfo template="GrWindow"/>
+                </rectangle>
+                <rectangle x="2" y="2" x2="16" y2="11">
+                    <Kind>
+                        <KindItem kindValue="floor"/>
+                    </Kind>
+                    <graphicInfo template="GrWoodenFloor"/>
+                </rectangle>
+                <rectangle x="1" y="6" y2="7">
+                    <Kind>
+                        <KindItem kindValue="floor"/>
+                    </Kind>
+                    <graphicInfo template="GrWoodenFloor"/>
+                </rectangle>
+                <rectangle x="6" y="12" x2="7">
+                    <Kind>
+                        <KindItem kindValue="floor"/>
+                    </Kind>
+                    <graphicInfo template="GrWoodenFloor"/>
+                </rectangle>
+                <rectangle x="17" y="6" y2="7">
+                    <Kind>
+                        <KindItem kindValue="floor"/>
+                    </Kind>
+                    <graphicInfo template="GrWoodenFloor"/>
+                </rectangle>
+                <rectangle x="2" y="3">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrWood"/>
+                </rectangle>
+                <rectangle x="2" y="4" x2="6">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrWood"/>
+                </rectangle>
+                <rectangle x="7" y="2">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrWall"/>
+                </rectangle>
+                <rectangle x="1" y="1">
+                    <ObjectPlacement objectTemplate="/system"/>
+                </rectangle>
+                
+                <rectangle x="4" y="9">
+                    <ObjectPlacement objectTemplate="/object/Table"/>
+                </rectangle>
+                <rectangle x="3" y="9">
+                    <ObjectPlacement objectTemplate="/object/mount/Chair"/>
+                </rectangle>
+                <rectangle x="5" y="9">
+                    <ObjectPlacement objectTemplate="/object/mount/Chair"/>
+                </rectangle>
+                <rectangle x="4" y="8">
+                    <ObjectPlacement objectTemplate="/object/mount/Chair"/>
+                </rectangle>
+                <rectangle x="4" y="10">
+                    <ObjectPlacement objectTemplate="/object/mount/Chair"/>
+                </rectangle>
+                
+                <rectangle x="9" y="9">
+                    <ObjectPlacement objectTemplate="/object/Table"/>
+                </rectangle>
+                <rectangle x="8" y="9">
+                    <ObjectPlacement objectTemplate="/object/mount/Chair"/>
+                </rectangle>
+                <rectangle x="10" y="9">
+                    <ObjectPlacement objectTemplate="/object/mount/Chair"/>
+                </rectangle>
+                <rectangle x="9" y="8">
+                    <ObjectPlacement objectTemplate="/object/mount/Chair"/>
+                </rectangle>
+                <rectangle x="9" y="10">
+                    <ObjectPlacement objectTemplate="/object/mount/Chair"/>
+                </rectangle>
+                
+                <rectangle x="14" y="9">
+                    <ObjectPlacement objectTemplate="/object/Table"/>
+                </rectangle>
+                <rectangle x="13" y="9">
+                    <ObjectPlacement objectTemplate="/object/mount/Chair"/>
+                </rectangle>
+                <rectangle x="15" y="9">
+                    <ObjectPlacement objectTemplate="/object/mount/Chair"/>
+                </rectangle>
+                <rectangle x="14" y="8">
+                    <ObjectPlacement objectTemplate="/object/mount/Chair"/>
+                </rectangle>
+                <rectangle x="14" y="10">
+                    <ObjectPlacement objectTemplate="/object/mount/Chair"/>
+                </rectangle>
+                
+                <rectangle x="14" y="4">
+                    <ObjectPlacement objectTemplate="/object/Table"/>
+                </rectangle>
+                <rectangle x="13" y="4">
+                    <ObjectPlacement objectTemplate="/object/mount/Chair"/>
+                </rectangle>
+                <rectangle x="15" y="4">
+                    <ObjectPlacement objectTemplate="/object/mount/Chair"/>
+                </rectangle>
+                <rectangle x="14" y="3">
+                    <ObjectPlacement objectTemplate="/object/mount/Chair"/>
+                </rectangle>
+                <rectangle x="14" y="5">
+                    <ObjectPlacement objectTemplate="/object/mount/Chair"/>
+                </rectangle>
+                
+                <rectangle x="2" y="3">
+                    <ObjectPlacement objectTemplate="/object/Glasses"/>
+                </rectangle>
+                
+                <rectangle x="5" y="4">
+                    <ObjectPlacement objectTemplate="/object/Tap"/>
+                </rectangle>
+                <rectangle x="6" y="4">
+                    <ObjectPlacement objectTemplate="/object/Cash"/>
+                </rectangle>
+                
+                <rectangle x="3" y="6" x2="12" y2="7">
+                    <ObjectPlacement objectTemplate="/person"/>
+                </rectangle>
+                <rectangle x="3" y="2" x2="6" y2="3">
+                    <ObjectPlacement objectTemplate="/person/Waiter"/>
+                </rectangle>
+                
+                <jointException waypoint="wp_5_4">
+                    <target waypoint="wp_5_3"/>
+                </jointException>                
+                <jointException waypoint="wp_6_4">
+                    <target waypoint="wp_6_5"/>
+                    <target waypoint="wp_5_5"/>
+                </jointException>                
+                
+            </subLocations>
+            <Kind>
+                <KindItem kindValue="floor"/>
+            </Kind>
+            <graphicInfo template="GrBar"/>
+        </GridLocation>
+        
+        <!-- Pub GraphLocation at LOD 3 -->
+        <GraphLocation name="Pub" lod="3">
+            <links>
+                <Link goal="*" process="*" slot="pub"/>
+                <Link goal="*" process="*" slot="targetPosition"/>
+            </links>            
+            
+            <subLocations>
+                <Location name="Yard" template="Yard" x="0" y="30">
+                    <placement>                        
+                        <ObjectPlacement objectTemplate="/system"/>
+                    </placement>
+                </Location>
+                <Location name="Bar" template="Bar" x="0" y="0">
+                    <genies>
+                        <Genius className="cz.ive.genius.BarGenius" geniusId="BarGenius" >
+                            <TopLevelGoal process="DelegatedBarJoy" goal="BarJoyGoal"/>
+                            <CleaningGoal goalId="PubCleaningTaxiGoal">
+                                <OntologyToken ontology="jBRP.expression">
+                                    <defined>
+                                        <objectlink role="actor" attrib="arm"/>
+                                    </defined>
+                                </OntologyToken>
+                            </CleaningGoal>
+                        </Genius>
+                        <Genius className="cz.ive.genius.BarWorkGenius" geniusId="BarWorkGenius" >
+                            <TopLevelGoal process="DelegatedBarWork" goal="BarWorkGoal"/>
+                            <CleaningGoal goalId="PubCleaningTaxiGoal">
+                                <OntologyToken ontology="jBRP.expression">
+                                    <defined>
+                                        <objectlink role="actor" attrib="arm"/>
+                                    </defined>
+                                </OntologyToken>
+                            </CleaningGoal>
+                        </Genius>
+                        <Genius className="cz.ive.genius.QueueGenius" geniusId="QueueGenius" >
+                            <TopLevelGoal process="DelegatedQueueBeer" goal="QueueGoal"/>
+                        </Genius>
+                    </genies>
+                    <placement>
+                        <ObjectPlacement objectTemplate="/person"/>
+                        <ObjectPlacement objectTemplate="/person/Waiter"/>
+                        <ObjectPlacement objectTemplate="/object/Tap"/>
+                        <ObjectPlacement objectTemplate="/system"/>
+                    </placement>
+                </Location>
+                <Location name="Ballroom" template="Ballroom" x="-30" y="0">
+                    <genies>
+                        <Genius className="cz.ive.genius.BallroomGenius" geniusId="BallroomGenius" >
+                            <TopLevelGoal process="DelegatedBallroomJoy" goal="BallroomJoyGoal"/>
+                        </Genius>
+                    </genies>
+                    <placement>
+                        <ObjectPlacement objectTemplate="/person"/>
+                        <ObjectPlacement objectTemplate="/person/Singer"/>
+                        <ObjectPlacement objectTemplate="/system"/>
+                        <ObjectPlacement objectTemplate="/object/Pole"/>
+                        <ObjectPlacement objectTemplate="/object/Jukebox"/>
+                    </placement>
+                </Location>
+                <Location name="Toilet" template="Toilet" x="30" y="0">
+                    <placement>
+                        <ObjectPlacement objectTemplate="/person"/>
+                        <ObjectPlacement objectTemplate="/system"/>
+                    </placement>
+                </Location>
+            </subLocations>
+            <neighbours>
+                <!-- LOD 4 -->
+                <Joint first="Bar" second="Yard" dx="0" dy="30"/>
+                <Joint first="Bar" second="Ballroom" dx="30" dy="0"/>
+                <Joint first="Bar" second="Toilet" dx="-30" dy="0"/>
+                <!-- LOD 5 -->
+                <Joint first="Bar.wp_17_6" second="Toilet.wp_1_4" dx="1" dy="0"/>
+                <Joint first="Bar.wp_17_7" second="Toilet.wp_1_5" dx="1" dy="0"/>
+                <Joint first="Bar.wp_1_6" second="Ballroom.wp_11_8" dx="-1" dy="0"/>
+                <Joint first="Bar.wp_1_7" second="Ballroom.wp_11_9" dx="-1" dy="0"/>
+                <Joint first="Bar.wp_6_12" second="Yard.wp_15_1" dx="0" dy="1"/>
+                <Joint first="Bar.wp_7_12" second="Yard.wp_16_1" dx="0" dy="1"/>
+            </neighbours>
+            <influences/>
+            <Kind>
+                <KindItem kindValue="floor"/>
+            </Kind>
+            <graphicInfo template="GrPub"/>
+        </GraphLocation>
+    </locationTemplates>
+    
+    
+    <processTemplates>
+        <!-- Pub specific processes -->
+        <!-- Joy processes LOD 3 -->
+        <ProcessTemplate processId="PubJoyTaxi" goalId="JoyTaxiGoal" minLod="2" maxLod="2" className="cz.ive.process.NeverAtomicProcessTemplate">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="TransportGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <notin obj="actor" waypoint="pub"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="targetPosition" valueFrom="pub"/>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="PubJoyGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="guest" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <sources>
+                <Slot name="pub"/>
+                <Slot name="actor" actor="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+        </ProcessTemplate>
+        
+        <ProcessTemplate processId="PubJoy" goalId="PubJoyGoal" minLod="3" maxLod="3" className="cz.ive.process.PermanentProcess">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="ToiletTaxiGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzylink role="guest" attrib="peeDrive"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="guest"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="PubJoyTaxiGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="guest" actor="true" valueFrom="guest"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <sources>
+                <Slot name="guest" actor="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+        </ProcessTemplate>
+        
+        <!-- Joy processes LOD 4 -->
+        
+        <!-- Delegated Joy -->
+        <ProcessTemplate processId="DelegatedJoyTaxi" goalId="PubJoyTaxiGoal" minLod="3" maxLod="5" className="cz.ive.process.CommonDelegatedProcessTemplate">
+            <expansion/>
+            <sources>
+                <Slot name="guest" actor="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </pcontext>
+        </ProcessTemplate>
+        
+        <!-- Non-delegated Joys -->
+        <ProcessTemplate processId="ToiletTaxi" goalId="ToiletTaxiGoal" minLod="3" maxLod="3" className="cz.ive.process.NeverAtomicProcessTemplate">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="TransportGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <notin obj="actor" waypoint="toilet"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="targetPosition" valueFrom="toilet"/>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="ToiletGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <sources>
+                <Slot name="toilet"/>
+                <Slot name="actor" actor="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzylink role="actor" attrib="peeDrive"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+        </ProcessTemplate>
+        
+        <ProcessTemplate processId="Toilet" goalId="ToiletGoal" minLod="4" maxLod="4" className="cz.ive.process.ToiletJoy">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="PeeTaxiGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <sources>
+                <Slot name="actor" actor="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+        </ProcessTemplate>
+        
+        <ProcessTemplate processId="PeeTaxi" goalId="PeeTaxiGoal" minLod="4" maxLod="4" className="cz.ive.process.NeverAtomicProcessTemplate">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="FollowGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <notnear obj1="actor" obj2="pissoir"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="targetObject" valueFrom="pissoir"/>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="PeeGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                            <Slot name="pissoir" valueFrom="pissoir"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <sources>
+                <Slot name="pissoir"/>
+                <Slot name="actor" actor="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+        </ProcessTemplate>
+        
+        <ProcessTemplate processId="BallroomJoyTaxi" goalId="PubJoyTaxiGoal" minLod="3" maxLod="3" className="cz.ive.process.NeverAtomicProcessTemplate">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="TransportGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <notin obj="guest" waypoint="ballroom"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="targetPosition" valueFrom="ballroom"/>
+                            <Slot name="actor" actor="true" valueFrom="guest"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="BallroomJoyGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="guest" actor="true" valueFrom="guest"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <sources>
+                <Slot name="ballroom"/>
+                <Slot name="guest" actor="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext>
+                <OntologyToken ontology="jBRP.expression">
+                    <not>
+                        <timer time="15" units="min" inaccuracy="4"/>
+                    </not>
+                </OntologyToken>
+            </pcontext>
+        </ProcessTemplate>
+        
+        <ProcessTemplate processId="DelegatedBallroomJoy" goalId="BallroomJoyGoal" minLod="4" maxLod="5" className="cz.ive.process.CommonDelegatedProcessTemplate">
+            <expansion/>
+            <sources>
+                <Slot name="guest" actor="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+        </ProcessTemplate>
+        
+        <ProcessTemplate processId="SingJoy" goalId="BallroomJoyGoal" minLod="4" maxLod="4" className="cz.ive.process.SingJoy">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="SitDownTaxiGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzylink role="guest" attrib="standing"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="guest"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="SayGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="guest"/>
+                        </sources>
+                        <parameters>
+                            <Parameter name="sentence">
+                                <OntologyToken ontology="java.int" >
+                                    <Value value="101"/>
+                                </OntologyToken>
+                            </Parameter>
+                        </parameters>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <sources>
+                <Slot name="guest" actor="true"/>
+                <Slot name="singer"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+        </ProcessTemplate>
+        
+        <ProcessTemplate processId="JukeboxJoy" goalId="BallroomJoyGoal" minLod="4" maxLod="4" className="cz.ive.process.JukeboxJoy">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="FollowGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <and>
+                                    <notnear obj1="guest" obj2="jukebox"/>
+                                    <not>
+                                        <fuzzylink role="jukebox" attrib="on"/>
+                                    </not>
+                                </and>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="targetObject" valueFrom="jukebox"/>
+                            <Slot name="actor" actor="true" valueFrom="guest"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="TurnOnJukeboxGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <not>
+                                    <fuzzylink role="jukebox" attrib="on"/>
+                                </not>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="guest" actor="true" valueFrom="guest"/>
+                            <Slot name="jukebox" valueFrom="jukebox"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="FollowGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <and>
+                                    <doisee  role="mark"/>
+                                    <notnear obj1="guest" obj2="mark"/>
+                                </and>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="targetObject" valueFrom="mark"/>
+                            <Slot name="actor" actor="true" valueFrom="guest"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="MinerDanceGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="guest"/>
+                        </sources>
+                        <parameters>
+                            <Parameter name="sentence">
+                                <OntologyToken ontology="java.int">
+                                    <Value  value="102"/>
+                                </OntologyToken>
+                            </Parameter>
+                        </parameters>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <sources>
+                <Slot name="guest" actor="true"/>
+                <Slot name="jukebox"/>
+                <Slot name="mark" optional="true" variable="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext>
+                <OntologyToken ontology="jBRP.expression">
+                    <doisee role="jukebox"/>
+                </OntologyToken>
+            </pcontext>
+            <!--
+            <pcontext sameAsSuitability="true"/>
+            -->
+        </ProcessTemplate>
+        
+        
+        <ProcessTemplate processId="EmptyBallroomJoy" goalId="BallroomJoyGoal" minLod="4" maxLod="4" className="cz.ive.process.PermanentProcess">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="SitDownTaxiGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">                                
+                                    <fuzzylink role="guest" attrib="standing"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="guest"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="WaitGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="guest"/>
+                        </sources>
+                        <parameters>
+                            <Parameter name="time">
+                                <OntologyToken ontology="java.int" >
+                                    <Value value="60000"/>
+                                </OntologyToken>
+                            </Parameter>
+                        </parameters>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <sources>
+                <Slot name="guest" actor="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext>
+                <OntologyToken ontology="jBRP.expression">
+                    <not>
+                        <timer time="60" units="s" inaccuracy="50"/>
+                    </not>
+                </OntologyToken>
+            </pcontext>
+        </ProcessTemplate>
+        
+        <ProcessTemplate processId="BarJoyTaxi" goalId="PubJoyTaxiGoal" minLod="3" maxLod="3" className="cz.ive.process.NeverAtomicProcessTemplate">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="TransportGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <notin obj="guest" waypoint="bar"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="targetPosition" valueFrom="bar"/>
+                            <Slot name="actor" actor="true" valueFrom="guest"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="BarJoyGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="guest"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <sources>
+                <Slot name="bar"/>
+                <Slot name="guest" actor="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext>
+                <OntologyToken ontology="jBRP.expression">
+                    <not>
+                        <timer time="15" units="min" inaccuracy="3"/>
+                    </not>
+                </OntologyToken>
+            </pcontext>
+        </ProcessTemplate>
+        
+        <ProcessTemplate processId="DelegatedBarJoy" goalId="BarJoyGoal" minLod="4" maxLod="5" className="cz.ive.process.CommonDelegatedProcessTemplate">
+            <expansion/>
+            <sources>
+                <Slot name="actor" actor="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+        </ProcessTemplate>
+        
+        <ProcessTemplate processId="BarJoy" goalId="BarJoyGoal" minLod="4" maxLod="4" className="cz.ive.process.BarJoy">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="SitDownTaxiGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">                                
+                                    <fuzzylink role="actor" attrib="standing"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="ExchangeGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <emptysource source="beer"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                            <Slot name="who" valueFrom="waiter"/>
+                            <Slot name="accept" valueFrom="beer"/>
+                        </sources>
+                        <parameters>
+                            <Parameter name="sentence">
+                                <OntologyToken ontology="java.int" >
+                                    <Value value="111"/>
+                                </OntologyToken>
+                            </Parameter>
+                        </parameters>
+                    </Goal>
+                    <Goal goalId="DrinkGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzylink role="beer" attrib="full"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="guest" actor="true" valueFrom="actor"/>
+                            <Slot name="beer" valueFrom="beer"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="ExchangeGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <not>
+                                    <fuzzylink role="beer" attrib="full"/>
+                                </not>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                            <Slot name="who" valueFrom="waiter"/>
+                            <Slot name="offer" valueFrom="beer"/>
+                        </sources>
+                        <parameters>
+                            <Parameter name="sentence">
+                                <OntologyToken ontology="java.int" >
+                                    <Value value="113"/>
+                                </OntologyToken>
+                            </Parameter>
+                        </parameters>
+                    </Goal>
+                    <Goal goalId="WaitGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters>
+                            <Parameter name="time">
+                                <OntologyToken ontology="java.int" >
+                                    <Value value="60000"/>
+                                </OntologyToken>
+                            </Parameter>
+                        </parameters>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <sources>
+                <Slot name="actor" actor="true"/>
+                <Slot name="waiter"/>                
+                <Slot name="beer" optional="true" variable="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+        </ProcessTemplate>
+        
+        <ProcessTemplate processId="EmptyBarJoy" goalId="BarJoyGoal" minLod="4" maxLod="4" className="cz.ive.process.PermanentProcess">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="SitDownTaxiGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">                                
+                                    <fuzzylink role="actor" attrib="standing"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="WaitGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters>
+                            <Parameter name="time">
+                                <OntologyToken ontology="java.int" >
+                                    <Value value="60000"/>
+                                </OntologyToken>
+                            </Parameter>
+                        </parameters>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <sources>
+                <Slot name="actor" actor="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext>
+                <OntologyToken ontology="jBRP.expression">
+                    <not>
+                        <timer time="60" units="s" inaccuracy="50"/>
+                    </not>
+                </OntologyToken>
+            </pcontext>
+        </ProcessTemplate>
+        
+        <ProcessTemplate processId="DelegatedQueueBeer" goalId="DelegatedQueueBeerGoal" minLod="4" maxLod="5" className="cz.ive.process.CommonDelegatedProcessTemplate">
+            <expansion/>
+            <sources>
+                <Slot name="guest" actor="true"/>
+                <Slot name="targetObject" optional="true" variable="true"/>
+                <Slot name="next" optional="true" variable="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+        </ProcessTemplate>
+        
+        <ProcessTemplate processId="QueueBarJoy" goalId="BarJoyGoal" minLod="4" maxLod="4" className="cz.ive.process.BarJoy">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="DelegatedQueueBeerGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <not>
+                                    <defined>
+                                        <objectlink role="actor" attrib="arm"/>
+                                    </defined>
+                                </not>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="guest" actor="true" valueFrom="actor"/>
+                            <Slot name="targetObject" valueFrom="cash"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="SitAndDrinkGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="guest" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <sources>
+                <Slot name="actor" actor="true"/>
+                <Slot name="waiter"/>
+                <Slot name="cash"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+        </ProcessTemplate>
+        
+        <ProcessTemplate processId="Queue" goalId="QueueGoal" minLod="4" maxLod="4" className="cz.ive.process.NeverAtomicProcessTemplate">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="FollowGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <and>
+                                    <emptysource source="next"/>
+                                    <notnear obj1="guest" obj2="targetObject"/>
+                                </and>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="guest"/>
+                            <Slot name="targetObject" valueFrom="targetObject"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="ExchangeGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <emptysource source="next"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="guest"/>
+                            <Slot name="who" valueFrom="waiter"/>
+                        </sources>
+                        <parameters>
+                            <Parameter name="sentence">
+                                <OntologyToken ontology="java.int" >
+                                    <Value value="111"/>
+                                </OntologyToken>
+                            </Parameter>
+                        </parameters>
+                    </Goal>
+                    <Goal goalId="FollowGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <notnear obj1="guest" obj2="next"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="guest"/>
+                            <Slot name="targetObject" valueFrom="next"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="WaitGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="guest"/>
+                        </sources>
+                        <parameters>
+                            <Parameter name="time">
+                                <OntologyToken ontology="java.int" >
+                                    <Value value="5000"/>
+                                </OntologyToken>
+                            </Parameter>
+                        </parameters>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <sources>
+                <Slot name="guest" actor="true"/>
+                <Slot name="waiter"/>
+                <Slot name="targetObject" optional="true" variable="true"/>
+                <Slot name="next" optional="true" variable="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+        </ProcessTemplate>
+        
+        <ProcessTemplate processId="SitAndDrink" goalId="SitAndDrinkGoal" minLod="4" maxLod="4" className="cz.ive.process.NeverAtomicProcessTemplate">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="SitDownTaxiGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzylink role="guest" attrib="standing"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="guest"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="DrinkAndCleanGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="guest" actor="true" valueFrom="guest"/>
+                            <Slot name="beer" valueFrom="guest->arm"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <sources>
+                <Slot name="guest" actor="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+        </ProcessTemplate>
+        
+        <ProcessTemplate processId="DrinkAndClean" goalId="DrinkAndCleanGoal" minLod="4" maxLod="4" className="cz.ive.process.NeverAtomicProcessTemplate">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="DrinkGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzylink role="beer" attrib="full"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="guest" actor="true" valueFrom="guest"/>
+                            <Slot name="beer" valueFrom="beer"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="ExchangeGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <not>
+                                    <fuzzylink role="beer" attrib="full"/>
+                                </not>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="guest"/>
+                            <Slot name="who" valueFrom="waiter"/>
+                            <Slot name="offer" valueFrom="beer"/>
+                        </sources>
+                        <parameters>
+                            <Parameter name="sentence">
+                                <OntologyToken ontology="java.int" >
+                                    <Value value="113"/>
+                                </OntologyToken>
+                            </Parameter>
+                        </parameters>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <sources>
+                <Slot name="waiter"/>
+                <Slot name="guest" actor="true"/>
+                <Slot name="beer" optional="true" variable="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+        </ProcessTemplate>
+
+        <ProcessTemplate processId="SitDownTaxi" goalId="SitDownTaxiGoal" minLod="4" maxLod="4" className="cz.ive.process.NeverAtomicProcessTemplate">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="FollowGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <notnear obj1="actor" obj2="chair"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="targetObject" valueFrom="chair"/>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="SitDownGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                            <Slot name="to" valueFrom="chair"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <sources>
+                <Slot name="chair"/>
+                <Slot name="actor" actor="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzylink role="chair" attrib="empty"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+        </ProcessTemplate>
+        
+        <!-- Joy processes LOD 5 -->
+        <ProcessTemplate processId="SitDown" goalId="SitDownGoal"  className="cz.ive.process.SitDown" minLod="1" maxLod="5">
+            <sources>
+                <Slot name="actor" actor="true"/>
+                <Slot name="to"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+            <expansion/>
+        </ProcessTemplate>
+        
+        <ProcessTemplate processId="Drink" goalId="DrinkGoal"  className="cz.ive.process.Drink" minLod="4" maxLod="5">
+            <sources>
+                <Slot name="guest" actor="true"/>
+                <Slot name="beer" variable="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+            <expansion/>
+        </ProcessTemplate>
+        <ProcessTemplate processId="TurnOnJukebox" goalId="TurnOnJukeboxGoal"  className="cz.ive.process.TurnOnJukebox" minLod="4" maxLod="5">
+            <sources>
+                <Slot name="guest" actor="true"/>
+                <Slot name="jukebox"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+            <expansion/>
+        </ProcessTemplate>
+        <ProcessTemplate processId="Pee" goalId="PeeGoal"  className="cz.ive.process.Pee" minLod="4" maxLod="5">
+            <sources>
+                <Slot name="actor" actor="true"/>
+                <Slot name="pissoir"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+            <expansion/>
+        </ProcessTemplate>
+        
+        <ProcessTemplate processId="MinerDanceLeft" goalId="MinerDanceGoal"  className="cz.ive.process.MinerDanceLeft" minLod="5" maxLod="5">
+            <sources>
+                <Slot name="actor" actor="true"/>                
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+            <expansion/>
+        </ProcessTemplate>
+        
+        <ProcessTemplate processId="MinerDanceRight" goalId="MinerDanceGoal"  className="cz.ive.process.MinerDanceRight" minLod="5" maxLod="5">
+            <sources>
+                <Slot name="actor" actor="true"/>                
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+            <expansion/>
+        </ProcessTemplate>
+        
+        
+        <ProcessTemplate processId="MinerDanceJump" goalId="MinerDanceGoal"  className="cz.ive.process.MinerDanceJump" minLod="5" maxLod="5">
+            <sources>
+                <Slot name="actor" actor="true"/>                
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+            <expansion/>
+        </ProcessTemplate>
+        
+        <ProcessTemplate processId="MinerDanceSay" goalId="MinerDanceGoal"  className="cz.ive.process.Say" minLod="5" maxLod="5">
+            <sources>
+                <Slot name="actor" actor="true"/>                
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+            <expansion/>
+        </ProcessTemplate>
+        
+        
+        <!-- Work processes LOD 3 -->
+        <ProcessTemplate processId="PubWorkTaxi" goalId="WorkTaxiGoal" minLod="2" maxLod="2" className="cz.ive.process.NeverAtomicProcessTemplate">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="TransportGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <notin obj="actor" waypoint="pub"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="targetPosition" valueFrom="pub"/>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="PubWorkGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <sources>
+                <Slot name="pub"/>
+                <Slot name="actor" actor="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+        </ProcessTemplate>
+        
+        <ProcessTemplate processId="PubWork" goalId="PubWorkGoal" minLod="3" maxLod="3" className="cz.ive.process.PermanentProcess">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="PubWorkTaxiGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <sources>
+                <Slot name="actor" actor="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+        </ProcessTemplate>
+        
+        <!-- Work processes LOD 4 -->
+        <ProcessTemplate processId="BarWorkTaxi" goalId="PubWorkTaxiGoal" minLod="3" maxLod="3" className="cz.ive.process.NeverAtomicProcessTemplate">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="TransportGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <notin obj="actor" waypoint="bar"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="targetPosition" valueFrom="bar"/>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="BarWorkGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="waiter" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <sources>
+                <Slot name="bar"/>
+                <Slot name="actor" actor="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+        </ProcessTemplate>
+        
+        
+        <ProcessTemplate processId="DelegatedBarWork" goalId="BarWorkGoal" minLod="4" maxLod="5" className="cz.ive.process.CommonDelegatedProcessTemplate">
+            <expansion/>
+            <sources>
+                <Slot name="actor" actor="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+        </ProcessTemplate>
+        
+        <ProcessTemplate processId="WaiterWork" goalId="BarWorkGoal" minLod="4" maxLod="4" className="cz.ive.process.WaiterWork">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="ServeGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <or>
+                                    <doisee role="guest">
+                                        <or>
+                                            <eq>
+                                                <intlink role="setitem" attrib="mouth"/> 
+                                                <int value="111"/>
+                                            </eq>
+                                            <eq>
+                                                <intlink role="setitem" attrib="mouth"/> 
+                                                <int value="113"/>
+                                            </eq>
+                                        </or>
+                                    </doisee>
+                                    <not>
+                                        <emptysource source="beer"/>
+                                    </not>
+                                </or>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="beer" valueFrom="beer"/>
+                            <Slot name="guest" valueFrom="guest"/>
+                            <Slot name="waiter" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="FollowGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <notnear obj1="actor" obj2="tap"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="targetObject" valueFrom="tap"/>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="WaitGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters>
+                            <Parameter name="time">
+                                <OntologyToken ontology="java.int" >
+                                    <Value value="60000"/>
+                                </OntologyToken>
+                            </Parameter>
+                        </parameters>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <sources>
+                <Slot name="actor" actor="true"/>
+                <Slot name="tap" />
+                <Slot name="beer" optional="true" variable="true"/>
+                <Slot name="guest" optional="true" variable="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+        </ProcessTemplate>
+        
+        <ProcessTemplate processId="ServeClean" goalId="ServeGoal" minLod="4" maxLod="4" className="cz.ive.process.NeverAtomicProcessTemplate">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="PubCleaningGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <not>
+                                    <emptysource source="beer"/>
+                                </not>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="beer" valueFrom="beer"/>
+                            <Slot name="actor" actor="true" valueFrom="waiter"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="FollowGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <notnear obj1="waiter" obj2="guest"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="targetObject" valueFrom="guest"/>
+                            <Slot name="actor" actor="true" valueFrom="waiter"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="ExchangeGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="waiter"/>
+                            <Slot name="who" valueFrom="guest"/>
+                            <Slot name="accept" valueFrom="beer"/>
+                        </sources>
+                        <parameters>
+                            <Parameter name="sentence">
+                                <OntologyToken ontology="java.int">
+                                    <Value  value="114"/>
+                                </OntologyToken>
+                            </Parameter>
+                        </parameters>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <sources>
+                <Slot name="waiter" actor="true"/>
+                <Slot name="beer" optional="true" variable="true"/>
+                <Slot name="guest" optional="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <or>
+                        <eq>
+                            <intlink role="guest" attrib="mouth"/> 
+                            <int value="113"/>
+                        </eq>
+                        <and>
+                            <not>
+                                <emptysource source="beer"/>
+                            </not>
+                            <or>
+                                <emptysource source="guest"/>
+                                <not>
+                                    <fuzzylink role="beer" attrib="full"/>
+                                </not>
+                            </or>
+                        </and>
+                    </or>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+        </ProcessTemplate>
+        
+        <ProcessTemplate processId="ServeOrder" goalId="ServeGoal" minLod="4" maxLod="4" className="cz.ive.process.NeverAtomicProcessTemplate">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="FetchGlassTaxiGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <emptysource source="beer"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="beer" valueFrom="beer"/>
+                            <Slot name="waiter" actor="true" valueFrom="waiter"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="TapBeerTaxiGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <not>
+                                    <fuzzylink role="beer" attrib="full"/>
+                                </not>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="beer" valueFrom="beer"/>
+                            <Slot name="waiter" actor="true" valueFrom="waiter"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="FollowGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <notnear obj1="waiter" obj2="guest"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="targetObject" valueFrom="guest"/>
+                            <Slot name="actor" actor="true" valueFrom="waiter"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="ExchangeGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="waiter"/>
+                            <Slot name="who" valueFrom="guest"/>
+                            <Slot name="offer" valueFrom="beer"/>
+                        </sources>
+                        <parameters>
+                            <Parameter name="sentence">
+                                <OntologyToken ontology="java.int">
+                                    <Value  value="112"/>
+                                </OntologyToken>
+                            </Parameter>
+                        </parameters>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <sources>
+                <Slot name="waiter" actor="true"/>
+                <Slot name="beer" optional="true" variable="true"/>
+                <Slot name="guest"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <and>
+                        <eq>
+                            <intlink role="guest" attrib="mouth"/> 
+                            <int value="111"/>
+                        </eq>
+                        <or>
+                            <emptysource source="beer"/>
+                            <fuzzylink role="beer" attrib="full"/>
+                        </or>
+                    </and>
+                </OntologyToken>
+            </suitability>
+            <pcontext>
+                <OntologyToken ontology="jBRP.expression">
+                    <eq>
+                        <intlink role="guest" attrib="mouth"/> 
+                        <int value="111"/>
+                    </eq>
+                </OntologyToken>
+            </pcontext>
+        </ProcessTemplate>
+        
+        <ProcessTemplate processId="FetchGlassTaxi" goalId="FetchGlassTaxiGoal" minLod="4" maxLod="4" className="cz.ive.process.NeverAtomicProcessTemplate">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="FollowGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <notnear obj1="waiter" obj2="glasses"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="targetObject" valueFrom="glasses"/>
+                            <Slot name="actor" actor="true" valueFrom="waiter"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="PickUpGlassGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="waiter" actor="true" valueFrom="waiter"/>
+                            <Slot name="from" valueFrom="glasses"/>
+                            <Slot name="beer" valueFrom="beer"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <sources>
+                <Slot name="waiter" actor="true"/>
+                <Slot name="beer" optional="true" variable="true"/>
+                <Slot name="glasses"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+        </ProcessTemplate>
+        
+        <ProcessTemplate processId="TapBeerTaxi" goalId="TapBeerTaxiGoal" minLod="4" maxLod="4" className="cz.ive.process.NeverAtomicProcessTemplate">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="FollowGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <notnear obj1="waiter" obj2="tap"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="targetObject" valueFrom="tap"/>
+                            <Slot name="actor" actor="true" valueFrom="waiter"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="TapGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="waiter" actor="true" valueFrom="waiter"/>
+                            <Slot name="tap" valueFrom="tap"/>
+                            <Slot name="beer" valueFrom="beer"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <sources>
+                <Slot name="waiter" actor="true"/>
+                <Slot name="beer"/>
+                <Slot name="tap"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+        </ProcessTemplate>
+
+        <ProcessTemplate processId="BallroomWorkTaxi" goalId="PubWorkTaxiGoal" minLod="3" maxLod="3" className="cz.ive.process.NeverAtomicProcessTemplate">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="TransportGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <notin obj="actor" waypoint="ballroom"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="targetPosition" valueFrom="ballroom"/>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="BallroomWorkGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="singer" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <sources>
+                <Slot name="ballroom"/>
+                <Slot name="actor" actor="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+        </ProcessTemplate>
+        
+        <ProcessTemplate processId="SingerWork" goalId="BallroomWorkGoal" minLod="4" maxLod="4" className="cz.ive.process.PermanentProcess">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="FollowGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <notnear obj1="singer" obj2="pole"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="targetObject" valueFrom="pole"/>
+                            <Slot name="actor" actor="true" valueFrom="singer"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="DanceGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="singer" actor="true" valueFrom="singer"/>
+                            <Slot name="pole" valueFrom="pole"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <sources>
+                <Slot name="singer" actor="true"/>
+                <Slot name="pole"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+        </ProcessTemplate>
+
+        <!-- Work processes LOD 5 -->
+        <ProcessTemplate processId="Tap" goalId="TapGoal"  className="cz.ive.process.Tap" minLod="4" maxLod="5">
+            <sources>
+                <Slot name="waiter" actor="true"/>
+                <Slot name="beer"/>
+                <Slot name="tap"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+            <expansion/>
+        </ProcessTemplate>
+        <ProcessTemplate processId="Dance" goalId="DanceGoal"  className="cz.ive.process.Dance" minLod="4" maxLod="5">
+            <sources>
+                <Slot name="singer" actor="true"/>
+                <Slot name="pole"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+            <expansion/>
+        </ProcessTemplate>
+    
+        <ProcessTemplate processId="JukeboxWork" goalId="JukeboxGoal" minLod="4" maxLod="4" className="cz.ive.process.PermanentProcess">
+            <sources>
+                <Slot name="jukebox" actor="true" />
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="PlaySongGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzylink role="jukebox" attrib="on"/> 
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>                        
+                            <Slot name="jukebox" actor="true" valueFrom="jukebox"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="WaitGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="jukebox"/>
+                        </sources>
+                        <parameters>
+                            <Parameter name="time">
+                                <OntologyToken ontology="java.int" >
+                                    <Value value="60000"/>
+                                </OntologyToken>
+                            </Parameter>
+                        </parameters>
+                    </Goal>
+                </OntologyToken>
+            </expansion>            
+        </ProcessTemplate>
+        
+        <ProcessTemplate processId="PlaySong" goalId="PlaySongGoal" minLod="5" maxLod="5" className="cz.ive.process.PlaySong">
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzylink role="jukebox" attrib="on"/> 
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+            <sources>                        
+                <Slot name="jukebox" actor="true"/>
+            </sources>
+            <expansion/>
+        </ProcessTemplate>
+        
+        <ProcessTemplate processId="DropGlass" goalId="DropGlassGoal" minLod="4" maxLod="5" className="cz.ive.process.DropGlass">
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/> 
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+            <sources>                        
+                <Slot name="actor" actor="true"/>
+                <Slot name="beer" variable="true"/>
+                <Slot name="to"/>
+            </sources>
+            <expansion/>
+        </ProcessTemplate>
+        
+        <ProcessTemplate processId="PickUpGlass" goalId="PickUpGlassGoal" minLod="4" maxLod="5" className="cz.ive.process.PickUpGlass">
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/> 
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+            <sources>                        
+                <Slot name="waiter" actor="true"/>
+                <Slot name="beer" variable="true" optional="true"/>
+                <Slot name="from"/>
+            </sources>
+            <expansion/>
+        </ProcessTemplate>
+        
+        <!-- Cleaning processes -->
+        <ProcessTemplate processId="PubCleaningTaxi" goalId="PubCleaningTaxiGoal" minLod="4" maxLod="4" className="cz.ive.process.NeverAtomicProcessTemplate">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="PubCleaningGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <or>
+                                    <doisee role="waiter"/>
+                                    <fuzzy value="true"/>
+                                </or>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="beer" valueFrom="actor->arm"/>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                            <Slot name="waiter" valueFrom="waiter"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <sources>
+                <Slot name="actor" actor="true"/>
+                <Slot name="waiter" optional="true" variable="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <defined>
+                        <objectlink role="actor" attrib="arm"/>
+                    </defined>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+        </ProcessTemplate>
+        
+        <ProcessTemplate processId="LazyPubCleaning" goalId="PubCleaningGoal" minLod="4" maxLod="4" className="cz.ive.process.NeverAtomicProcessTemplate">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="ExchangeGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                            <Slot name="who" valueFrom="waiter"/>
+                            <Slot name="offer" valueFrom="beer"/>
+                        </sources>
+                        <parameters>
+                            <Parameter name="sentence">
+                                <OntologyToken ontology="java.int" >
+                                    <Value value="113"/>
+                                </OntologyToken>
+                            </Parameter>
+                        </parameters>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <sources>
+                <Slot name="actor" actor="true"/>
+                <Slot name="beer" optional="true" variable="true"/>
+                <Slot name="waiter" optional="true" variable="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <and>
+                        <not>
+                            <emptysource source="waiter"/>
+                        </not>
+                        <defined>
+                            <objectlink role="actor" attrib="arm"/>
+                        </defined>
+                    </and>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+        </ProcessTemplate>
+
+        
+        <ProcessTemplate processId="PubCleaning" goalId="PubCleaningGoal" minLod="4" maxLod="4" className="cz.ive.process.NeverAtomicProcessTemplate">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="FollowGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <and>
+                                    <notnear obj1="actor" obj2="glasses"/>
+                                    <not>
+                                        <emptysource source="beer"/>
+                                    </not>
+                                </and>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="targetObject" valueFrom="glasses"/>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="DropGlassGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <not>
+                                    <emptysource source="beer"/>
+                                </not>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="beer" valueFrom="beer"/>
+                            <Slot name="to" valueFrom="glasses"/>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <sources>
+                <Slot name="actor" actor="true"/>
+                <Slot name="beer" optional="true" variable="true"/>
+                <Slot name="glasses"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <and>
+                        <defined>
+                            <objectlink role="actor" attrib="arm"/>
+                        </defined>
+                        <fuzzy value="30000"/>
+                    </and>
+                </OntologyToken>
+            </suitability>
+            <pcontext>
+                <OntologyToken ontology="jBRP.expression">
+                    <defined>
+                        <objectlink role="actor" attrib="arm"/>
+                    </defined>
+                </OntologyToken>
+            </pcontext>
+        </ProcessTemplate>
+        
+    </processTemplates>
+</IveWorld>

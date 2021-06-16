@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObjectTemplate name="Beer" existenceLevel="5" viewLevel="5" objectClass="/object/Beer" substantial="false">
+  <attributes>
+    <FuzzyAttribute name="full" value="false" />
+  </attributes>
+  <graphicInfo template="GrBeer" className="cz.ive.gui.AnimatedGraphicInfo" />
+</ObjectTemplate>
+

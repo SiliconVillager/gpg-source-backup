@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EntTemplate name="Cart" existenceLevel="4" viewLevel="4" objectClass="/vehicle/Cart" substantial="true">
+  <attributes>
+    <IntAttribute name="coal" value="0" />
+  </attributes>
+  <sensors>
+    <Sensor name="Knowledge" template="Knowledge" minLod="3" maxLod="5" />
+  </sensors>
+  <Kind>
+    <KindItem kindValue="track" />
+  </Kind>
+  <graphicInfo template="GrCart" />
+  <Genius geniusId="Cartgenius" />
+</EntTemplate>
+

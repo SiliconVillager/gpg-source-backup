@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObjectTemplate name="PalmII" existenceLevel="5" viewLevel="5" objectClass="/object/Palm" substantial="true">
+  <attributes />
+  <graphicInfo template="GrPalmII" />
+</ObjectTemplate>
+

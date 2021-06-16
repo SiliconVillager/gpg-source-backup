@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EntTemplate name="Charlady" existenceLevel="3" viewLevel="3" objectClass="/person/charlady" substantial="true">
+  <attributes>
+    <IntAttribute name="mouth" value="0" />
+    <IntAttribute name="workBegin" value="0" />
+    <IntAttribute name="workEnd" value="0" />
+    <FuzzyAttribute name="peeDrive" value="true" />
+    <FuzzyAttribute name="standing" value="true" />
+    <ObjectAttribute name="arm" />
+    <IntAttribute name="onTheWay1Begin" value="0" />
+    <IntAttribute name="onTheWay1End" value="0" />
+    <IntAttribute name="onTheWay2Begin" value="0" />
+    <IntAttribute name="onTheWay2End" value="0" />
+    <IntAttribute name="sleepBegin" value="0" />
+    <IntAttribute name="sleepEnd" value="0" />
+    <ObjectAttribute name="address.house" />
+    <FuzzyAttribute name="standing" value="true" />
+    <IntAttribute name="state" value="0" />
+  </attributes>
+  <sensors>
+    <Sensor name="SensorArchitecture" template="SensorArchitecture" minLod="3" maxLod="4" />
+    <Sensor name="SensorEye" template="SensorEye" minLod="4" maxLod="5" />
+    <Sensor name="SensorTopography" template="SensorTopography" minLod="2" maxLod="3" />
+  </sensors>
+  <Kind>
+    <KindItem kindValue="floor" />
+  </Kind>
+  <graphicInfo template="GrCharlady" />
+  <Genius geniusId="none" />
+</EntTemplate>
+

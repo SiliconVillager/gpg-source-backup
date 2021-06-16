@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObjectTemplate name="Armchair" existenceLevel="4" viewLevel="4" objectClass="/object/Chair/armchair" substantial="true">
+  <attributes>
+    <FuzzyAttribute name="empty" value="true" />
+  </attributes>
+  <graphicInfo template="GrArmChair" />
+</ObjectTemplate>
+

@@ -1,0 +1,5 @@
+<?xml version = '1.0' encoding = 'UTF8' ?>
+<EVALTREE>
+        <fuzzy name="stepSuitability" value="32767"/> <!-- I mean true -->
+        <fuzzy name="stepContext" value="32767"/>
+</EVALTREE>

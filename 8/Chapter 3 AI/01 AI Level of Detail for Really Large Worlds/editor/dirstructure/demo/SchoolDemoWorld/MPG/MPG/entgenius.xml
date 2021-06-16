@@ -1,0 +1,32 @@
+<genies>
+  <Genius geniusId="Teacher femalegenius">
+    <Genius>
+      <TopLevelGoal goalId="DayPlanGoal" />
+      <TopLevelGoal goalId="LifeGoal" />
+    </Genius>
+  </Genius>
+  <Genius geniusId="Teachergenius">
+    <Genius>
+      <TopLevelGoal goalId="DayPlanGoal" />
+      <TopLevelGoal goalId="LifeGoal" />
+    </Genius>
+  </Genius>
+  <Genius geniusId="Pupil malegenius">
+    <Genius>
+      <TopLevelGoal goalId="StudentDayPlanGoal" />
+      <TopLevelGoal goalId="LifeGoal" />
+    </Genius>
+  </Genius>
+  <Genius geniusId="Pupil femalegenius">
+    <Genius>
+      <TopLevelGoal goalId="StudentDayPlanGoal" />
+      <TopLevelGoal goalId="LifeGoal" />
+    </Genius>
+  </Genius>
+  <Genius geniusId="Directorgenius">
+    <Genius>
+      <TopLevelGoal goalId="DayPlanGoal" />
+      <TopLevelGoal goalId="LifeGoal" />
+    </Genius>
+  </Genius>
+</genies>

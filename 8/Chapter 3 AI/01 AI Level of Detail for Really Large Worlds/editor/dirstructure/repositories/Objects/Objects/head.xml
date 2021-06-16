@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<repositoryHeader>
+  <source file="Mark.xml" name="Mark" grName="GrMark" grFile="GrMark.xml" frame0="mark.gif" className="" graphicClassName="" templateClass="" />
+  <source file="Pole.xml" name="Pole" grName="GrPole" grFile="GrPole.xml" frame0="pole.gif" className="" graphicClassName="" templateClass="" />
+  <source file="Cash.xml" name="Cash" grName="GrCash" grFile="GrCash.xml" frame0="cash.gif" className="" graphicClassName="" templateClass="" />
+  <source file="Glasses.xml" name="Glasses" grName="GrGlasses" grFile="GrGlasses.xml" frame0="glasses.gif" className="" graphicClassName="" templateClass="" />
+  <source file="Beer.xml" name="Beer" grName="GrBeer" grFile="GrBeer.xml" frame0="glass.gif" className="" graphicClassName="cz.ive.gui.AnimatedGraphicInfo" templateClass="" />
+  <source file="LeverUp.xml" name="LeverUp" grName="GrLever" grFile="GrLever.xml" frame0="lever-off.gif" className="" graphicClassName="cz.ive.gui.AnimatedGraphicInfo" templateClass="" />
+  <source file="LeverDown.xml" name="LeverDown" grName="GrLever" grFile="GrLever.xml" frame0="lever-off.gif" className="" graphicClassName="cz.ive.gui.AnimatedGraphicInfo" templateClass="" />
+  <source file="SignalLightUp.xml" name="SignalLightUp" grName="GrSignalLight" grFile="GrSignalLight.xml" frame0="semaphore-down.gif" className="" graphicClassName="cz.ive.gui.AnimatedGraphicInfo" templateClass="" />
+  <source file="SignalLightDown.xml" name="SignalLightDown" grName="GrSignalLight" grFile="GrSignalLight.xml" frame0="semaphore-down.gif" className="" graphicClassName="cz.ive.gui.AnimatedGraphicInfo" templateClass="" />
+  <source file="Cart.xml" name="Cart" grName="GrCart" grFile="GrCart.xml" frame0="cart-empty.gif" className="" graphicClassName="" templateClass="" />
+  <source file="Bed.xml" name="Bed" grName="GrBed" grFile="GrBed.xml" frame0="bed.gif" className="" graphicClassName="" templateClass="" />
+  <source file="HomeFlower.xml" name="HomeFlower" grName="GrFlower" grFile="GrFlower.xml" frame0="flower.gif" className="" graphicClassName="" templateClass="" />
+  <source file="MinerEnt.xml" name="MinerEnt" grName="GrMiner" grFile="GrMiner.xml" frame0="miner.gif" className="cz.ive.iveobject.Human" graphicClassName="" templateClass="" />
+  <source file="Flower.xml" name="Flower" grName="GrFlower2" grFile="GrFlower2.xml" frame0="flower2.png" className="" graphicClassName="" templateClass="" />
+  <source file="PalmII.xml" name="PalmII" grName="GrPalmII" grFile="GrPalmII.xml" frame0="palm2.png" className="" graphicClassName="" templateClass="" />
+  <source file="PalmI.xml" name="PalmI" grName="GrPalmI" grFile="GrPalmI.xml" frame0="palm.png" className="" graphicClassName="" templateClass="" />
+  <source file="Closet.xml" name="Closet" grName="GrCloset" grFile="GrCloset.xml" frame0="closet.png" className="" graphicClassName="" templateClass="" />
+  <source file="Chair.xml" name="Chair" grName="GrChair" grFile="GrChair.xml" frame0="chair.png" className="" graphicClassName="" templateClass="" />
+  <source file="Table.xml" name="Table" grName="GrTable" grFile="GrTable.xml" frame0="table.png" className="" graphicClassName="" templateClass="" />
+  <source file="WaiterEnt.xml" name="WaiterEnt" grName="GrWaiter" grFile="GrWaiter.xml" frame0="waiter.png" className="cz.ive.iveobject.Human" graphicClassName="" templateClass="" />
+  <source file="Pissoir2.xml" name="Pissoir2" grName="GrPissoir2" grFile="GrPissoir2.xml" frame0="pissoir2.png" className="" graphicClassName="" templateClass="" />
+  <source file="Pissoir1.xml" name="Pissoir1" grName="GrPissoir1" grFile="GrPissoir1.xml" frame0="pissoir.png" className="" graphicClassName="" templateClass="" />
+  <source file="Jukebox.xml" name="Jukebox" grName="GrJukebox" grFile="GrJukebox.xml" frame0="jukebox-off.png" className="" graphicClassName="" templateClass="" />
+  <source file="Tap.xml" name="Tap" grName="GrTap" grFile="GrTap.xml" frame0="bar-beer.png" className="" graphicClassName="" templateClass="" />
+  <source file="CoalPile.xml" name="CoalPile" grName="GrCoalPile" grFile="GrCoalPile.xml" frame0="coal_pile-small.png" className="" graphicClassName="cz.ive.gui.AnimatedGraphicInfo" templateClass="" />
+  <source file="Coal.xml" name="Coal" grName="GrCoal" grFile="GrCoal.xml" frame0="coal-piece.png" className="" graphicClassName="" templateClass="" />
+  <source file="Hole.xml" name="Hole" grName="GrHole" grFile="GrHole.xml" frame0="hole.png" className="" graphicClassName="" templateClass="" />
+  <source file="Rock.xml" name="Rock" grName="GrRock" grFile="GrRock.xml" frame0="mining_place.png" className="" graphicClassName="" templateClass="" />
+  <source file="SingerEnt.xml" name="SingerEnt" grName="GrSinger" grFile="GrSinger.xml" frame0="singer.png" className="cz.ive.iveobject.Human" graphicClassName="" templateClass="" />
+</repositoryHeader>
+

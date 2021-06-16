@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObjectTemplate name="Cash" existenceLevel="4" viewLevel="4" objectClass="/object/Cash" substantial="true">
+  <attributes />
+  <graphicInfo template="GrCash" />
+</ObjectTemplate>
+

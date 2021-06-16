@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObjectTemplate name="Pole" existenceLevel="4" viewLevel="4" objectClass="/object/Pole" substantial="false">
+  <attributes />
+  <graphicInfo template="GrPole" />
+</ObjectTemplate>
+

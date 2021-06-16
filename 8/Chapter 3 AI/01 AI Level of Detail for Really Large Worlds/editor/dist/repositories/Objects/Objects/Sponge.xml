@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObjectTemplate name="Sponge" existenceLevel="5" viewLevel="5" objectClass="/object/sponge" substantial="false">
+  <attributes />
+  <graphicInfo template="GrSponge" />
+</ObjectTemplate>
+

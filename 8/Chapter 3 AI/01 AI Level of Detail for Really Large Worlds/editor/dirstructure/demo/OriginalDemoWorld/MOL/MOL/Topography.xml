@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Sensor>
+  <ObjectTemplate name="Topography" existenceLevel="3" viewLevel="3" className="cz.ive.sensors.SensorEye" objectClass="/sensor/Eye" substantial="false">
+    <attributes />
+    <graphicInfo template="GrEye" />
+  </ObjectTemplate>
+  <Sensor name="Topography" template="Topography" minLod="2" maxLod="3" />
+</Sensor>
+

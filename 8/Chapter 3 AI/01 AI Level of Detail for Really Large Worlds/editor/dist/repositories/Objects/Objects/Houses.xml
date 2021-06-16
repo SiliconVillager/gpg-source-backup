@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObjectTemplate name="Houses" existenceLevel="5" viewLevel="5" objectClass="/object/houses" substantial="true">
+  <attributes />
+  <graphicInfo template="GrEstate" />
+</ObjectTemplate>
+

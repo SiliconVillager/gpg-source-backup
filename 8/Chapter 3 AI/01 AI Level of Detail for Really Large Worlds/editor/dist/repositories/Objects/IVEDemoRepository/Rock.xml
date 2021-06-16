@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObjectTemplate name="Rock" existenceLevel="4" viewLevel="4" objectClass="/object/Rock" substantial="true">
+  <attributes />
+  <graphicInfo template="GrRock" />
+</ObjectTemplate>
+

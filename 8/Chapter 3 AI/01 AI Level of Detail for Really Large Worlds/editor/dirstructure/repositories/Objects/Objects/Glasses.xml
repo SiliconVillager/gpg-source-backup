@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObjectTemplate name="Glasses" existenceLevel="4" viewLevel="4" objectClass="/object/Glasses" substantial="true">
+  <attributes />
+  <graphicInfo template="GrGlasses" />
+</ObjectTemplate>
+

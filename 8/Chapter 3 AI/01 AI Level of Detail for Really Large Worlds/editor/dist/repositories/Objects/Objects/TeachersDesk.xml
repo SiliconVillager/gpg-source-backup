@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObjectTemplate name="TeachersDesk" existenceLevel="5" viewLevel="5" objectClass="/object/teachersDesk" substantial="true">
+  <attributes>
+    <IntAttribute name="empty" value="0" />
+  </attributes>
+  <graphicInfo template="GrTeachersDesk" />
+</ObjectTemplate>
+

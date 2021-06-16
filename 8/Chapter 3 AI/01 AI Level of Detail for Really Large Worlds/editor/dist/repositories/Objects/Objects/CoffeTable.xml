@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObjectTemplate name="CoffeTable" existenceLevel="5" viewLevel="5" objectClass="/object/table/coffe" substantial="true">
+  <attributes />
+  <graphicInfo template="GrCoffeeTable" />
+</ObjectTemplate>
+

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObjectTemplate name="Pissoir1" existenceLevel="5" viewLevel="5" objectClass="/object/Pissoir/1" substantial="true">
+  <attributes>
+    <FuzzyAttribute name="empty" value="true" />
+  </attributes>
+  <graphicInfo template="GrPissoir1" />
+</ObjectTemplate>
+

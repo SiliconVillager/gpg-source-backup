@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- placement of all files is a local path to folder "Sources" within the new projekt folder
+     continuing by the path described in the <file> tag by path parameter -->
+
+<files>
+	
+	<file name="SensorEye.java" path="cz/ive/sensors/" />	
+	<file name="Exchange.java" path="cz/ive/process/" />	
+	<file name="FollowProcessTemplate.java" path="cz/ive/process/" />	
+	<file name="HuntingStep.java" path="cz/ive/process/" />	
+	<file name="NeverAtomicProcessTemplate.java" path="cz/ive/process/" />	
+	<file name="Panic.java" path="cz/ive/process/" />
+	<file name="Say.java" path="cz/ive/process/" />		
+	<file name="Step.java" path="cz/ive/process/" />
+	<file name="Wait.java" path="cz/ive/process/" />				
+	<file name="HelperExecutor.java" path="cz/ive/" />
+ 
+</files>

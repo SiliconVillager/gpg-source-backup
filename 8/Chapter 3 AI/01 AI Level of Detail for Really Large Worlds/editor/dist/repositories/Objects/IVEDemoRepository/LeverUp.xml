@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObjectTemplate name="LeverUp" existenceLevel="4" viewLevel="4" objectClass="/object/Lever" substantial="true">
+  <attributes>
+    <FuzzyAttribute name="pushed" value="false" />
+  </attributes>
+  <graphicInfo template="GrLever" className="cz.ive.gui.AnimatedGraphicInfo" />
+</ObjectTemplate>
+

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IveWorld>
+    <processTemplates>
+        <!-- Main delegated vital function goal -->
+        <ProcessTemplate processId="DelegatedLife" goalId="LifeGoal" minLod="3" maxLod="5" className="cz.ive.process.CommonDelegatedProcessTemplate">
+            <sources>
+                <Slot name="actor" actor="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+            <expansion/>
+        </ProcessTemplate>
+        
+        <!-- Vital functions non-delegated process implementation -->
+        <ProcessTemplate processId="Vital" goalId="VitalGoal" className="cz.ive.process.Vital" minLod="3" maxLod="5">
+            <sources>
+                <Slot name="actor" actor="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+            <expansion/>
+        </ProcessTemplate>
+    </processTemplates>
+</IveWorld>

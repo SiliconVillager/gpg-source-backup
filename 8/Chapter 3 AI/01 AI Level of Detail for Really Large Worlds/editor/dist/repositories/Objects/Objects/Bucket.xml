@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObjectTemplate name="Bucket" existenceLevel="5" viewLevel="5" objectClass="/object/tool/bucket" substantial="true">
+  <attributes />
+  <graphicInfo template="GrBucket" />
+</ObjectTemplate>
+

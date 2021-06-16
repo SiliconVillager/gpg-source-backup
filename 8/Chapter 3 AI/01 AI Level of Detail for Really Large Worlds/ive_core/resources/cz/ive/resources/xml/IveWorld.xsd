@@ -1,0 +1,987 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:include schemaLocation="expressions.xsd"/>
+    <xs:element name="IveWorld">
+        <xs:annotation>
+            <xs:documentation>Root element of the world description file. This element is root even for included files</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:choice maxOccurs="unbounded">
+                <xs:element name="include" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation>The given file is included. The effect is the same as the content of the included file was in the file instead of the include element</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:attribute name="url" type="xs:string" use="required">
+                            <xs:annotation>
+                                <xs:documentation>url of the included file</xs:documentation>
+                            </xs:annotation>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="classPath" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Each ClassPathItem is added into JVM ClassPath</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ClassPathItem" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:attribute name="url" type="xs:string" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="objectTemplates">
+                    <xs:annotation>
+                        <xs:documentation>list of the object templates.</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:choice maxOccurs="unbounded">
+                            <!--<xs:sequence>-->
+                            <xs:element name="ObjectTemplate" minOccurs="0" maxOccurs="unbounded">
+                                <xs:annotation>
+                                    <xs:documentation>Object template is draft that is used to create particular object. Templates support inheritance.</xs:documentation>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:all>
+                                        <xs:element ref="links" minOccurs="0"/>
+                                        <xs:element ref="attributes" minOccurs="0"/>
+                                        <xs:element ref="slaves" minOccurs="0"/>
+                                        <xs:element ref="sensors" minOccurs="0"/>
+                                        <xs:element ref="graphicInfo" minOccurs="0"/>
+                                        <xs:element ref="Kind" minOccurs="0"/>
+                                    </xs:all>
+                                    <xs:attribute name="objectClass" type="xs:string" use="optional" default="/">
+                                        <xs:annotation>
+                                            <xs:documentation>class of the object - it is used by object placement</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:attribute>
+                                    <xs:attribute name="className" type="xs:string" use="optional" default="cz.ive.iveobject.IveObjectImpl">
+                                        <xs:annotation>
+                                            <xs:documentation>java class that is used to keep instances in the memory</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:attribute>
+                                    <xs:attribute name="template" type="xs:string" use="optional">
+                                        <xs:annotation>
+                                            <xs:documentation>Template used as  draft for this template. This attribute provides inheritance of object templates</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:attribute>
+                                    <xs:attribute name="name" type="xs:string" use="required">
+                                        <xs:annotation>
+                                            <xs:documentation>name of the template
+                                            </xs:documentation>
+                                        </xs:annotation>
+                                    </xs:attribute>
+                                    <xs:attribute name="existenceLevel" type="xs:short" use="required"/>
+                                    <xs:attribute name="viewLevel" type="xs:short" use="required"/>
+                                    <xs:attribute name="templateClass" type="xs:string" default="cz.ive.xmlload.ObjectTemplate">
+                                        <xs:annotation>
+                                            <xs:documentation>Class used to load data of this temlate from DOM representation</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:attribute>
+                                    <xs:attribute name="substantial" type="xs:boolean" default="false">
+                                        <xs:annotation>
+                                            <xs:documentation>Two substantial objects can not share the same waypoint</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="EntTemplate" minOccurs="0" maxOccurs="unbounded">
+                                <xs:annotation>
+                                    <xs:documentation>ObjectTemplate bounded to some actor genius and top level goal</xs:documentation>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:all>
+                                        <xs:element ref="links" minOccurs="0"/>
+                                        <xs:element ref="attributes" minOccurs="0"/>
+                                        <xs:element ref="slaves" minOccurs="0"/>
+                                        <xs:element ref="sensors" minOccurs="0"/>
+                                        <xs:element name="graphicInfo">
+                                            <xs:annotation>
+                                                <xs:documentation>information needed by gui to show object</xs:documentation>
+                                            </xs:annotation>
+                                            <xs:complexType>
+                                                <xs:attribute name="template" type="xs:string"/>
+                                                <xs:attribute name="className" type="xs:string" default="cz.ive.gui.ActorGraphicInfo"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element ref="Kind" minOccurs="0"/>
+                                        <xs:element name="Genius">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="TopLevelGoal" minOccurs="0" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="goalId" type="xs:string" use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                                <xs:attribute name="className" type="xs:string" use="optional" default="cz.ive.genius.BasicGenius"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:all>
+                                    <xs:attribute name="objectClass" type="xs:string" use="optional" default="/"/>
+                                    <xs:attribute name="className" type="xs:string" use="optional" default="cz.ive.iveobject.Ent"/>
+                                    <xs:attribute name="template" type="xs:string" use="optional"/>
+                                    <xs:attribute name="name" type="xs:string" use="required"/>
+                                    <xs:attribute name="existenceLevel" type="xs:short" use="required"/>
+                                    <xs:attribute name="viewLevel" type="xs:short" use="required"/>
+                                    <xs:attribute name="templateClass" type="xs:string" default="cz.ive.xmlload.ObjectTemplate"/>
+                                    <xs:attribute name="substantial" type="xs:boolean" default="false"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:choice>
+                        <!--</xs:sequence>-->
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="graphicTemplates">
+                    <xs:annotation>
+                        <xs:documentation>list of graphic templates that are used to display objects (including locations) in the gui </xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:choice maxOccurs="unbounded">
+                            <xs:element name="GraphicTemplate">
+                                <xs:annotation>
+                                    <xs:documentation>The simplest graphic template - static image</xs:documentation>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:attribute name="name" use="required">
+                                        <xs:annotation>
+                                            <xs:documentation>template name</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:attribute>
+                                    <xs:attribute name="src" type="xs:anyURI">
+                                        <xs:annotation>
+                                            <xs:documentation>image file</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:attribute>
+                                    <xs:attribute name="center_x" type="xs:int" use="required">
+                                        <xs:annotation>
+                                            <xs:documentation>what column of the image is in the center of waypoint</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:attribute>
+                                    <xs:attribute name="center_y" type="xs:int" use="required">
+                                        <xs:annotation>
+                                            <xs:documentation>what row of the image is placed in the center of the waypoint</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:attribute>
+                                    <xs:attribute name="templateClass" type="xs:string" default="cz.ive.gui.StaticTemplate">
+                                        <xs:annotation>
+                                            <xs:documentation>Java class that is used to draw this template</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="AnimatedGraphicTemplate">
+                                <xs:complexType>
+                                    <xs:sequence maxOccurs="unbounded">
+                                        <xs:element name="image">
+                                            <xs:complexType>
+                                                <xs:attribute name="src" type="xs:anyURI"/>
+                                                <xs:attribute name="center_x" type="xs:int"/>
+                                                <xs:attribute name="center_y" type="xs:int"/>
+                                                <xs:attribute name="templateClass" type="xs:string" default="cz.ive.gui.AnimatedTemplate"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="name" use="required">
+                                        <xs:annotation>
+                                            <xs:documentation>template name</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:attribute>
+                                    <xs:attribute name="frameAttribute" use="required">
+                                        <xs:annotation>
+                                            <xs:documentation>name of  IveObject attribute (fuzzy or integer) that determines frame of the animation. Fuzzy attribute is degraded to boolean</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:choice>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="locationTemplates">
+                    <xs:annotation>
+                        <xs:documentation>list of the location templates</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:choice maxOccurs="unbounded">
+                            <xs:element name="GridLocation">
+                                <xs:annotation>
+                                    <xs:documentation>Location template that contains the grid of simple waypoints in it</xs:documentation>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:all>
+                                        <xs:element ref="objects" minOccurs="0"/>
+                                        <xs:element ref="inherentObjects" minOccurs="0"/>
+                                        <xs:element ref="links" minOccurs="0"/>
+                                        <xs:element ref="attributes" minOccurs="0"/>
+                                        <xs:element ref="Kind" minOccurs="0"/>
+                                        <xs:element name="graphicInfo">
+                                            <xs:annotation>
+                                                <xs:documentation>information needed by gui to show object</xs:documentation>
+                                            </xs:annotation>
+                                            <xs:complexType>
+                                                <xs:attribute name="template" type="xs:string"/>
+                                                <xs:attribute name="className" type="xs:string" default="cz.ive.gui.WayPointGraphicInfo"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="subLocations">
+                                            <xs:annotation>
+                                                <xs:documentation>description of the sublocation grid</xs:documentation>
+                                            </xs:annotation>
+                                            <xs:complexType>
+                                                <xs:sequence maxOccurs="unbounded">
+                                                    <xs:element name="defaultGraphicInfo">
+                                                        <xs:annotation>
+                                                            <xs:documentation>default graphic info that is used for all waypoints that are not mentioned by any position element</xs:documentation>
+                                                        </xs:annotation>
+                                                        <xs:complexType>
+                                                            <xs:attribute name="template" type="xs:string"/>
+                                                            <xs:attribute name="className" type="xs:string" default="cz.ive.gui.WayPointGraphicInfo"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="defaultKind" minOccurs="0">
+                                                        <xs:annotation>
+                                                            <xs:documentation>default kind that is used for all waypoints that are not mentioned by any position element</xs:documentation>
+                                                        </xs:annotation>
+                                                        <xs:complexType>
+                                                            <xs:all>
+                                                                <xs:element ref="Kind"/>
+                                                            </xs:all>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="rectangle" minOccurs="0" maxOccurs="unbounded">
+                                                        <xs:annotation>
+                                                            <xs:documentation>states that all waypoints in the given rectangle differs from the default values</xs:documentation>
+                                                        </xs:annotation>
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element ref="Kind" minOccurs="0"/>
+                                                                <xs:element ref="ObjectPlacement" minOccurs="0" maxOccurs="unbounded"/>
+                                                                <xs:element name="graphicInfo" minOccurs="0">
+                                                                    <xs:annotation>
+                                                                        <xs:documentation>information needed by gui to show waypoint</xs:documentation>
+                                                                    </xs:annotation>
+                                                                    <xs:complexType>
+                                                                        <xs:attribute name="template" type="xs:string"/>
+                                                                        <xs:attribute name="className" type="xs:string" default="cz.ive.gui.WayPointGraphicInfo"/>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                            <xs:attribute name="x" type="xs:int"/>
+                                                            <xs:attribute name="y" type="xs:int"/>
+                                                            <xs:attribute name="x2" type="xs:int" default="0"/>
+                                                            <xs:attribute name="y2" type="xs:int" default="0"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="jointException" minOccurs="0" maxOccurs="unbounded">
+                                                        <xs:annotation>
+                                                            <xs:documentation>states that all waypoints in the given rectangle differs from the default values</xs:documentation>
+                                                        </xs:annotation>
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="target" maxOccurs="unbounded">
+                                                                    <xs:complexType>
+                                                                        <xs:attribute name="waypoint" type="xs:string"/>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                            <xs:attribute name="waypoint" type="xs:string"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:all>
+                                    <xs:attribute name="name" type="xs:string" use="required"/>
+                                    <xs:attribute name="lod" type="xs:short"/>
+                                    <xs:attribute name="width" type="xs:int"/>
+                                    <xs:attribute name="height" type="xs:int"/>
+                                    <xs:attribute name="className" type="xs:string" default="cz.ive.location.Area2DGrid"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="GraphLocation">
+                                <xs:annotation>
+                                    <xs:documentation>Location template that contains generic graph of sublocations</xs:documentation>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:all>
+                                        <xs:element ref="objects" minOccurs="0"/>
+                                        <xs:element ref="inherentObjects" minOccurs="0"/>
+                                        <xs:element ref="links" minOccurs="0"/>
+                                        <xs:element ref="attributes" minOccurs="0"/>
+                                        <xs:element name="subLocations">
+                                            <xs:annotation>
+                                                <xs:documentation>List of sublocations - nodes of the graph</xs:documentation>
+                                            </xs:annotation>
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element ref="Location" minOccurs="0" maxOccurs="unbounded"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="neighbours">
+                                            <xs:annotation>
+                                                <xs:documentation>list of the location pairs - edges of the graph</xs:documentation>
+                                            </xs:annotation>
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="Joint" minOccurs="0" maxOccurs="unbounded">
+                                                        <xs:annotation>
+                                                            <xs:documentation>Pair of the connected locations. This need not be direct sublocations of the template. If two sublocations are connected on deeper level joint appears at their nearest common ancestor.
+If the kind of both locations is diferent it is described in the subtree</xs:documentation>
+                                                        </xs:annotation>
+                                                        <xs:complexType>
+                                                            <xs:sequence minOccurs="0" maxOccurs="2">
+                                                                <xs:element ref="Kind"/>
+                                                            </xs:sequence>
+                                                            <xs:attribute name="first" type="xs:string">
+                                                                <xs:annotation>
+                                                                    <xs:documentation>IveId of the first item ( relative to the current location )</xs:documentation>
+                                                                </xs:annotation>
+                                                            </xs:attribute>
+                                                            <xs:attribute name="second" type="xs:string">
+                                                                <xs:annotation>
+                                                                    <xs:documentation>IveId of the second item ( relative to the current location )</xs:documentation>
+                                                                </xs:annotation>
+                                                            </xs:attribute>
+                                                            <xs:attribute name="dx" type="xs:float">
+                                                                <xs:annotation>
+                                                                    <xs:documentation>x axis length of the edge</xs:documentation>
+                                                                </xs:annotation>
+                                                            </xs:attribute>
+                                                            <xs:attribute name="dy" type="xs:float">
+                                                                <xs:annotation>
+                                                                    <xs:documentation>y axis length of the edge</xs:documentation>
+                                                                </xs:annotation>
+                                                            </xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="influences">
+                                            <xs:annotation>
+                                                <xs:documentation>list of the influences between the sublocations</xs:documentation>
+                                            </xs:annotation>
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="Influence" minOccurs="0" maxOccurs="unbounded">
+                                                        <xs:annotation>
+                                                            <xs:documentation>Pair of the locations that influents each other. This need not be direct sublocations of the template. If two sublocations are connected on deeper level influence appears at their nearest common ancestor.</xs:documentation>
+                                                        </xs:annotation>
+                                                        <xs:complexType>
+                                                            <xs:attribute name="first" type="xs:string">
+                                                                <xs:annotation>
+                                                                    <xs:documentation>IveId of the first item ( relative to the current location )</xs:documentation>
+                                                                </xs:annotation>
+                                                            </xs:attribute>
+                                                            <xs:attribute name="second" type="xs:string">
+                                                                <xs:annotation>
+                                                                    <xs:documentation>IveId of the second item ( relative to the current location )</xs:documentation>
+                                                                </xs:annotation>
+                                                            </xs:attribute>
+                                                            <xs:attribute name="influence" type="xs:int">
+                                                                <xs:annotation>
+                                                                    <xs:documentation>influence value</xs:documentation>
+                                                                </xs:annotation>
+                                                            </xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element ref="Kind" minOccurs="0"/>
+                                        <xs:element name="graphicInfo">
+                                            <xs:annotation>
+                                                <xs:documentation>information needed by gui to show object</xs:documentation>
+                                            </xs:annotation>
+                                            <xs:complexType>
+                                                <xs:attribute name="template" type="xs:string"/>
+                                                <xs:attribute name="className" type="xs:string" default="cz.ive.gui.WayPointGraphicInfo"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:all>
+                                    <xs:attribute name="name" type="xs:string" use="required"/>
+                                    <xs:attribute name="lod" type="xs:short"/>
+                                    <xs:attribute name="className" type="xs:string" default="cz.ive.location.SimpleArea"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:choice>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="processTemplates">
+                    <xs:annotation>
+                        <xs:documentation>list of the process templates</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ProcessTemplate" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:all>
+                                        <xs:element ref="sources"/>
+                                        <xs:element name="suitability">
+                                            <xs:annotation>
+                                                <xs:documentation>suitability of the process - the expression that express how feasible is this implementation of the goal in the current situation</xs:documentation>
+                                            </xs:annotation>
+                                            <xs:complexType>
+                                                <xs:all>
+                                                    <xs:element ref="OntologyToken"/>
+                                                </xs:all>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="pcontext">
+                                            <xs:annotation>
+                                                <xs:documentation>context of the process - expression that says whether the conditions neede by the executed process still holds in the world</xs:documentation>
+                                            </xs:annotation>
+                                            <xs:complexType>
+                                                <xs:all>
+                                                    <xs:element ref="OntologyToken" minOccurs="0"/>
+                                                </xs:all>
+                                                <xs:attribute name="sameAsSuitability" type="xs:boolean" use="optional"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="expansion">
+                                            <xs:annotation>
+                                                <xs:documentation>description of subgoals.
+Currently the jBRP.expansion ontology is supported. It is list of the Goal elements .Priority of the goals is given by the order.</xs:documentation>
+                                            </xs:annotation>
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element ref="OntologyToken" minOccurs="0"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:all>
+                                    <xs:attribute name="processId" type="xs:string" use="required">
+                                        <xs:annotation>
+                                            <xs:documentation>process identifier</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:attribute>
+                                    <xs:attribute name="goalId" type="xs:string" use="required">
+                                        <xs:annotation>
+                                            <xs:documentation>identifier if the implemented goal</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:attribute>
+                                    <xs:attribute name="className" type="xs:string" use="required">
+                                        <xs:annotation>
+                                            <xs:documentation>java class that implements ProcessTemplate interface used to perform atomic commit of instances of this template</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:attribute>
+                                    <xs:attributeGroup ref="lodRange">
+                                        <xs:annotation>
+                                            <xs:documentation>lod range within this process is atomic</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:attributeGroup>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="rootLocation">
+                    <xs:annotation>
+                        <xs:documentation>instance of the root loation</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="Location"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="utterances">
+                    <xs:annotation>
+                        <xs:documentation>List of the utterances used in the world</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Utterance" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:attribute name="text" type="xs:string" use="required">
+                                        <xs:annotation>
+                                            <xs:documentation>displayed text</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:attribute>
+                                    <xs:attribute name="index" type="xs:int" use="required">
+                                        <xs:annotation>
+                                            <xs:documentation>index of the utterance</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="SimulationSettings" minOccurs="0">
+                    <xs:complexType>
+                        <xs:all>
+                            <xs:element name="Speed" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:attribute name="speedRatio" type="xs:double"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="CleanUp" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:attribute name="loadTriggered" type="xs:boolean"/>
+                                    <xs:attribute name="threshold" type="xs:int"/>
+                                    <xs:attribute name="windowSize" type="xs:int"/>
+                                    <xs:attribute name="minimalLoop" type="xs:int"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:all>
+                    </xs:complexType>
+                </xs:element>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+    <xs:attributeGroup name="lodRange">
+        <xs:annotation>
+            <xs:documentation>Pair of lod values used in different contexts</xs:documentation>
+        </xs:annotation>
+        <xs:attribute name="minLod" type="xs:short"/>
+        <xs:attribute name="maxLod" type="xs:short"/>
+    </xs:attributeGroup>
+    <xs:element name="userInfo">
+        <xs:annotation>
+            <xs:documentation>used to store user information. Current implementation ignores it.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:any minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Object">
+        <xs:annotation>
+            <xs:documentation>Instance of object template</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:attribute name="template" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Template used as a draft for this object</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="name" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>object name</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="number" type="xs:int" use="optional" default="1">
+                <xs:annotation>
+                    <xs:documentation>number of the objects of the same class. Unique number is added to the name in the case that number>1</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Location">
+        <xs:annotation>
+            <xs:documentation>Instance of location template</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="placement" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="ObjectPlacement" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="genies" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="Genius" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:all>
+            <xs:attribute name="name" type="xs:string"/>
+            <xs:attribute name="template" type="xs:string"/>
+            <xs:attribute name="x" type="xs:float" use="required"/>
+            <xs:attribute name="y" type="xs:float" use="required"/>
+            <xs:attribute name="z" type="xs:float"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="inherentObjects">
+        <xs:annotation>
+            <xs:documentation>Object instances that are inherent to the location. They are created during expansion</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Object" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="objects">
+        <xs:annotation>
+            <xs:documentation>list of object instances. They are created during instantiation</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Object" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:group name="Attribute">
+        <xs:annotation>
+            <xs:documentation>Group of elements that can be used as object attributes</xs:documentation>
+        </xs:annotation>
+        <xs:choice>
+            <xs:element name="AttrPath">
+                <xs:annotation>
+                    <xs:documentation>Fragment of the attribute path</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:group ref="Attribute"/>
+                    </xs:sequence>
+                    <xs:attribute name="name" type="xs:string">
+                        <xs:annotation>
+                            <xs:documentation>fragment of the attribute path</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="FuzzyAttribute">
+                <xs:annotation>
+                    <xs:documentation>Attribute that holds fuzzy value</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:attribute name="name" type="xs:string"/>
+                    <xs:attribute name="value" type="xs:string"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="IntAttribute">
+                <xs:annotation>
+                    <xs:documentation>Attribute that holds integer value</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:attribute name="name" type="xs:string"/>
+                    <xs:attribute name="value" type="xs:int"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element ref="ObjectAttribute"/>
+            <xs:element name="CollectionAttribute">
+                <xs:annotation>
+                    <xs:documentation>Attribute that holds set of object references</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ObjectAttribute" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                    <xs:attribute name="name" type="xs:string"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:choice>
+    </xs:group>
+    <xs:element name="ObjectAttribute">
+        <xs:annotation>
+            <xs:documentation>Object attribute - reference to the another object</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:attribute name="name" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>name of the attribute</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="empty" type="xs:boolean" default="true">
+                <xs:annotation>
+                    <xs:documentation>whether it can be empty</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="value" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>IveID of the object instance ObjectAttribute refers to.
+It is relative or absolute depending on the relative attribute</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="relative" type="xs:boolean" default="false">
+                <xs:annotation>
+                    <xs:documentation>Says whether the value contains relative or absolute IveID</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="sources">
+        <xs:annotation>
+            <xs:documentation>list of sources</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Slot" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:attribute name="name" type="xs:string" use="required"/>
+                        <xs:attribute name="optional" type="xs:boolean" use="optional" default="false"/>
+                        <xs:attribute name="variable" type="xs:boolean" use="optional" default="false"/>
+                        <xs:attribute name="actor" type="xs:boolean" use="optional" default="false"/>
+                        <xs:attributeGroup ref="lodRange"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="OntologyToken">
+        <xs:annotation>
+            <xs:documentation>Subtree contains data in some ontology.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:any/>
+            </xs:choice>
+            <xs:attribute name="ontology" type="xs:string" use="required">
+                <xs:annotation>
+                    <xs:documentation>Name of the ontology used in the subtree</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Kind">
+        <xs:annotation>
+            <xs:documentation>Kind description
+The kind is combination of different types of waypoints. Kind is used to distinguish different kind of waypoint ( floor, water...) </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="KindItem" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation>Object can be placed on the location iff the intersection of their kinds is not empty</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:attribute name="kindValue" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>Text identifier of the kind</xs:documentation>
+                            </xs:annotation>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="ObjectPlacement">
+        <xs:annotation>
+            <xs:documentation>States that the object of proper class can be placed on the waypoint</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:attribute name="objectTemplate" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="graphicInfo">
+        <xs:annotation>
+            <xs:documentation>information needed by gui to show object</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:attribute name="template" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Name of the used graphic template</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="className" type="xs:string" default="cz.ive.gui.AbstractGraphicInfo">
+                <xs:annotation>
+                    <xs:documentation>name of the class used to draw the object</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="sensors">
+        <xs:annotation>
+            <xs:documentation>list of sensors</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Sensor" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation>Instance of object template with appended lod bounds of the sensor</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:attribute name="template" type="xs:string"/>
+                        <xs:attribute name="name" type="xs:string"/>
+                        <xs:attributeGroup ref="lodRange"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="slaves">
+        <xs:annotation>
+            <xs:documentation>List of object slaves. All this objects are created during instantiation of the template. Their master is the new instance</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Object" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="attributes">
+        <xs:annotation>
+            <xs:documentation>subtree describes tree of the object attributes</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                <xs:group ref="Attribute"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="links">
+        <xs:annotation>
+            <xs:documentation>list of the roles the instance can be used in</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Link" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation>Express ability of the  instance to take part in process implementing goal in particular slot</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:all minOccurs="0">
+                            <xs:element ref="userInfo"/>
+                        </xs:all>
+                        <xs:attribute name="goal" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>goal identifier. If it is not specified Link matches to the all Links restricted only by process and slot</xs:documentation>
+                            </xs:annotation>
+                        </xs:attribute>
+                        <xs:attribute name="process" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>Process identifier. If it is ommited the link matches to the all links containing process implementing given goal and proper slot</xs:documentation>
+                            </xs:annotation>
+                        </xs:attribute>
+                        <xs:attribute name="slot" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>identifies the slot ( role ) of the object in the process</xs:documentation>
+                            </xs:annotation>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Goal">
+        <xs:annotation>
+            <xs:documentation>goal description</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="gtrigger">
+                    <xs:annotation>
+                        <xs:documentation>fuzzy expression that says how much actor wants to perform the goal</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:all>
+                            <xs:element ref="OntologyToken"/>
+                        </xs:all>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="gcontext">
+                    <xs:annotation>
+                        <xs:documentation>fuzzy expression that says how much the actor wants to continue in the goal it performs</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:all>
+                            <xs:element ref="OntologyToken" minOccurs="0"/>
+                        </xs:all>
+                        <xs:attribute name="sameAsTrigger" type="xs:boolean" use="optional">
+                            <xs:annotation>
+                                <xs:documentation>if it is true the gcontext is identical to the trigger. In such case the ontology token is ommited</xs:documentation>
+                            </xs:annotation>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="sources">
+                    <xs:annotation>
+                        <xs:documentation>list of sources needed by the goal</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Slot" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:attribute name="name" type="xs:string" use="required">
+                                        <xs:annotation>
+                                            <xs:documentation>slot name</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:attribute>
+                                    <xs:attribute name="optional" type="xs:boolean" use="optional" default="false">
+                                        <xs:annotation>
+                                            <xs:documentation>slot is optional</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:attribute>
+                                    <xs:attribute name="variable" type="xs:boolean" use="optional" default="false">
+                                        <xs:annotation>
+                                            <xs:documentation>slot is variable</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:attribute>
+                                    <xs:attribute name="actor" type="xs:boolean" use="optional" default="false">
+                                        <xs:annotation>
+                                            <xs:documentation>slot is actor ( we need to mark actors to be able to learn actual process LOD)</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:attribute>
+                                    <xs:attributeGroup ref="lodRange">
+                                        <xs:annotation>
+                                            <xs:documentation>lod range within the slot exist</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:attributeGroup>
+                                    <xs:attribute name="valueFrom" type="xs:string" use="optional">
+                                        <xs:annotation>
+                                            <xs:documentation>value of the slot is obtained from the substitution of parent process.
+The string contains name of the slot or access to the Object attribute of slot content  ( "actor" or "actor->hat" ) </xs:documentation>
+                                        </xs:annotation>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="parameters">
+                    <xs:annotation>
+                        <xs:documentation>list of parameters of the goal</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Parameter" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:all>
+                                        <xs:element ref="OntologyToken"/>
+                                    </xs:all>
+                                    <xs:attribute name="name" type="xs:string"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:all>
+            <xs:attribute name="goalId" type="xs:string" use="required">
+                <xs:annotation>
+                    <xs:documentation>Name of the goal</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Value">
+        <xs:annotation>
+            <xs:documentation>the simplest subtree of OntologyToken</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:attribute name="value"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Genius">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="TopLevelGoal" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:attribute name="goal" type="xs:string" use="required"/>
+                        <xs:attribute name="process" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="CleaningGoal" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="OntologyToken"/>
+                        </xs:sequence>
+                        <xs:attribute name="goalId" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="className" type="xs:string" use="required"/>
+            <xs:attribute name="geniusId" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

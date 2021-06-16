@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IveWorld>
+
+    <!-- default graphics -->
+    <graphicTemplates>
+	<GraphicTemplate name="empty_default" src="cz/ive/resources/images/empty.gif" center_x="16" center_y="16"/>
+	<GraphicTemplate name="GrHoldback" src="cz/ive/resources/images/holdback.gif" center_x="16" center_y="32"/>
+        <GraphicTemplate name="GrEye" src="cz/ive/resources/images/eye2.gif" center_x="8" center_y="8"/>
+    </graphicTemplates>
+    
+    <!-- default objects -->
+    <objectTemplates>
+        <ObjectTemplate name="Holdback" existenceLevel="1" viewLevel="1" objectClass="/system/Holdback">
+            <graphicInfo template="GrHoldback"/>
+        </ObjectTemplate>
+	<SensorObjectInRepository name="SensorEye" existenceLevel="1" viewLevel="2" className="cz.ive.sensors.SensorEye" objectClass="/sensor/Eye" substantial="false" minLod="1" maxLod="5">
+	  <attributes />
+	  <graphicInfo template="GrEye" />
+	</SensorObjectInRepository>
+    </objectTemplates>    
+</IveWorld>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IveWorld>
+
+    <!-- Core processes -->
+    <processTemplates>
+        <ProcessTemplate processId="Wait" goalId="WaitGoal" minLod="1" maxLod="100" className="cz.ive.process.Wait">
+            <expansion/>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </pcontext>
+            <sources>
+                <Slot name="actor" actor="true"/>
+            </sources>
+        </ProcessTemplate>
+        <ProcessTemplate processId="Step" goalId="MoveGoal" minLod="1" maxLod="1" className="cz.ive.process.Step">
+            <expansion/>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </pcontext>
+            <sources>
+                <Slot name="actor" actor="true"/>
+                <Slot name="targetPosition" optional="true" variable="true"/>
+            </sources>
+        </ProcessTemplate>
+        <ProcessTemplate processId="Transport" goalId="TransportGoal" minLod="1" maxLod="1" className="cz.ive.process.NeverAtomicProcessTemplate">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="MoveGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="java.class" >
+                                <Value value="cz.ive.trigger.MoveGoalTriggerTemplate"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gcontext>
+                        <sources>
+                            <Slot name="targetPosition" valueFrom="targetPosition"/>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </pcontext>
+            <sources>
+                <Slot name="actor" actor="true"/>
+                <Slot name="targetPosition" optional="true" variable="true"/>
+            </sources>
+        </ProcessTemplate>
+        <ProcessTemplate processId="HuntingStep" goalId="HuntGoal" minLod="1" maxLod="1" className="cz.ive.process.HuntingStep">
+            <expansion/>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </pcontext>
+            <sources>
+                <Slot name="actor" actor="true"/>
+                <Slot name="targetObject"/>
+                <Slot name="targetPosition" optional="true" variable="true"/>
+            </sources>
+        </ProcessTemplate>
+        <ProcessTemplate processId="Follow" goalId="FollowGoal" minLod="1" maxLod="1" className="cz.ive.process.FollowProcessTemplate">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="HuntGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="java.class">
+                                 <Value value="cz.ive.trigger.HuntGoalTriggerTemplate"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gcontext>
+                        <sources>
+                            <Slot name="targetObject" valueFrom="targetObject"/>
+                            <!-- targetPosition slot is generated automatically by FollowProcessTemplate -->
+                            <Slot name="targetPosition" valueFrom="targetPosition"/> 
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </pcontext>
+            <sources>
+                <Slot name="actor" actor="true"/>
+                <Slot name="targetObject" variable="true"/>
+            </sources>
+        </ProcessTemplate>
+        <ProcessTemplate processId="Panic" goalId="PanicGoal" minLod="1" maxLod="100" className="cz.ive.process.Panic">
+            <expansion/>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </pcontext>
+            <sources>
+                <Slot name="actor" actor="true"/>
+            </sources>
+        </ProcessTemplate>
+        <ProcessTemplate processId="Exchange" goalId="ExchangeGoal"  className="cz.ive.process.Exchange" minLod="1" maxLod="100">
+            <sources>
+                <Slot name="actor" actor="true"/>
+                <Slot name="who"/>
+                <Slot name="offer" optional="true" variable="true"/>
+                <Slot name="accept" optional="true" variable="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+            <expansion/>
+        </ProcessTemplate>
+        <ProcessTemplate processId="Say" goalId="SayGoal" minLod="1" maxLod="100" className="cz.ive.process.Say">
+            <expansion/>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </pcontext>
+            <sources>
+                <Slot name="actor" actor="true"/>
+            </sources>
+        </ProcessTemplate>
+    </processTemplates>
+ 
+</IveWorld>

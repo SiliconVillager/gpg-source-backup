@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObjectTemplate name="Rag" existenceLevel="5" viewLevel="5" objectClass="/object/tool/rag" substantial="true">
+  <attributes />
+  <graphicInfo template="GrRag" />
+</ObjectTemplate>
+

@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BlockAllocation", "BlockAllocation\BlockAllocation.vcproj", "{BCE81BBB-8C3B-4424-998C-72B879E4694B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BCE81BBB-8C3B-4424-998C-72B879E4694B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BCE81BBB-8C3B-4424-998C-72B879E4694B}.Debug|Win32.Build.0 = Debug|Win32
+		{BCE81BBB-8C3B-4424-998C-72B879E4694B}.Release|Win32.ActiveCfg = Release|Win32
+		{BCE81BBB-8C3B-4424-998C-72B879E4694B}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObjectTemplate name="SignalLightUp" existenceLevel="4" viewLevel="4" objectClass="/object/SignalLight" substantial="false">
+  <attributes>
+    <IntAttribute name="state" value="0" />
+  </attributes>
+  <graphicInfo template="GrSignalLight" className="cz.ive.gui.AnimatedGraphicInfo" />
+</ObjectTemplate>
+

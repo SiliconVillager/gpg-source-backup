@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IveWorld>
+    <processTemplates>
+    <!-- Main delegated queue process -->
+    <ProcessTemplate processId="DelegatedQueue" goalId="QueueGoal" minLod="5" maxLod="5" className="cz.ive.process.CommonDelegatedProcessTemplate">
+        <sources>
+            <Slot name="actor" actor="true"/>
+            <Slot name="target"/>
+            <Slot name="next" optional="true" variable="true"/>
+        </sources>
+        <suitability>
+            <OntologyToken ontology="jBRP.expression">
+                <fuzzy value="true"/>
+            </OntologyToken>
+        </suitability>
+        <pcontext sameAsSuitability="true"/>
+        <expansion/>
+    </ProcessTemplate>
+        
+    <!-- Queue non-delegated process implementation -->
+    <ProcessTemplate processId="Queue" goalId="QueueGoal" className="cz.ive.process.NeverAtomic" minLod="4" maxLod="4">
+        <sources>
+            <Slot name="actor" actor="true"/>
+            <Slot name="target"/>
+            <Slot name="next"/>
+        </sources>
+        <suitability>
+            <OntologyToken ontology="jBRP.expression">
+                <fuzzy value="true"/>
+            </OntologyToken>
+        </suitability>
+        <pcontext sameAsSuitability="true"/>
+        <expansion>
+            <OntologyToken ontology="jBRP.expansion">
+                <Goal goalId="FollowGoal">
+                    <gtrigger>
+                        <OntologyToken ontology="jBRP.expression">
+                            <notnear obj1="actor" obj2="next"/>
+                        </OntologyToken>
+                    </gtrigger>
+                    <gcontext sameAsTrigger="true"/>
+                    <sources>
+                        <Slot name="actor" actor="true" valueFrom="actor"/>
+                        <Slot name="targetObject" valueFrom="next"/>
+                    </sources>
+                    <parameters/>
+                </Goal>
+                <Goal goalId="WaitGoal">
+                    <gtrigger>
+                        <OntologyToken ontology="jBRP.expression">
+                            <fuzzy value="true"/>
+                        </OntologyToken>
+                    </gtrigger>
+                    <gcontext sameAsTrigger="true"/>
+                    <sources>
+                        <Slot name="actor" actor="true" valueFrom="actor"/>
+                    </sources>
+                    <parameters>
+                        <Parameter name="time">
+                            <OntologyToken ontology="java.int">
+                                <Value value="1000"/>
+                            </OntologyToken>
+                        </Parameter>
+                    </parameters>
+                </Goal>
+            </OntologyToken>
+        </expansion>
+    </ProcessTemplate>
+    </processTemplates>
+</IveWorld>

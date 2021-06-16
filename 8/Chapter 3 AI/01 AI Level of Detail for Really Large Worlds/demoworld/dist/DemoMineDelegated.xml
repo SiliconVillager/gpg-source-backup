@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IveWorld >
+    
+    <!-- Core template definitions -->
+    <include url="Core.xml"/>
+    
+    <!-- Vital functions of ents -->
+    <include url="Vital.xml"/>
+    
+    <!-- Mine template definitions -->
+    
+    
+    <include url="DelegatedMine.xml"/>
+    <processTemplates>
+        <ProcessTemplate processId="MineWorkTaxi" goalId="WorkTaxiGoal" minLod="2" maxLod="2" className="cz.ive.process.NeverAtomicProcessTemplate">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="TransportGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <notin obj="actor" waypoint="mine"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="targetPosition" valueFrom="mine"/>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="WorkMineGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="miner" actor="true" valueFrom="actor"/>
+                            <Slot name="mine" valueFrom="mine"/>
+                            <!--to keep the same mine-->
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <sources>
+                <Slot name="mine"/>
+                <Slot name="actor" actor="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+        </ProcessTemplate>
+        <ProcessTemplate processId="DayPlan" goalId="DayPlanGoal" minLod="1" maxLod="1" className="cz.ive.process.NeverAtomicProcessTemplate">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <!-- used to hard-wire top level goal. comment out if you want to get real DayPlan -->
+                    <Goal goalId="WaitGoal"> <!-- For testing the MINE cleaning, turn peeDrive to TRUE -->
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzylink role="actor" attrib="peeDrive"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters>
+                            <Parameter name="time">
+                                <OntologyToken ontology="java.int">
+                                    <Value value="60000"/>
+                                </OntologyToken>
+                            </Parameter>
+                        </parameters>
+                    </Goal>
+                    <Goal goalId="WorkTaxiGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+            <sources>
+                <Slot name="actor" actor="true"/>
+            </sources>
+        </ProcessTemplate>
+    </processTemplates>
+    
+    
+    <locationTemplates>
+        <GraphLocation name="Nest" lod="2">            
+            <subLocations>
+                <Location name="Mine" template="Mine" x="0" y="0">
+                    <genies>
+                        <Genius className="cz.ive.genius.AreaGeniusImpl" geniusId="LifeGenius" >
+                            <TopLevelGoal process="DelegatedLife" goal="VitalGoal"/>
+                        </Genius>
+                        <Genius className="cz.ive.genius.MineGenius" geniusId="MineGenius" >
+                            <TopLevelGoal process="DelegatedMineWorkTaxi" goal="MineWorkTaxiGoal"/>
+                            <CleaningGoal goalId="MineCleaningTaxiGoal">
+                                <OntologyToken ontology="jBRP.expression">
+                                    <defined>
+                                        <objectlink role="miner" attrib="arm"/>
+                                    </defined>
+                                </OntologyToken>
+                            </CleaningGoal>
+                        </Genius>
+                    </genies>
+                    <placement>
+                        <ObjectPlacement objectTemplate="/person"/>
+                        <ObjectPlacement objectTemplate="/system"/>
+                    </placement>
+                </Location>
+            </subLocations>
+            <neighbours/>                
+            <influences/>
+            <objects/>
+            <inherentObjects>
+                <Object name="Miner" template="MinerEnt" number="2"/>
+            </inherentObjects>
+            <links/>
+            <graphicInfo template="GrTown"/>
+        </GraphLocation>
+    </locationTemplates>
+    
+    
+    <!-- The root of the location tree hierarchy -->
+    <rootLocation>
+        <Location name="Nest" template="Nest" x="0" y="0"/>
+    </rootLocation>
+    
+</IveWorld>

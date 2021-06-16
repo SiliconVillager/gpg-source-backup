@@ -1,0 +1,17 @@
+<genies>
+  <Genius geniusId="LifeGenius">
+    <Genius className="cz.ive.genius.AreaGeniusImpl" geniusId="LifeGenius">
+      <TopLevelGoal process="DelegatedLife" goal="VitalGoal" />
+    </Genius>
+  </Genius>
+  <Genius geniusId="ClassroomGenius">
+    <Genius className="cz.ive.genius.ClassroomGenius" geniusId="ClassroomGenius">
+      <TopLevelGoal process="DelegatedClassroom" goal="StudentClassroomGoal" />
+    </Genius>
+  </Genius>
+  <Genius geniusId="StaffroomGenius">
+    <Genius className="cz.ive.genius.StaffroomGenius" geniusId="StaffroomGenius">
+      <TopLevelGoal process="DelegatedStaffroomLife" goal="StaffroomGoal" />
+    </Genius>
+  </Genius>
+</genies>

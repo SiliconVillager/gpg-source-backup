@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EntTemplate name="MinerEnt" existenceLevel="3" viewLevel="3" className="cz.ive.iveobject.Human" objectClass="/person/Miner" substantial="true">
+  <attributes>
+    <FuzzyAttribute name="peeDrive" value="false" />
+    <FuzzyAttribute name="tiredness" value="false" />
+    <IntAttribute name="mouth" value="0" />
+    <ObjectAttribute name="arm" />
+    <FuzzyAttribute name="standing" value="true" />
+    <IntAttribute name="state" value="0" />
+    <IntAttribute name="workBegin" value="0" />
+    <IntAttribute name="workEnd" value="0" />
+    <IntAttribute name="sleepBegin" value="0" />
+    <IntAttribute name="sleepEnd" value="0" />
+    <ObjectAttribute name="address.estate" />
+    <ObjectAttribute name="address.house" />
+    <ObjectAttribute name="address.work" />
+  </attributes>
+  <sensors>
+    <Sensor name="SensorEye" template="SensorEye" minLod="1" maxLod="5" />
+  </sensors>
+  <Kind>
+    <KindItem kindValue="floor" />
+  </Kind>
+  <graphicInfo template="GrMiner" />
+  <Genius geniusId="MinerEntgenius" />
+</EntTemplate>
+

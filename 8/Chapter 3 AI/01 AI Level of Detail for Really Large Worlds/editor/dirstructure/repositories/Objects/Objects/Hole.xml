@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObjectTemplate name="Hole" existenceLevel="4" viewLevel="4" objectClass="/object/Hole" substantial="true">
+  <attributes />
+  <graphicInfo template="GrHole" />
+</ObjectTemplate>
+

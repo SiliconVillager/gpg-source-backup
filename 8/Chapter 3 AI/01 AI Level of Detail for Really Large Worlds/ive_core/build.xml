@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='us-ascii'?>
+<project basedir="." default="dist" name="IVE">
+  <description>Intelligent Virtual Environment</description>
+
+  <property name="src" location="./src"/>
+  <property name="res" location="./resources"/>
+  <property name="build" location="./build"/>
+  <property name="classes" location="./build/classes"/>
+  <property name="dist" location="./dist"/>
+  <property name="javadoc" location="./dist/javadoc/"/>
+
+  <target name="initDirs">
+  	<mkdir dir="${build}"/>
+  	<mkdir dir="${classes}"/>
+  	<mkdir dir="${dist}"/>
+  	<mkdir dir="${javadoc}"/>
+  </target>
+  
+  <target name="compile" description="Compiles kernel sources">
+  	<mkdir dir="${build}"/>
+  	<mkdir dir="${classes}"/>
+    <depend srcdir="${src}"
+            destdir="${classes}"
+            cache="${build}/depcache"
+            closure="yes"/>
+    <javac srcdir="${src}" destdir="${classes}">
+    </javac>
+  </target>
+ 
+  <target name="dist" depends="compile,javadoc">
+      <mkdir dir="${dist}"/>
+      <jar destfile="${dist}/ive_core.jar">
+           <fileset dir="${classes}"/>
+           <fileset dir="${res}"/>
+           <manifest>
+                <attribute name="Main-Class" value="cz.ive.IveExecutor"/>
+           </manifest>
+      </jar>
+  </target>
+  
+  <target name="clean" description="Deletes .class files">
+    <delete dir="${classes}"/>
+    <delete dir="${build}"/>
+  </target>
+ 
+  <target name="totalclean" description="Deletes .class files" depends="clean">
+    <delete dir="${dist}"/>
+  </target>
+
+  <target name="javadoc" description="Creates IVE Javadocs">
+	<mkdir dir="${javadoc}"/>
+        <javadoc 
+            destdir="${javadoc}"
+            additionalparam="-private">
+            <fileset dir="${src}/" includes="**/*.java" />
+        </javadoc>
+    </target>
+
+</project>

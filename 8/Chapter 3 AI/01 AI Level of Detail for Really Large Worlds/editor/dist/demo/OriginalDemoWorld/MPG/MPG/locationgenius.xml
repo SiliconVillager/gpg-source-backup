@@ -1,0 +1,58 @@
+<genies>
+  <Genius geniusId="LifeGenius">
+    <Genius className="cz.ive.genius.AreaGeniusImpl" geniusId="LifeGenius">
+      <TopLevelGoal process="DelegatedLife" goal="VitalGoal" />
+    </Genius>
+  </Genius>
+  <Genius geniusId="BarGenius">
+    <Genius className="cz.ive.genius.BarGenius" geniusId="BarGenius">
+      <TopLevelGoal process="DelegatedBarJoy" goal="BarJoyGoal" />
+      <CleaningGoal goalId="PubCleaningTaxiGoal">
+        <OntologyToken ontology="jBRP.expression">
+          <defined>
+            <objectlink role="actor" attrib="arm" />
+          </defined>
+        </OntologyToken>
+      </CleaningGoal>
+    </Genius>
+  </Genius>
+  <Genius geniusId="BarWorkGenius">
+    <Genius className="cz.ive.genius.BarWorkGenius" geniusId="BarWorkGenius">
+      <TopLevelGoal process="DelegatedBarWork" goal="BarWorkGoal" />
+      <CleaningGoal goalId="PubCleaningTaxiGoal">
+        <OntologyToken ontology="jBRP.expression">
+          <defined>
+            <objectlink role="actor" attrib="arm" />
+          </defined>
+        </OntologyToken>
+      </CleaningGoal>
+    </Genius>
+  </Genius>
+  <Genius geniusId="QueueGenius">
+    <Genius className="cz.ive.genius.QueueGenius" geniusId="QueueGenius">
+      <TopLevelGoal process="DelegatedQueueBeer" goal="QueueGoal" />
+    </Genius>
+  </Genius>
+  <Genius geniusId="BallroomGenius">
+    <Genius className="cz.ive.genius.BallroomGenius" geniusId="BallroomGenius">
+      <TopLevelGoal process="DelegatedBallroomJoy" goal="BallroomJoyGoal" />
+    </Genius>
+  </Genius>
+  <Genius geniusId="MineGenius">
+    <Genius className="cz.ive.genius.MineGenius" geniusId="MineGenius">
+      <TopLevelGoal process="DelegatedMineWorkTaxi" goal="MineWorkTaxiGoal" />
+      <CleaningGoal goalId="MineCleaningTaxiGoal">
+        <OntologyToken ontology="jBRP.expression">
+          <defined>
+            <objectlink role="miner" attrib="arm" />
+          </defined>
+        </OntologyToken>
+      </CleaningGoal>
+    </Genius>
+  </Genius>
+  <Genius geniusId="PubGenius">
+    <Genius className="cz.ive.genius.PubGenius" geniusId="PubGenius">
+      <TopLevelGoal process="DelegatedJoyTaxi" goal="PubJoyTaxiGoal" />
+    </Genius>
+  </Genius>
+</genies>

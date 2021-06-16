@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IveWorld >
+    <graphicTemplates>
+        <GraphicTemplate name="GrFlower" src="cz/ive/resources/images/flower.gif" center_x="16" center_y="32"/>
+        <GraphicTemplate name="GrEstate" src="cz/ive/resources/images/houses.gif" center_x="48" center_y="48"/>
+        <GraphicTemplate name="GrHouse" src="cz/ive/resources/images/house.gif" center_x="32" center_y="32"/>
+        <GraphicTemplate name="GrBed" src="cz/ive/resources/images/bed.gif" center_x="16" center_y="16"/>
+    </graphicTemplates>
+    <utterances>
+        <Utterance text="Zzzz..." index="201"/>
+    </utterances>
+    <objectTemplates>
+        <ObjectTemplate name="Bed" existenceLevel="5" viewLevel="5" objectClass="/object/mount/Bed" substantial="true">
+            <graphicInfo template="GrBed"/>
+            <attributes>
+                <FuzzyAttribute name="empty" value="true"/>
+            </attributes>
+            <links>
+                <Link goal="*" process="*" slot="bed"/>
+                <Link goal="MountGoal" process="Mount" slot="to"/>
+            </links>
+        </ObjectTemplate>
+        <ObjectTemplate name="HomeFlower" existenceLevel="5" viewLevel="5" objectClass="/object/Flower" substantial="true">
+            <graphicInfo template="GrFlower"/>
+        </ObjectTemplate>
+    </objectTemplates>
+    <locationTemplates>
+        <!-- House-1 GridLocations at LOD 4 -->
+        <GridLocation name="House1" height="7" width="8" lod="4" className="cz.ive.location.HouseLocation">
+            <links>
+                <Link goal="*" process="*" slot="house"/>
+            </links>
+            <inherentObjects>
+                <Object name="Closet" template="Closet"/>
+                <Object name="Bed" template="Bed" number="2"/>
+                <Object name="Flower" template="HomeFlower" number="1"/>
+            </inherentObjects>
+            <Kind>
+                <KindItem kindValue="floor"/>
+            </Kind>
+            <graphicInfo template="GrHouse"/>
+            <subLocations>
+                <defaultGraphicInfo template="GrWoodenFloor"/>
+                <defaultKind>
+                    <Kind>
+                        <KindItem kindValue="floor"/>
+                    </Kind>
+                </defaultKind>
+                <!-- North wall -->
+                <rectangle x="1" y="1" x2="8">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrWall"/>
+                </rectangle>
+                
+                <!-- East wall -->
+                <rectangle x="8" y="2" y2="6">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrWall"/>
+                </rectangle>
+                
+                <!-- South wall -->
+                <rectangle x="1" y="7" x2="8">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrWall"/>
+                </rectangle>
+                
+                <!-- West wall -->
+                <rectangle x="1" y="2" y2="6">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrWall"/>
+                </rectangle>
+                <rectangle x="1" y="4">
+                    <Kind>
+                        <KindItem kindValue="floor"/>
+                    </Kind>
+                    <graphicInfo template="GrWoodenFloor"/>
+                </rectangle>
+                
+                <!-- Windows -->
+                <rectangle x="4" y="1">
+                    <graphicInfo template="GrWindow"/>
+                </rectangle>
+                
+                <!--Toilet -->
+                <rectangle x="6" y="2" y2="3">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrWall"/>
+                </rectangle>
+                <rectangle x="7" y="2" y2="3">
+                    <graphicInfo template="GrToiletFloor"/>
+                </rectangle>
+                <rectangle x="7" y="2">                    
+                    <ObjectPlacement objectTemplate="/object/Closet"/>
+                </rectangle>
+                <rectangle x="1" y="1">                
+                    <ObjectPlacement objectTemplate="/system"/>
+                </rectangle>
+                
+                <rectangle x="2" y="2">
+                    <ObjectPlacement objectTemplate="/object/mount/Bed"/>
+                </rectangle>
+                <rectangle x="2" y="6">
+                    <ObjectPlacement objectTemplate="/object/mount/Bed"/>
+                </rectangle>
+                <rectangle x="7" y="6">
+                    <ObjectPlacement objectTemplate="/object/Flower"/>
+                </rectangle>
+                <rectangle x="2" y="3" x2="5" y2="5">
+                    <ObjectPlacement objectTemplate="/person"/>
+                </rectangle>
+            </subLocations>            
+        </GridLocation>
+        
+        <GridLocation name="House2" height="7" width="8" lod="4" className="cz.ive.location.HouseLocation">
+            <links>
+                <Link goal="*" process="*" slot="house"/>
+            </links>
+            <inherentObjects>
+                <Object name="Closet" template="Closet"/>
+                <Object name="Bed" template="Bed" number="2"/>
+                <Object name="Flower" template="HomeFlower" number="1"/>
+            </inherentObjects>
+            <Kind>
+                <KindItem kindValue="floor"/>
+            </Kind>
+            <graphicInfo template="GrHouse"/>
+            <subLocations>
+                <defaultGraphicInfo template="GrWoodenFloor"/>
+                <defaultKind>
+                    <Kind>
+                        <KindItem kindValue="floor"/>
+                    </Kind>
+                </defaultKind>
+                <!-- North wall -->
+                <rectangle x="1" y="1" x2="8">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrWall"/>
+                </rectangle>
+                <rectangle x="4" y="1">
+                    <Kind>
+                        <KindItem kindValue="floor"/>
+                    </Kind>
+                    <graphicInfo template="GrWoodenFloor"/>
+                </rectangle>
+                
+                <!-- East wall -->
+                <rectangle x="8" y="2" y2="6">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrWall"/>
+                </rectangle>
+                
+                <!-- South wall -->
+                <rectangle x="1" y="7" x2="8">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrWall"/>
+                </rectangle>
+                
+                <!-- West wall -->
+                <rectangle x="1" y="2" y2="6">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrWall"/>
+                </rectangle>
+                
+                <!--Toilet -->
+                <rectangle x="6" y="2" y2="3">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrWall"/>
+                </rectangle>
+                <rectangle x="7" y="2" y2="3">
+                    <graphicInfo template="GrToiletFloor"/>
+                </rectangle>
+                <rectangle x="7" y="2">                    
+                    <ObjectPlacement objectTemplate="/object/Closet"/>
+                </rectangle>
+                <rectangle x="1" y="1">                
+                    <ObjectPlacement objectTemplate="/system"/>
+                </rectangle>
+                
+                <rectangle x="2" y="2">
+                    <ObjectPlacement objectTemplate="/object/mount/Bed"/>
+                </rectangle>
+                <rectangle x="2" y="6">
+                    <ObjectPlacement objectTemplate="/object/mount/Bed"/>
+                </rectangle>
+                <rectangle x="7" y="6">
+                    <ObjectPlacement objectTemplate="/object/Flower"/>
+                </rectangle>
+                <rectangle x="2" y="3" x2="5" y2="5">
+                    <ObjectPlacement objectTemplate="/person"/>
+                </rectangle>
+            </subLocations>            
+        </GridLocation>
+        
+        <GridLocation name="House3" height="7" width="8" lod="4" className="cz.ive.location.HouseLocation">
+            <links>
+                <Link goal="*" process="*" slot="house"/>
+            </links>
+            <inherentObjects>
+                <Object name="Closet" template="Closet"/>
+                <Object name="Bed" template="Bed" number="2"/>
+                <Object name="Flower" template="HomeFlower" number="1"/>
+            </inherentObjects>
+            <Kind>
+                <KindItem kindValue="floor"/>
+            </Kind>
+            <graphicInfo template="GrHouse"/>
+            <subLocations>
+                <defaultGraphicInfo template="GrWoodenFloor"/>
+                <defaultKind>
+                    <Kind>
+                        <KindItem kindValue="floor"/>
+                    </Kind>
+                </defaultKind>
+                <!-- North wall -->
+                <rectangle x="1" y="1" x2="8">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrWall"/>
+                </rectangle>
+                
+                <!-- East wall -->
+                <rectangle x="8" y="2" y2="6">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrWall"/>
+                </rectangle>
+                
+                <!-- South wall -->
+                <rectangle x="1" y="7" x2="8">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrWall"/>
+                </rectangle>
+                <rectangle x="4" y="7">
+                    <Kind>
+                        <KindItem kindValue="floor"/>
+                    </Kind>
+                    <graphicInfo template="GrWoodenFloor"/>
+                </rectangle>
+                
+                <!-- West wall -->
+                <rectangle x="1" y="2" y2="6">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrWall"/>
+                </rectangle>
+                
+                <!-- Windows -->
+                <rectangle x="4" y="1">
+                    <graphicInfo template="GrWindow"/>
+                </rectangle>
+                
+                <!--Toilet -->
+                <rectangle x="6" y="2" y2="3">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrWall"/>
+                </rectangle>
+                <rectangle x="7" y="2" y2="3">
+                    <graphicInfo template="GrToiletFloor"/>
+                </rectangle>
+                <rectangle x="7" y="2">                    
+                    <ObjectPlacement objectTemplate="/object/Closet"/>
+                </rectangle>
+                <rectangle x="1" y="1">                
+                    <ObjectPlacement objectTemplate="/system"/>
+                </rectangle>
+                
+                <rectangle x="2" y="2">
+                    <ObjectPlacement objectTemplate="/object/mount/Bed"/>
+                </rectangle>
+                <rectangle x="2" y="6">
+                    <ObjectPlacement objectTemplate="/object/mount/Bed"/>
+                </rectangle>
+                <rectangle x="7" y="6">
+                    <ObjectPlacement objectTemplate="/object/Flower"/>
+                </rectangle>
+                <rectangle x="2" y="3" x2="5" y2="5">
+                    <ObjectPlacement objectTemplate="/person"/>
+                </rectangle>
+            </subLocations>            
+        </GridLocation>
+        
+        <!-- Estate GraphLocation at LOD 3 -->
+        <GraphLocation name="Estate" lod="3" className="cz.ive.location.EstateLocation">
+            <links>
+                <Link goal="*" process="*" slot="estate"/>
+            </links>
+            <inherentObjects/>
+            <subLocations>
+                <Location name="Yard" template="Yard" x="0" y="0">
+                    <placement>
+                        <ObjectPlacement objectTemplate="/system"/>
+                        <ObjectPlacement objectTemplate="/person"/>
+                    </placement>
+                </Location>
+                <Location name="House1" template="House1" x="30" y="0">
+                    <placement>
+                        <ObjectPlacement objectTemplate="/system"/>
+                    </placement>
+                </Location>
+                <Location name="House2" template="House2" x="0" y="30">
+                    <placement>
+                        <ObjectPlacement objectTemplate="/system"/>
+                    </placement>
+                </Location>
+                <Location name="House3" template="House3" x="0" y="-30">
+                    <placement>
+                        <ObjectPlacement objectTemplate="/system"/>
+                    </placement>
+                </Location>
+            </subLocations>
+            <neighbours>
+                <!-- LOD 4 -->
+                <Joint first="Yard" second="House1" dx="10" dy="0"/>
+                <Joint first="Yard" second="House2" dx="0" dy="10"/>
+                <Joint first="Yard" second="House3" dx="0" dy="-10"/>
+                <!-- LOD 5 -->
+                <Joint first="Yard.wp_30_15" second="House1.wp_1_4" dx="2" dy="0"/>
+                <Joint first="Yard.wp_15_30" second="House2.wp_4_1" dx="0" dy="2"/>
+                <Joint first="Yard.wp_15_1" second="House3.wp_4_7" dx="0" dy="-2"/>
+            </neighbours>
+            <influences/>
+            <Kind>
+                <KindItem kindValue="floor"/>
+            </Kind>
+            <graphicInfo template="GrEstate"/>
+        </GraphLocation>
+    </locationTemplates>
+    
+    <processTemplates>
+        <!-- Estate specific processes -->        
+        <ProcessTemplate processId="SleepEstateTaxi" goalId="SleepTaxiGoal" minLod="2" maxLod="2" className="cz.ive.process.SleepAtomic">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="TransportGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <notin obj="actor" waypoint="estate"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="targetPosition" valueFrom="estate"/>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="SleepEstateGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>                            
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <sources>
+                <Slot name="estate"/>
+                <Slot name="actor" actor="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <eq>
+                        <objectlink role="actor" attrib="address.estate"/>
+                        <source role="estate"/>
+                    </eq>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+        </ProcessTemplate>
+        
+        <ProcessTemplate processId="SleepEstate" goalId="SleepEstateGoal" minLod="3" maxLod="3" className="cz.ive.process.SleepAtomic">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="SleepHouseTaxiGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>                            
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <sources>
+                <Slot name="actor" actor="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+        </ProcessTemplate>
+
+        <ProcessTemplate processId="SleepHouseTaxi" goalId="SleepHouseTaxiGoal" minLod="3" maxLod="3" className="cz.ive.process.NeverAtomicProcessTemplate">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="TransportGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <notin obj="actor" waypoint="house"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="targetPosition" valueFrom="house"/>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="SleepHouseGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <sources>                
+                <Slot name="actor" actor="true"/>
+                <Slot name="house"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <eq>
+                        <objectlink role="actor" attrib="address.house"/>
+                        <source role="house"/>
+                    </eq>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+        </ProcessTemplate>
+
+        <ProcessTemplate processId="SleepHouse" goalId="SleepHouseGoal" minLod="4" maxLod="4" className="cz.ive.process.SleepAtomic">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="PeeTaxiGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzylink role="actor" attrib="peeDrive"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="LayTaxiGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzylink role="actor" attrib="standing"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="SayGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters>
+                            <Parameter name="sentence">
+                                <OntologyToken ontology="java.int" >
+                                    <Value value="201"/>
+                                </OntologyToken>
+                            </Parameter>
+                        </parameters>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <sources>
+                <Slot name="actor" actor="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+        </ProcessTemplate>
+
+        <ProcessTemplate processId="LayTaxi" goalId="LayTaxiGoal" minLod="4" maxLod="4" className="cz.ive.process.NeverAtomicProcessTemplate">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="FollowGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <and>
+                                    <fuzzylink role="actor" attrib="standing"/>
+                                    <notnear obj1="actor" obj2="bed"/>
+                                </and>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="targetObject" valueFrom="bed"/>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="MountGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzylink role="actor" attrib="standing"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                            <Slot name="to" valueFrom="bed"/>
+                        </sources>
+                        <parameters>
+                            <Parameter name="state">
+                                <OntologyToken ontology="java.int" >
+                                    <Value value="1"/>
+                                </OntologyToken>
+                            </Parameter>
+                        </parameters>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <sources>
+                <Slot name="actor" actor="true"/>
+                <Slot name="bed"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzylink role="bed" attrib="empty"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+        </ProcessTemplate>
+    </processTemplates>
+</IveWorld>

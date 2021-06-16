@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IveWorld >
+    
+    <!-- Core graphics -->
+    <graphicTemplates>
+        <GraphicTemplate name="GrEye" src="cz/ive/resources/images/eye2.gif" center_x="8" center_y="8"/>
+        <AnimatedGraphicTemplate name="GrMiner" frameAttribute="state">
+            <image src="cz/ive/resources/images/miner.gif" center_x="16" center_y="32"/>
+            <image src="cz/ive/resources/images/miner-sleep.gif" center_x="16" center_y="16"/>
+            <image src="cz/ive/resources/images/miner-s.gif" center_x="20" center_y="36"/>
+            <image src="cz/ive/resources/images/miner-d-1.gif" center_x="16" center_y="32"/>
+            <image src="cz/ive/resources/images/miner-d-2.gif" center_x="16" center_y="32"/>
+            <image src="cz/ive/resources/images/miner-d-3.gif" center_x="16" center_y="34"/>
+        </AnimatedGraphicTemplate>
+        <GraphicTemplate name="GrGrass" src="cz/ive/resources/images/grass.gif" center_x="16" center_y="16"/>
+        <GraphicTemplate name="GrFlower2" src="cz/ive/resources/images/flower2.gif" center_x="24" center_y="32"/>
+        <GraphicTemplate name="GrPalmI" src="cz/ive/resources/images/palm.gif" center_x="24" center_y="32"/>
+        <GraphicTemplate name="GrPalmII" src="cz/ive/resources/images/palm2.gif" center_x="24" center_y="32"/>
+        <GraphicTemplate name="GrHoldback" src="cz/ive/resources/images/holdback.gif" center_x="16" center_y="32"/>
+        <GraphicTemplate name="GrYard" src="cz/ive/resources/images/grass.gif" center_x="16" center_y="16"/>
+        <GraphicTemplate name="GrWall" src="cz/ive/resources/images/wall.gif" center_x="16" center_y="16"/>
+        <GraphicTemplate name="GrWoodenFloor" src="cz/ive/resources/images/floor_pub.gif" center_x="16" center_y="16"/>
+        <GraphicTemplate name="GrEmpty" src="cz/ive/resources/images/empty.gif" center_x="16" center_y="16"/>
+        <GraphicTemplate name="GrWindow" src="cz/ive/resources/images/window.gif" center_x="16" center_y="16"/>
+        <GraphicTemplate name="GrToilet" src="cz/ive/resources/images/toilet_door.gif" center_x="37" center_y="40"/>
+        <GraphicTemplate name="GrToiletFloor" src="cz/ive/resources/images/floor_toilet.gif" center_x="16" center_y="16"/>
+        <GraphicTemplate name="GrCloset" src="cz/ive/resources/images/closet.gif" center_x="16" center_y="16"/>
+    </graphicTemplates>
+    
+    <locationTemplates>
+        <!-- Yard GridLocations at LOD 4 -->
+        <GridLocation name="Yard" height="30" width="30" lod="4">
+            <links/>
+            <objects/>
+            <inherentObjects>
+                <Object name="Flower" template="Flower" number="7"/>
+                <Object name="PalmI" template="PalmI" number="7"/>
+                <Object name="PalmII" template="PalmII" number="7"/>
+            </inherentObjects>
+            <subLocations>
+                <defaultGraphicInfo template="GrGrass"/>
+                <defaultKind>
+                    <Kind>
+                        <KindItem kindValue="floor"/>
+                    </Kind>
+                </defaultKind>
+                <rectangle x="1" y="1">
+                    <ObjectPlacement objectTemplate="/system"/>
+                </rectangle>
+                <rectangle x="2" y="2" x2="29" y2="29">
+                    <ObjectPlacement objectTemplate="/"/>
+                </rectangle>
+            </subLocations>
+            <Kind>
+                <KindItem kindValue="floor"/>
+            </Kind>
+            <graphicInfo template="GrYard"/>
+        </GridLocation>
+    </locationTemplates>
+    
+    <!-- Core objects -->
+    <objectTemplates>
+        <ObjectTemplate name="SensorEye" existenceLevel="3" viewLevel="3" className="cz.ive.sensors.SensorEye" objectClass="/sensor/Eye">
+            <graphicInfo template="GrEye"/>
+        </ObjectTemplate>
+        <ObjectTemplate name="SensorKnowledge" existenceLevel="4" viewLevel="4" className="cz.ive.sensors.SensorEye" objectClass="/sensor/Knowledge">
+            <graphicInfo template="GrEye"/>
+        </ObjectTemplate>
+        <ObjectTemplate name="Holdback" existenceLevel="1" viewLevel="1" objectClass="/system/Holdback">
+            <graphicInfo template="GrHoldback"/>
+        </ObjectTemplate>
+        <ObjectTemplate name="Flower" existenceLevel="5" viewLevel="5" objectClass="/object/Flower" substantial="true">
+            <graphicInfo template="GrFlower2"/>
+        </ObjectTemplate>
+        <ObjectTemplate name="PalmI" existenceLevel="5" viewLevel="5" objectClass="/object/Palm" substantial="true">
+            <graphicInfo template="GrPalmI"/>
+        </ObjectTemplate>
+        <ObjectTemplate name="PalmII" existenceLevel="5" viewLevel="5" objectClass="/object/Palm" substantial="true">
+            <graphicInfo template="GrPalmII"/>
+        </ObjectTemplate>
+        <ObjectTemplate name="Person" existenceLevel="3" viewLevel="3" objectClass="/person" substantial="true">
+            <links>
+                <Link goal="DayPlanGoal" process="*" slot="actor"/>
+                <Link goal="SleepTaxiGoal" process="*" slot="actor"/>
+                <Link goal="SleepEstateGoal" process="*" slot="actor"/>
+                <Link goal="SleepHouseTaxiGoal" process="*" slot="actor"/>
+                <Link goal="SleepHouseGoal" process="*" slot="actor"/>
+                <Link goal="LayTaxiGoal" process="*" slot="actor"/>
+                <Link goal="SitDownTaxiGoal" process="*" slot="actor"/>
+                <Link goal="SitDownGoal" process="*" slot="actor"/>
+                <Link goal="StandUpGoal" process="*" slot="actor"/>
+                <Link goal="SayGoal" process="*" slot="actor"/>
+                <Link goal="MountGoal" process="*" slot="actor"/>
+                <Link goal="FollowGoal" process="*" slot="actor"/>
+                <Link goal="DropGlassGoal" process="*" slot="actor"/>
+                
+                <Link goal="ToiletTaxiGoal" process="*" slot="actor"/>
+                <Link goal="ToiletGoal" process="*" slot="actor"/>
+                <Link goal="PeeTaxiGoal" process="*" slot="actor"/>
+                <Link goal="PeeGoal" process="*" slot="actor"/>
+                
+                <Link goal="LifeGoal" process="*" slot="actor"/>
+                <Link goal="VitalGoal" process="*" slot="actor"/>
+                <Link goal="WaitGoal" process="*" slot="actor"/>
+                <Link goal="*" process="Panic" slot="actor"/>
+                
+                <Link goal="*" process="Queue" slot="next"/>
+            </links>
+            <sensors>
+                <Sensor name="Topography" template="SensorEye" minLod="2" maxLod="3"/>
+                <Sensor name="Architecture" template="SensorEye" minLod="3" maxLod="4"/>
+                <Sensor name="Eye" template="SensorEye" minLod="4" maxLod="5"/>
+            </sensors>
+            <attributes>
+
+                <FuzzyAttribute name="peeDrive"   value="false"/>
+                <FuzzyAttribute name="tiredness"  value="false"/>
+                <IntAttribute   name="mouth" value="0"/>
+                <ObjectAttribute name="arm"/>
+                <FuzzyAttribute name="standing"   value="true"/>
+                <IntAttribute   name="state"      value="0"/>
+            </attributes>
+        </ObjectTemplate>
+        <EntTemplate name="MinerEnt" existenceLevel="3" viewLevel="3" objectClass="/person/Miner" substantial="true" template="Person" className="cz.ive.iveobject.Human">
+            <links>
+                <Link goal="*" process="*" slot="miner"/>
+                <Link goal="ExchangeGoal" process="*" slot="actor"/>
+                <Link goal="ExchangeGoal" process="*" slot="who"/>
+                <Link goal="*" process="*" slot="guest"/>
+                <!-- Common -->
+                
+                <Link goal="MinerDanceGoal" process="*" slot="actor"/>
+                
+                
+                <Link goal="WorkTaxiGoal" process="MineWorkTaxi" slot="actor"/>
+                <Link goal="JoyTaxiGoal" process="*" slot="actor"/>
+                <Link goal="BarJoyGoal" process="*" slot="actor"/>
+                
+                <Link goal="PubCleaningTaxiGoal" process="*" slot="actor"/>
+                <Link goal="PubCleaningGoal" process="*" slot="actor"/>
+                
+            </links>
+            <sensors>
+            </sensors>
+            <attributes>
+                <IntAttribute   name="workBegin"  value="0"/>
+                <IntAttribute   name="workEnd"    value="0"/>
+                <IntAttribute   name="sleepBegin" value="0"/>
+                <IntAttribute   name="sleepEnd"   value="0"/>
+                
+                <ObjectAttribute   name="address.estate" />
+                <ObjectAttribute   name="address.house"  />
+                <ObjectAttribute   name="address.work"  />
+                
+            </attributes>
+            <graphicInfo template="GrMiner"/>
+            <Kind>
+                <KindItem kindValue="floor"/>
+            </Kind>
+            <Genius>
+                <TopLevelGoal goalId="DayPlanGoal"/>
+                <TopLevelGoal goalId="LifeGoal"/>
+            </Genius>
+        </EntTemplate>
+        
+        <ObjectTemplate name="Closet" existenceLevel="5" viewLevel="5" objectClass="/object/Closet" substantial="true">
+            <graphicInfo template="GrCloset"/>
+            <attributes>
+                <FuzzyAttribute name="empty" value="true"/>
+            </attributes>
+            <links>
+                <Link goal="*" process="*" slot="pissoir"/>
+                <Link goal="*" process="*" slot="targetObject"/>
+            </links>
+        </ObjectTemplate>
+
+    </objectTemplates>
+    
+    <!-- Core processes -->
+    <processTemplates>
+
+        
+        <ProcessTemplate processId="Wait" goalId="WaitGoal" minLod="1" maxLod="5" className="cz.ive.process.Wait">
+            <expansion/>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </pcontext>
+            <sources>
+                <Slot name="actor" actor="true"/>
+            </sources>
+        </ProcessTemplate>
+        <ProcessTemplate processId="Step" goalId="MoveGoal" minLod="2" maxLod="2" className="cz.ive.process.Step">
+            <expansion/>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </pcontext>
+            <sources>
+                <Slot name="actor" actor="true"/>
+                <Slot name="targetPosition" optional="true" variable="true"/>
+            </sources>
+        </ProcessTemplate>
+        <ProcessTemplate processId="Transport" goalId="TransportGoal" minLod="1" maxLod="1" className="cz.ive.process.NeverAtomicProcessTemplate">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="MoveGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="java.class" >
+                                <Value value="cz.ive.trigger.MoveGoalTriggerTemplate"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gcontext>
+                        <sources>
+                            <Slot name="targetPosition" valueFrom="targetPosition"/>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <or>
+                        <not>
+                            <defined>
+                                <fuzzylink role="actor" attrib="standing"/> 
+                            </defined>
+                        </not>
+                        <fuzzylink role="actor" attrib="standing"/> 
+                    </or>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+            <sources>
+                <Slot name="actor" actor="true"/>
+                <Slot name="targetPosition" optional="true" variable="true"/>
+            </sources>
+        </ProcessTemplate>
+        <ProcessTemplate processId="BeforeTransport" goalId="TransportGoal" minLod="1" maxLod="1" className="cz.ive.process.NeverAtomicProcessTemplate">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="StandUpGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <not>
+                        <fuzzylink role="actor" attrib="standing"/> 
+                    </not>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+            <sources>
+                <Slot name="actor" actor="true"/>
+                <Slot name="targetPosition" optional="true" variable="true"/>
+            </sources>
+        </ProcessTemplate>
+        <ProcessTemplate processId="HuntingStep" goalId="HuntGoal" minLod="2" maxLod="2" className="cz.ive.process.HuntingStep">
+            <expansion/>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </pcontext>
+            <sources>
+                <Slot name="actor" actor="true"/>
+                <Slot name="targetObject"/>
+                <Slot name="targetPosition" optional="true" variable="true"/>
+            </sources>
+        </ProcessTemplate>
+        <ProcessTemplate processId="Follow" goalId="FollowGoal" minLod="1" maxLod="1" className="cz.ive.process.FollowProcessTemplate">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="HuntGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="java.class">
+                                 <Value value="cz.ive.trigger.HuntGoalTriggerTemplate"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gcontext>
+                        <sources>
+                            <Slot name="targetObject" valueFrom="targetObject"/>
+                            <!-- targetPosition slot is generated automatically by FollowProcessTemplate -->
+                            <Slot name="targetPosition" valueFrom="targetPosition"/> 
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <or>
+                        <not>
+                            <defined>
+                                <fuzzylink role="actor" attrib="standing"/> 
+                            </defined>
+                        </not>
+                        <fuzzylink role="actor" attrib="standing"/> 
+                    </or>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+            <sources>
+                <Slot name="actor" actor="true"/>
+                <Slot name="targetObject" variable="true"/>
+            </sources>
+        </ProcessTemplate>
+        <ProcessTemplate processId="BeforeFollow" goalId="FollowGoal" minLod="1" maxLod="1" className="cz.ive.process.FollowProcessTemplate">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="StandUpGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <not>
+                        <fuzzylink role="actor" attrib="standing"/> 
+                    </not>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+            <sources>
+                <Slot name="actor" actor="true"/>
+                <Slot name="targetObject" variable="true"/>
+            </sources>
+        </ProcessTemplate>
+        <ProcessTemplate processId="Panic" goalId="PanicGoal" minLod="1" maxLod="5" className="cz.ive.process.Panic">
+            <expansion/>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </pcontext>
+            <sources>
+                <Slot name="actor" actor="true"/>
+            </sources>
+        </ProcessTemplate>
+        <ProcessTemplate processId="Exchange" goalId="ExchangeGoal"  className="cz.ive.process.Exchange" minLod="4" maxLod="5">
+            <sources>
+                <Slot name="actor" actor="true"/>
+                <Slot name="who"/>
+                <Slot name="offer" optional="true" variable="true"/>
+                <Slot name="accept" optional="true" variable="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+            <expansion/>
+        </ProcessTemplate>
+        <ProcessTemplate processId="Say" goalId="SayGoal" minLod="1" maxLod="5" className="cz.ive.process.Say">
+            <expansion/>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </pcontext>
+            <sources>
+                <Slot name="actor" actor="true"/>
+            </sources>
+        </ProcessTemplate>
+        <ProcessTemplate processId="StandUp" goalId="StandUpGoal"  className="cz.ive.process.Unmount" minLod="1" maxLod="5">
+            <sources>
+                <Slot name="actor" actor="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+            <expansion/>
+        </ProcessTemplate>
+        <ProcessTemplate processId="Mount" goalId="MountGoal"  className="cz.ive.process.Mount" minLod="1" maxLod="5">
+            <sources>
+                <Slot name="actor" actor="true"/>
+                <Slot name="to"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+            <expansion/>
+        </ProcessTemplate>
+    </processTemplates>
+</IveWorld>

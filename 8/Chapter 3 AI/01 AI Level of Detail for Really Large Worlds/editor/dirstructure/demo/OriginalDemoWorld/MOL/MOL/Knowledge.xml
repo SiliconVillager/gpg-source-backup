@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Sensor>
+  <ObjectTemplate name="Knowledge" existenceLevel="4" viewLevel="4" className="cz.ive.sensors.SensorEye" objectClass="/sensor/Knowledge" substantial="false">
+    <attributes />
+    <graphicInfo template="GrEye" />
+  </ObjectTemplate>
+  <Sensor name="Knowledge" template="Knowledge" minLod="3" maxLod="5" />
+</Sensor>
+

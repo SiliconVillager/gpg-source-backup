@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObjectTemplate name="ComputerTable" existenceLevel="5" viewLevel="5" objectClass="/object/table/computer" substantial="true">
+  <attributes />
+  <graphicInfo template="GrComputerTable" />
+</ObjectTemplate>
+

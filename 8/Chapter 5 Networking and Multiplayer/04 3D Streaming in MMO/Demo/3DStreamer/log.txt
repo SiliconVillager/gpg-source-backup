@@ -1,0 +1,5 @@
+Application initiated
+Could not load minimap.dds
+Could not load grass.dds
+Could not load stone.jpg
+Could not load snow.dds

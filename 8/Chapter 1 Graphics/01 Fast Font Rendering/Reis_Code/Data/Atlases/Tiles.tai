@@ -1,0 +1,29 @@
+# Atlases\Tiles.tai
+# AtlasCreationTool.exe -nomipmap -halftexel -width 2048 -height 2048 -o Atlases\Tiles
+#
+# <filename>		<atlas filename>, <atlas idx>, <atlas type>, <woffset>, <hoffset>, <depth offset>, <width>, <height>
+#
+# Texture <filename> can be found in texture atlas <atlas filename>, i.e., 
+# Atlases\Tiles<idx>.dds of <atlas type> type with texture coordinates boundary given by:
+#   A = ( <woffset>, <hoffset> )
+#   B = ( <woffset> + <width>, <hoffset> + <height> )
+#
+# where coordinates (0,0) and (1,1) of the original texture map correspond
+# to coordinates A and B, respectively, in the texture atlas.
+# If the atlas is a volume texture then <depth offset> is the w-coordinate
+# to use the access the appropriate slice in the volume atlas.
+
+Roads\road_ne_2.tga		Atlases\Tiles0.dds, 0, 2D, 0.000244, 0.000244, 0.000000, 0.249512, 0.249512
+Roads\road_nes_7.tga		Atlases\Tiles0.dds, 0, 2D, 0.250244, 0.000244, 0.000000, 0.249512, 0.249512
+Roads\road_nesw_10.tga		Atlases\Tiles0.dds, 0, 2D, 0.500244, 0.000244, 0.000000, 0.249512, 0.249512
+Roads\road_ns_0.tga		Atlases\Tiles0.dds, 0, 2D, 0.750244, 0.000244, 0.000000, 0.249512, 0.249512
+Roads\road_nw_3.tga		Atlases\Tiles0.dds, 0, 2D, 0.000244, 0.250244, 0.000000, 0.249512, 0.249512
+Roads\road_nws_6.tga		Atlases\Tiles0.dds, 0, 2D, 0.250244, 0.250244, 0.000000, 0.249512, 0.249512
+Roads\road_se_4.tga		Atlases\Tiles0.dds, 0, 2D, 0.500244, 0.250244, 0.000000, 0.249512, 0.249512
+Roads\road_sw_5.tga		Atlases\Tiles0.dds, 0, 2D, 0.750244, 0.250244, 0.000000, 0.249512, 0.249512
+Roads\road_we_1.tga		Atlases\Tiles0.dds, 0, 2D, 0.000244, 0.500244, 0.000000, 0.249512, 0.249512
+Roads\road_wne_8.tga		Atlases\Tiles0.dds, 0, 2D, 0.250244, 0.500244, 0.000000, 0.249512, 0.249512
+Roads\road_wse_9.tga		Atlases\Tiles0.dds, 0, 2D, 0.500244, 0.500244, 0.000000, 0.249512, 0.249512
+Buildings\building_0.tga		Atlases\Tiles0.dds, 0, 2D, 0.750244, 0.500244, 0.000000, 0.249512, 0.249512
+Buildings\building_1.tga		Atlases\Tiles0.dds, 0, 2D, 0.000244, 0.750244, 0.000000, 0.249512, 0.249512
+Buildings\building_2.tga		Atlases\Tiles0.dds, 0, 2D, 0.250244, 0.750244, 0.000000, 0.249512, 0.249512

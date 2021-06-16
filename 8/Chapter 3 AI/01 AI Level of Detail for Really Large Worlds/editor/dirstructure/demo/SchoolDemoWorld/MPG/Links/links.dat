@@ -1,0 +1,156 @@
+accept * *@
+actor * *@
+actor HeadmasterWorkTaxi *@Director
+actor Panic *@Pupil male;Pupil female;Teacher;Teacher female;Director
+actor StudentSchoolTaxi *@Pupil male;Pupil female
+actor TeacherWorkTaxi *@Teacher;Teacher female
+actor * AnswerCapitalTaxiGoal@Pupil male;Pupil female
+actor * AnswerCzechLessonTaxiGoal@Pupil male;Pupil female
+actor * AnswerEnglishLessonTaxiGoal@Pupil male;Pupil female
+actor * AnswerFamilyTaxiGoal@Pupil male;Pupil female
+actor * AnswerGeographyLessonTaxiGoal@Pupil male;Pupil female
+actor * AnswerKomenskyTaxiGoal@Pupil male;Pupil female
+actor * AnswerMathLessonTaxiGoal@Pupil male;Pupil female
+actor * AnswerPrimeNumberTaxiGoal@Pupil male;Pupil female
+actor * AnswerQuestionTaxiGoal@Pupil male;Pupil female
+actor * CheckClassroomTaxiGoal@Director
+actor * CheckUpCorridorGoal@Director
+actor * CheckUpCorridorTaxiGoal@Director
+actor * ClassInspectionTaxi@Director
+actor DayPlan DayPlanGoal@Teacher;Teacher female;Director
+actor * DisturbingTaxiGoal@Pupil male;Pupil female
+actor * EatAppleGoal@Pupil male;Pupil female;Teacher;Teacher female;Director
+actor * EatAppleTaxiGoal@Pupil male;Pupil female;Teacher;Teacher female;Director
+actor * FirstLessonTaxiGoal@Teacher;Teacher female
+actor * FollowGoal@
+actor * FourthLessonTaxiGoal@Teacher;Teacher female
+actor * GoToBookCaseTaxiGoal@Teacher;Teacher female;Director
+actor * GoToClassbookTableTaxiGoal@Teacher;Teacher female
+actor * GoforAppleTaxiGoal@Pupil male;Pupil female;Teacher;Teacher female;Director
+actor * HeadmasterWorkTaxiGoal@Director
+actor * HeadmasteringGoal@Director
+actor * HomeJoyEstateGoal@Pupil male;Pupil female;Teacher;Teacher female;Director
+actor * HomeJoyGoal@Pupil male;Pupil female;Teacher;Teacher female;Director
+actor * HomeJoyHouseTaxiGoal@Pupil male;Pupil female;Teacher;Teacher female;Director
+actor * HomeJoySomeGoal@Pupil male;Pupil female;Teacher;Teacher female;Director
+actor * HomeJoyTaxiGoal@Pupil male;Pupil female;Teacher;Teacher female;Director
+actor * HuntGoal@Pupil male;Pupil female;Teacher;Teacher female;Director
+actor * LayTaxiGoal@Pupil male;Pupil female;Teacher;Teacher female;Director
+actor * LifeGoal@Pupil male;Pupil female;Teacher;Teacher female;Director
+actor * MountGoal@Pupil male;Pupil female;Teacher;Teacher female;Director
+actor * MoveGoal@Pupil male;Pupil female;Teacher;Teacher female;Director
+actor * OfficeheadmasteringGoal@Director
+actor * PCGameTalkingGoal@Pupil male;Pupil female;Teacher;Teacher female;Director
+actor * PayAttentionTaxiGoal@Pupil male;Pupil female
+actor * PeeGoal@Pupil male;Pupil female;Teacher;Teacher female;Director
+actor * PeeTaxiGoal@Pupil male;Pupil female;Teacher;Teacher female;Director
+actor * SayGoal@Pupil male;Pupil female;Teacher;Teacher female;Director
+actor * SchoolStudyGoal@Pupil male;Pupil female;Teacher;Teacher female;Director
+actor * SchoolStudyTaxiGoal@Teacher;Teacher female;Director
+actor * SchoolWorkGoal@Teacher;Teacher female;Director
+actor * SecondLessonTaxiGoal@Teacher;Teacher female
+actor * SitDownArmchairGoal@Director
+actor * SitDownGoal@Pupil male;Pupil female
+actor * SitDownLivingGoal@Pupil male;Pupil female;Teacher;Teacher female;Director
+actor * SitDownLuxuryGoal@Pupil male;Pupil female;Teacher;Teacher female;Director
+actor * SitDownLuxuryTaxiGoal@Pupil male;Pupil female;Teacher;Teacher female;Director
+actor * SitDownSofaFGoal@Teacher;Teacher female
+actor * SitDownSofaFTaxiGoal@Teacher;Teacher female
+actor * SitDownSofaLGoal@Teacher;Teacher female
+actor * SitDownSofaLTaxiGoal@Teacher;Teacher female
+actor * SitDownTaxiGoal@Pupil male;Pupil female;Teacher;Teacher female;Director
+actor * SleepEstateGoal@Pupil male;Pupil female;Teacher;Teacher female;Director
+actor * SleepHomeGoal@Pupil male;Pupil female;Teacher;Teacher female;Director
+actor * SleepHouseTaxiGoal@Pupil male;Pupil female;Teacher;Teacher female;Director
+actor * SleepTaxiGoal@Pupil male;Pupil female;Teacher;Teacher female;Director
+actor * StaffroomGoal@Teacher;Teacher female
+actor * StandUpGoal@Pupil male;Pupil female;Teacher;Teacher female;Director
+actor * StudentBreakGoal@Pupil male;Pupil female
+actor * StudentBreakTaxiGoal@Pupil male;Pupil female
+actor * StudentClassroomGoal@Pupil male;Pupil female
+actor * StudentCorridorGoal@Pupil male;Pupil female
+actor StudentDayPlan StudentDayPlanGoal@Pupil male;Pupil female
+actor * StudentSchoolTaxiGoal@Pupil male;Pupil female
+actor * StudyTaxiGoal@Pupil male;Pupil female
+actor * TakeAppleGoal@Pupil male;Pupil female;Teacher;Teacher female;Director
+actor * TakeBackBookTaxiGoal@Pupil male;Pupil female;Teacher;Teacher female;Director
+actor * TakeBookGoal@Pupil male;Pupil female;Teacher;Teacher female;Director
+actor * TakeBookTaxiGoal@Pupil male;Pupil female;Teacher;Teacher female;Director
+actor * TeachCzechGoal@Teacher;Teacher female
+actor * TeachCzechTaxiGoal@Teacher;Teacher female
+actor * TeachEnglishGoal@Teacher;Teacher female
+actor * TeachEnglishTaxiGoal@Teacher;Teacher female
+actor * TeachGeographyGoal@Teacher;Teacher female
+actor * TeachGeographyTaxiGoal@Teacher;Teacher female
+actor * TeachMathGoal@Teacher;Teacher female
+actor * TeachMathTaxiGoal@Teacher;Teacher female
+actor * TeacherStaffroomTaxiGoal@Teacher;Teacher female
+actor * TeachingTaxiGoal@Teacher;Teacher female
+actor * ThirdLessonTaxiGoal@Teacher;Teacher female
+actor * TransportGoal@Pupil male;Pupil female;Teacher;Teacher female;Director
+actor * VitalGoal@Pupil male;Pupil female;Teacher;Teacher female;Director
+actor * WaitGoal@Pupil male;Pupil female;Teacher;Teacher female;Director
+actor * WatchingTVTalkingGoal@Pupil male;Pupil female;Teacher;Teacher female;Director
+actor * WorkTaxiGoal@Teacher;Teacher female;Director
+apple * *@Apple
+aquarium * *@Aquarium
+armchair * *@Armchair
+bed * *@ChildBed;Bed
+book * *@Book
+bookcase * *@BookCase
+boy * *@Pupil male
+chair * *@SchoolChair
+classbooktable * *@ClassBookTable
+classroom * *@World.City.School.Classroom A;World.City.School.Classroom B;World.City.School.Classroom C;World.City.School.Classroom D
+classroomA * *@World.City.School.Classroom A
+classroomB * *@World.City.School.Classroom B
+classroomC * *@World.City.School.Classroom C
+classroomD * *@World.City.School.Classroom D
+closet * *@Closet
+coffetable * *@CoffeTable
+computertable * *@ComputerTable
+corridor * *@World.City.School.Coridors
+director * *@Director
+door * *@Door
+estate * *@World.City.South estate
+fridge * *@Fridge
+from * *@
+from * TakeAppleGoal@Fridge
+from * TakeBookGoal@BookCase
+girl * *@Pupil female
+headmasteroffice * *@World.City.School.Headmaster's office
+house * *@World.City.South estate.House1;World.City.South estate.House5;World.City.South estate.House10;World.City.South estate.House15;World.City.South estate.House20;World.City.South estate.House25;World.City.South estate.House26;World.City.South estate.House27;World.City.South estate.House2;World.City.South estate.House3;World.City.South estate.House4;World.City.South estate.House6;World.City.South estate.House7;World.City.South estate.House8;World.City.South estate.House9;World.City.South estate.House11;World.City.South estate.House12;World.City.South estate.House13;World.City.South estate.House14;World.City.South estate.House16;World.City.South estate.House17;World.City.South estate.House18;World.City.South estate.House19;World.City.South estate.House21;World.City.South estate.House22;World.City.South estate.House23;World.City.South estate.House24;World.City.South estate.House28;World.City.South estate.House29
+livingsofa * *@LivingSofa1;LivingSofa2
+luxurychair * *@LuxuryChair
+master * *@
+offer * *@
+pisscloset * *@Pissoir2;Pissoir1;Closet
+pissoir * *@Pissoir2;Pissoir1
+plant * *@Plant1;Plant2
+plant1 * *@Plant1
+plant2 * *@Plant2
+rag * *@
+school * *@World.City.School
+schooldesk * *@SchoolDesk
+sink * *@Sink
+sofa * *@SofaL;SofaF
+sofaF * *@SofaF
+sofaL * *@SofaL
+staffroom * *@World.City.School.Staffroom
+staffroomObjects * *@LeisureTable;CoffeTable;ComputerTable;ClassBookTable;BookCase
+student * *@Pupil male;Pupil female
+targetObject * *@
+targetPosition * *@
+teacher * *@Teacher
+teacherf * *@Teacher female
+teachersdesk * *@TeachersDesk
+to * *@SchoolChair;ChildBed
+to Mount MountGoal@ChildBed;Bed
+to SitDownArmchair SitDownArmchairGoal@Armchair
+to SitDownLiving SitDownLivingGoal@LivingSofa1;LivingSofa2
+to SitDownLuxury SitDownLuxuryGoal@LuxuryChair
+to SitDownSofaF SitDownSofaFGoal@SofaF
+to SitDownSofaL SitDownSofaLGoal@SofaL
+toilet * *@World.City.School.Toilet
+washbasin * *@Washbasin
+who * *@

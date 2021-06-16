@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<IveWorld xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="IveWorld.xsd">-->
+<IveWorld >
+    
+    <!-- Core template definitions -->
+    <include url="Core.xml"/>
+    
+    <!-- Vital functions of ents -->
+    <include url="Vital.xml"/>
+    
+    
+    <!-- Mine template definitions -->
+    <include url="Mine.xml"/>
+    <processTemplates>
+        <ProcessTemplate processId="DayPlan" goalId="DayPlanGoal" minLod="1" maxLod="1" className="cz.ive.process.NeverAtomicProcessTemplate">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <!-- used to hard-wire top level goal. comment out if you want to get real DayPlan -->
+                    <Goal goalId="WorkTaxiGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+            <sources>
+                <Slot name="actor" actor="true"/>
+            </sources>
+        </ProcessTemplate>
+    </processTemplates>
+    <!-- The root of the location tree hierarchy -->
+    
+    <locationTemplates>
+        <GraphLocation name="Nest" lod="2">            
+            <subLocations>
+                <Location name="Mine" template="Mine" x="0" y="0">
+                    <genies>
+                        <Genius className="cz.ive.genius.AreaGeniusImpl" geniusId="LifeGenius" >
+                            <TopLevelGoal process="DelegatedLife" goal="VitalGoal"/>
+                        </Genius>
+                    </genies>
+                    <placement>
+                        <ObjectPlacement objectTemplate="/person"/>
+                    </placement>
+                </Location>
+            </subLocations>
+            <neighbours/>                
+            <influences/>
+            <objects/>
+            <inherentObjects>
+                <Object name="Miner" template="MinerEnt" number="2"/>                
+            </inherentObjects>
+            <links/>
+            <graphicInfo template="GrTown"/>
+        </GraphLocation>
+    </locationTemplates>
+    
+    <rootLocation>
+        <Location name="Nest" template="Nest" x="0" y="0"/>
+    </rootLocation>
+    
+</IveWorld>

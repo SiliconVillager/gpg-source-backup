@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<IveWorld xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="IveWorld.xsd">-->
+<IveWorld >
+    <classPath>
+        <ClassPathItem url="demoworld.jar"/>
+    </classPath>
+
+    <!-- Core template definitions -->
+    <include url="Core.xml"/>
+    
+    <!-- Vital functions of ents -->
+    <include url="Vital.xml"/>
+    
+    <!-- Pub template definitions -->
+    <include url="Pub.xml"/>
+    
+    <!-- Mine template definitions -->
+    <include url="DelegatedMine.xml"/>
+    
+    <!-- Estate template definitions -->
+    <include url="Estate.xml"/>
+    
+    <!-- WorldTopolgy template definitions -->
+    <include url="WorldTopology.xml"/>
+    
+    <processTemplates>
+        <ProcessTemplate processId="DayPlan" goalId="DayPlanGoal" minLod="2" maxLod="2" className="cz.ive.process.NeverAtomicProcessTemplate">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <!-- used to hard-wire top level goal. comment out if you want to get real DayPlan -->
+                    <!--<Goal goalId="SleepTaxiGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>-->
+                    <Goal goalId="WorkTaxiGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <timeinterval>
+                                    <intlink role="actor" attrib="workBegin"/>
+                                    <intlink role="actor" attrib="workEnd"/>
+                                </timeinterval>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="SleepTaxiGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <or>
+                                    <timeinterval>
+                                        <intlink role="actor" attrib="sleepBegin"/>
+                                        <intlink role="actor" attrib="sleepEnd"/>
+                                    </timeinterval>
+                                    <fuzzylink role="actor" attrib="tiredness"/>
+                                </or>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="JoyTaxiGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+            <sources>
+                <Slot name="actor" actor="true"/>
+            </sources>
+        </ProcessTemplate>
+    </processTemplates>
+    
+    <!-- The root of the location tree hierarchy -->
+    <rootLocation>
+        <Location name="World" template="World" x="0" y="0">
+            <genies>
+                <Genius className="cz.ive.genius.AreaGeniusImpl" geniusId="LifeGenius" >
+                    <TopLevelGoal process="DelegatedLife" goal="VitalGoal"/>
+                </Genius>
+            </genies>
+        </Location>
+    </rootLocation>
+    
+</IveWorld>

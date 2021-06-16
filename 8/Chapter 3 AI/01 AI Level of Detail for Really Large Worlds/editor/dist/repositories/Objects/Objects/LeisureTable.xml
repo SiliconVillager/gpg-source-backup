@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObjectTemplate name="LeisureTable" existenceLevel="5" viewLevel="5" objectClass="/object/table/leisure" substantial="true">
+  <attributes />
+  <graphicInfo template="GrLeisureTable" />
+</ObjectTemplate>
+

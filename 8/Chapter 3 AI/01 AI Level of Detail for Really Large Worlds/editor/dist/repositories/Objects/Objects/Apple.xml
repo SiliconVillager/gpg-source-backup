@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObjectTemplate name="Apple" existenceLevel="5" viewLevel="5" objectClass="/object/food/apple" substantial="true">
+  <attributes />
+  <graphicInfo template="GrApple" />
+</ObjectTemplate>
+

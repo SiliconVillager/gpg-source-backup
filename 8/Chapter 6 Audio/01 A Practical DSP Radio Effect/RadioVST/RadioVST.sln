@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RadioVST", "RadioVST.vcproj", "{D6CE4A0C-1CA9-40C9-BDAE-1C2CE3F9B859}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test", "..\test\test.vcproj", "{C1BE1550-0EB6-43B9-A0AA-B72FBFEFB914}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D6CE4A0C-1CA9-40C9-BDAE-1C2CE3F9B859}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D6CE4A0C-1CA9-40C9-BDAE-1C2CE3F9B859}.Debug|Win32.Build.0 = Debug|Win32
+		{D6CE4A0C-1CA9-40C9-BDAE-1C2CE3F9B859}.Release|Win32.ActiveCfg = Release|Win32
+		{D6CE4A0C-1CA9-40C9-BDAE-1C2CE3F9B859}.Release|Win32.Build.0 = Release|Win32
+		{C1BE1550-0EB6-43B9-A0AA-B72FBFEFB914}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C1BE1550-0EB6-43B9-A0AA-B72FBFEFB914}.Debug|Win32.Build.0 = Debug|Win32
+		{C1BE1550-0EB6-43B9-A0AA-B72FBFEFB914}.Release|Win32.ActiveCfg = Release|Win32
+		{C1BE1550-0EB6-43B9-A0AA-B72FBFEFB914}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

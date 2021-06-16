@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Profiler", "Profiler\Profiler.vcproj", "{262D76EF-97C5-4E74-89DC-5A0B9F68062E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test", "Test\Test.vcproj", "{0C8EDC15-A58C-4B70-B1DB-DFFDD65C4650}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProfilerClient", "ProfilerClient\ProfilerClient.csproj", "{6D95A74D-E4BE-42D1-AB08-1FA2FF79B5CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aga.Controls", "TreeViewAdv\Aga.Controls.csproj", "{E73BB233-D88B-44A7-A98F-D71EE158381D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|Win32 = Debug|Win32
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{262D76EF-97C5-4E74-89DC-5A0B9F68062E}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{262D76EF-97C5-4E74-89DC-5A0B9F68062E}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{262D76EF-97C5-4E74-89DC-5A0B9F68062E}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{262D76EF-97C5-4E74-89DC-5A0B9F68062E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{262D76EF-97C5-4E74-89DC-5A0B9F68062E}.Debug|Win32.Build.0 = Debug|Win32
+		{262D76EF-97C5-4E74-89DC-5A0B9F68062E}.Release|Any CPU.ActiveCfg = Release|Win32
+		{262D76EF-97C5-4E74-89DC-5A0B9F68062E}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{262D76EF-97C5-4E74-89DC-5A0B9F68062E}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{262D76EF-97C5-4E74-89DC-5A0B9F68062E}.Release|Win32.ActiveCfg = Release|Win32
+		{262D76EF-97C5-4E74-89DC-5A0B9F68062E}.Release|Win32.Build.0 = Release|Win32
+		{0C8EDC15-A58C-4B70-B1DB-DFFDD65C4650}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{0C8EDC15-A58C-4B70-B1DB-DFFDD65C4650}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{0C8EDC15-A58C-4B70-B1DB-DFFDD65C4650}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{0C8EDC15-A58C-4B70-B1DB-DFFDD65C4650}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0C8EDC15-A58C-4B70-B1DB-DFFDD65C4650}.Debug|Win32.Build.0 = Debug|Win32
+		{0C8EDC15-A58C-4B70-B1DB-DFFDD65C4650}.Release|Any CPU.ActiveCfg = Release|Win32
+		{0C8EDC15-A58C-4B70-B1DB-DFFDD65C4650}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{0C8EDC15-A58C-4B70-B1DB-DFFDD65C4650}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{0C8EDC15-A58C-4B70-B1DB-DFFDD65C4650}.Release|Win32.ActiveCfg = Release|Win32
+		{0C8EDC15-A58C-4B70-B1DB-DFFDD65C4650}.Release|Win32.Build.0 = Release|Win32
+		{6D95A74D-E4BE-42D1-AB08-1FA2FF79B5CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D95A74D-E4BE-42D1-AB08-1FA2FF79B5CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D95A74D-E4BE-42D1-AB08-1FA2FF79B5CA}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{6D95A74D-E4BE-42D1-AB08-1FA2FF79B5CA}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{6D95A74D-E4BE-42D1-AB08-1FA2FF79B5CA}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{6D95A74D-E4BE-42D1-AB08-1FA2FF79B5CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D95A74D-E4BE-42D1-AB08-1FA2FF79B5CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D95A74D-E4BE-42D1-AB08-1FA2FF79B5CA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{6D95A74D-E4BE-42D1-AB08-1FA2FF79B5CA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{6D95A74D-E4BE-42D1-AB08-1FA2FF79B5CA}.Release|Win32.ActiveCfg = Release|Any CPU
+		{E73BB233-D88B-44A7-A98F-D71EE158381D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E73BB233-D88B-44A7-A98F-D71EE158381D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E73BB233-D88B-44A7-A98F-D71EE158381D}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{E73BB233-D88B-44A7-A98F-D71EE158381D}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{E73BB233-D88B-44A7-A98F-D71EE158381D}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{E73BB233-D88B-44A7-A98F-D71EE158381D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E73BB233-D88B-44A7-A98F-D71EE158381D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E73BB233-D88B-44A7-A98F-D71EE158381D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{E73BB233-D88B-44A7-A98F-D71EE158381D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{E73BB233-D88B-44A7-A98F-D71EE158381D}.Release|Win32.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

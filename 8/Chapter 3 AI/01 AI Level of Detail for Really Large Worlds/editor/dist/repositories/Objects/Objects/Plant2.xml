@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObjectTemplate name="Plant2" existenceLevel="5" viewLevel="5" objectClass="/object/plant" substantial="true">
+  <attributes />
+  <graphicInfo template="GrPlant2" />
+</ObjectTemplate>
+

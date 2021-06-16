@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObjectTemplate name="Bed" existenceLevel="5" viewLevel="5" objectClass="/object/bed" substantial="true">
+  <attributes>
+    <FuzzyAttribute name="empty" value="true" />
+  </attributes>
+  <graphicInfo template="GrBed" />
+</ObjectTemplate>
+

@@ -1,0 +1,21 @@
+# Atlases\Cars.tai
+# AtlasCreationTool.exe -nomipmap -halftexel -width 2048 -o Atlases\Cars
+#
+# <filename>		<atlas filename>, <atlas idx>, <atlas type>, <woffset>, <hoffset>, <depth offset>, <width>, <height>
+#
+# Texture <filename> can be found in texture atlas <atlas filename>, i.e., 
+# Atlases\Cars<idx>.dds of <atlas type> type with texture coordinates boundary given by:
+#   A = ( <woffset>, <hoffset> )
+#   B = ( <woffset> + <width>, <hoffset> + <height> )
+#
+# where coordinates (0,0) and (1,1) of the original texture map correspond
+# to coordinates A and B, respectively, in the texture atlas.
+# If the atlas is a volume texture then <depth offset> is the w-coordinate
+# to use the access the appropriate slice in the volume atlas.
+
+Cars\car_blue.tga		Atlases\Cars0.dds, 0, 2D, 0.000244, 0.001953, 0.000000, 0.124512, 0.996094
+Cars\car_green.tga		Atlases\Cars0.dds, 0, 2D, 0.125244, 0.001953, 0.000000, 0.124512, 0.996094
+Cars\car_orange.tga		Atlases\Cars0.dds, 0, 2D, 0.250244, 0.001953, 0.000000, 0.124512, 0.996094
+Cars\car_red.tga		Atlases\Cars0.dds, 0, 2D, 0.375244, 0.001953, 0.000000, 0.124512, 0.996094
+Cars\car_silver.tga		Atlases\Cars0.dds, 0, 2D, 0.500244, 0.001953, 0.000000, 0.124512, 0.996094
+Cars\car_yellow.tga		Atlases\Cars0.dds, 0, 2D, 0.625244, 0.001953, 0.000000, 0.124512, 0.996094

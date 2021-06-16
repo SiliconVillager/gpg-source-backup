@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EntTemplate name="SingerEnt" existenceLevel="3" viewLevel="3" className="cz.ive.iveobject.Human" objectClass="/person/Singer" substantial="true">
+  <attributes>
+    <FuzzyAttribute name="peeDrive" value="false" />
+    <FuzzyAttribute name="tiredness" value="false" />
+    <IntAttribute name="mouth" value="0" />
+    <ObjectAttribute name="arm" />
+    <FuzzyAttribute name="standing" value="true" />
+    <IntAttribute name="state" value="0" />
+    <ObjectAttribute name="address.estate" />
+    <ObjectAttribute name="address.house" />
+    <IntAttribute name="workBegin" value="0" />
+    <IntAttribute name="workEnd" value="2" />
+    <IntAttribute name="sleepBegin" value="0" />
+    <IntAttribute name="sleepEnd" value="0" />
+  </attributes>
+  <sensors>
+    <Sensor name="Topography" template="Topography" minLod="2" maxLod="3" />
+    <Sensor name="Architecture" template="Architecture" minLod="3" maxLod="4" />
+    <Sensor name="Eye" template="Eye" minLod="4" maxLod="5" />
+  </sensors>
+  <Kind>
+    <KindItem kindValue="floor" />
+  </Kind>
+  <graphicInfo template="GrSinger" />
+  <Genius geniusId="SingerEntgenius" />
+</EntTemplate>
+

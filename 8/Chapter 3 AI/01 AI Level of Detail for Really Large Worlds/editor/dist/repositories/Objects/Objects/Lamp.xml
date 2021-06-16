@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObjectTemplate name="Lamp" existenceLevel="5" viewLevel="5" objectClass="/object/lamp" substantial="true">
+  <attributes>
+    <IntAttribute name="state" value="0" />
+  </attributes>
+  <graphicInfo template="GrLamp" />
+</ObjectTemplate>
+

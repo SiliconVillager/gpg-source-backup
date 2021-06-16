@@ -1,0 +1,30 @@
+<genies>
+  <Genius geniusId="MinerEntgenius">
+    <Genius>
+      <TopLevelGoal goalId="DayPlanGoal" />
+      <TopLevelGoal goalId="LifeGoal" />
+    </Genius>
+  </Genius>
+  <Genius geniusId="SingerEntgenius">
+    <Genius>
+      <TopLevelGoal goalId="DayPlanGoal" />
+      <TopLevelGoal goalId="LifeGoal" />
+    </Genius>
+  </Genius>
+  <Genius geniusId="Cartgenius">
+    <Genius>
+      <TopLevelGoal goalId="CartDriverGoal" />
+    </Genius>
+  </Genius>
+  <Genius geniusId="WaiterEntgenius">
+    <Genius>
+      <TopLevelGoal goalId="DayPlanGoal" />
+      <TopLevelGoal goalId="LifeGoal" />
+    </Genius>
+  </Genius>
+  <Genius geniusId="Jukeboxgenius">
+    <Genius>
+      <TopLevelGoal goalId="JukeboxGoal" />
+    </Genius>
+  </Genius>
+</genies>

@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+    <head>
+        <title>package description</title>
+    </head>
+    <body>
+        <p>
+        Main group of classes providing evaulation of expressions
+        </p>
+        
+        <p>
+        The expresion is typicaly used not only for one-shot evaluation, but we are
+        often interested in the changes of expression during simulation time.
+        </p>
+        
+        <p>
+        The main idea is quite straight forward. Expression is represented by parse
+        tree. Notification about change of value follows the edges. If value of some
+        leaf changes its parent is notified. The parent computes its new value and
+        if the new value differs from the old one it notifies its parent.
+        </p>
+        <p>
+        The expression is created at first. This typically means that it is loaded 
+        from the xml world definition however it can be for example created by some
+        ive genius (It was one of the requirements to enable geniuses to modify trigger 
+        expressions). The inner expression nodes are common aritmetic operators(+,-,*,/),
+        relations ( <,>,= ), fuzzy logic operators ( AND,OR,NOT ).
+        </p>
+        <p>
+        If the expression is used as trigger or context of some process its value must
+        be obviously affected by the particular substitution that the process is executed
+        with. So that the type of leaf nodes are links to the attributes of the objects 
+        ( typically phantoms ) from the used substitution too. Because the particular 
+        substitution can not be known during expression creation this links must be set 
+        later. This setting contains registering the leaf node as listenner of the link
+        target and we call it instantiation. Another type of leaf expression is
+        manager of senses query. During instantiation the query is passed to the manager
+        of senses and the node is registered as listenner of the query result.
+        </p>
+        <p>
+        Instantiation performs many actions to provide the value updating, what is useless
+        if we want only to evaluate expression once and we are not interested in later 
+        changes. For this case there is another light-weight way how to evaluate the
+        expression that uses depth first traversal of the parse tree and does not 
+        register the nodes as listenner of anything.
+        </p>
+        <p>
+        As you can see the straight forward parse tree approach cause reevaluation of 
+        all nodes on the path from the changed leaf to the root. If two leaves such 
+        that they have common part of the path to the root changes the common part of 
+        the path is evaluated at first with only one value changed. After that it is 
+        evaluated again with the second value changed. 
+        </p>
+        <p>
+        This problem is solved together with the common subexpressions handling by using
+        DAG (directed acyclic graph) instead of the parse tree.<br/>
+        DAG is formed by merging instantiated expressions. There is number of roots 
+        representing distinct expression inserted into the DAG. If the new expression
+        is merged to the DAG and there is already expression with the common subexpression
+        in the DAG the equivalent subexpression is detected and its occurence in the new 
+        expression is replaced by the DAG version.<br/>
+        Note that if there is no common subexpression in the set of expressions passed
+        to the DAG the DAG is just set of parse trees.<br/>
+        Another feature of DAG is that evaluation of changes is posponded. The whole DAG 
+        is reevaluated only once per time. Changes that are atomic from the point of view 
+        of simulation time are accumulated in the leafs. When special method of DAG is called
+        the reevaluation starts. Moreover the changes does not just follow the edges like in the
+        standalone expression but order of notification is given by the depth of the node.
+        So that if there is more than one notification coming from node children
+        the node reports the change only once to his parent(s).
+        </p>
+        <p>
+        There can be many DAGs in the one system and it is up to the designer to
+        decide what expressions are supposed to contain sufficient number of subexpressions
+        so that it is suitable to insert them into the same DAG.
+        </p>
+        <p>
+        Currently the ive uses one DAG in each genius.
+        </p>
+        
+        Usage summary:
+        <ol>
+            <li>One time evaluation
+                <ol>
+                    <li>create the parse tree</li>
+                    <li>invoke DFSEval on the root of the expression. Used substitution is passed as
+                    parameter of this method</li>
+                </ol>
+            </li>
+            <li>Evaluation that keeps the value up to date 
+                <ol>
+                    <li>create the parse tree</li>
+                    <li>call instantiate method</li>
+                    <li>insert the expression into the DAG</li>
+                </ol>
+            </li>
+        </ol>   
+        
+        <p>
+        Naming conventions<br>
+        The name consist of two parts. The first part is Type of result and operands and second is name of operator<br>
+        Example:  <CODE>FuzzyAnd</CODE> 
+        <br>
+        There is an exception - Relation has the result always of type Fuzzy, so that the Type part of the name is only
+        type of the operands
+        </p>
+    </body>
+</html>

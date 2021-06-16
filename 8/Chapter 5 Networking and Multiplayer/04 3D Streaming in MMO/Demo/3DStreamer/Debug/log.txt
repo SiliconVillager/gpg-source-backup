@@ -1,0 +1,1149 @@
+Application initiated
+FileQueueReadThread just dequeued Data\Terrain_BB.datfrom queue:0
+FileQueueReadThread just loaded Data\Terrain_BB.datfrom queue:0
+Enqueue New Patch (14,9) for queue:3
+Enqueue New Patch (15,9) for queue:3
+Enqueue New Patch (16,9) for queue:3
+Enqueue New Patch (12,10) for queue:3
+Enqueue New Patch (13,10) for queue:3
+FileQueueReadThread just loaded Data\Terrain_9_14.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_9_15.datfrom queue:3
+Enqueue New Patch (14,10) for queue:3
+Enqueue New Patch (15,10) for queue:3
+Enqueue New Patch (16,10) for queue:3
+Enqueue New Patch (17,10) for queue:3
+Enqueue New Patch (18,10) for queue:3
+FileQueueReadThread just dequeued Data\Terrain_9_16.datfrom queue:3
+Enqueue New Patch (19,10) for queue:3
+Enqueue New Patch (10,11) for queue:3
+Enqueue New Patch (11,11) for queue:3
+Enqueue New Patch (12,11) for queue:3
+FileQueueReadThread just loaded Data\Terrain_9_16.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_10_12.datfrom queue:3
+Enqueue New Patch (13,11) for queue:3
+Enqueue New Patch (14,11) for queue:2
+Enqueue New Patch (15,11) for queue:2
+Enqueue New Patch (16,11) for queue:2
+Enqueue New Patch (17,11) for queue:3
+Enqueue New Patch (18,11) for queue:3
+Enqueue New Patch (19,11) for queue:3
+Enqueue New Patch (20,11) for queue:3
+Enqueue New Patch (10,12) for queue:3
+Enqueue New Patch (11,12) for queue:3
+Enqueue New Patch (12,12) for queue:2
+Enqueue New Patch (13,12) for queue:2
+Enqueue New Patch (14,12) for queue:2
+Enqueue New Patch (15,12) for queue:2
+Enqueue New Patch (16,12) for queue:2
+Enqueue New Patch (17,12) for queue:2
+Enqueue New Patch (18,12) for queue:2
+Enqueue New Patch (19,12) for queue:3
+Enqueue New Patch (20,12) for queue:3
+Enqueue New Patch (21,12) for queue:3
+Enqueue New Patch (9,13) for queue:3
+Enqueue New Patch (10,13) for queue:3
+Enqueue New Patch (11,13) for queue:2
+Enqueue New Patch (12,13) for queue:2
+Enqueue New Patch (13,13) for queue:2
+Enqueue New Patch (14,13) for queue:1
+Enqueue New Patch (15,13) for queue:1
+Enqueue New Patch (16,13) for queue:1
+Enqueue New Patch (17,13) for queue:2
+FileQueueReadThread just loaded Data\Terrain_10_12.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_13_14.datfrom queue:1
+Enqueue New Patch (18,13) for queue:2
+Enqueue New Patch (19,13) for queue:2
+Enqueue New Patch (20,13) for queue:3
+Enqueue New Patch (21,13) for queue:3
+Enqueue New Patch (9,14) for queue:3
+Enqueue New Patch (10,14) for queue:3
+Enqueue New Patch (11,14) for queue:2
+Enqueue New Patch (12,14) for queue:2
+Enqueue New Patch (13,14) for queue:1
+Enqueue New Patch (14,14) for queue:1
+Enqueue New Patch (15,14) for queue:1
+Enqueue New Patch (16,14) for queue:1
+Enqueue New Patch (17,14) for queue:1
+Enqueue New Patch (18,14) for queue:2
+Enqueue New Patch (19,14) for queue:2
+Enqueue New Patch (20,14) for queue:2
+Enqueue New Patch (21,14) for queue:3
+Enqueue New Patch (22,14) for queue:3
+Enqueue New Patch (9,15) for queue:3
+Enqueue New Patch (10,15) for queue:3
+Enqueue New Patch (11,15) for queue:2
+Enqueue New Patch (12,15) for queue:2
+Enqueue New Patch (13,15) for queue:1
+Enqueue New Patch (14,15) for queue:1
+Enqueue New Patch (15,15) for queue:0
+Enqueue New Patch (16,15) for queue:1
+Enqueue New Patch (17,15) for queue:1
+Enqueue New Patch (18,15) for queue:1
+Enqueue New Patch (19,15) for queue:2
+Enqueue New Patch (20,15) for queue:2
+Enqueue New Patch (21,15) for queue:3
+Enqueue New Patch (22,15) for queue:3
+Enqueue New Patch (8,16) for queue:3
+Enqueue New Patch (9,16) for queue:3
+Enqueue New Patch (10,16) for queue:2
+Enqueue New Patch (11,16) for queue:2
+Enqueue New Patch (12,16) for queue:1
+Enqueue New Patch (13,16) for queue:1
+Enqueue New Patch (14,16) for queue:0
+Enqueue New Patch (15,16) for queue:0
+Enqueue New Patch (16,16) for queue:0
+Enqueue New Patch (17,16) for queue:1
+Enqueue New Patch (18,16) for queue:1
+Enqueue New Patch (19,16) for queue:2
+Enqueue New Patch (20,16) for queue:2
+Enqueue New Patch (21,16) for queue:3
+Enqueue New Patch (22,16) for queue:3
+Enqueue New Patch (9,17) for queue:3
+Enqueue New Patch (10,17) for queue:3
+Enqueue New Patch (11,17) for queue:2
+Enqueue New Patch (12,17) for queue:2
+Enqueue New Patch (13,17) for queue:1
+Enqueue New Patch (14,17) for queue:1
+Enqueue New Patch (15,17) for queue:0
+Enqueue New Patch (16,17) for queue:0
+Enqueue New Patch (17,17) for queue:1
+Enqueue New Patch (18,17) for queue:1
+Enqueue New Patch (19,17) for queue:2
+Enqueue New Patch (20,17) for queue:2
+Enqueue New Patch (21,17) for queue:3
+Enqueue New Patch (22,17) for queue:3
+Enqueue New Patch (9,18) for queue:3
+Enqueue New Patch (10,18) for queue:3
+Enqueue New Patch (11,18) for queue:2
+Enqueue New Patch (12,18) for queue:2
+Enqueue New Patch (13,18) for queue:1
+Enqueue New Patch (14,18) for queue:1
+Enqueue New Patch (15,18) for queue:1
+Enqueue New Patch (16,18) for queue:1
+Enqueue New Patch (17,18) for queue:1
+Enqueue New Patch (18,18) for queue:2
+Enqueue New Patch (19,18) for queue:2
+Enqueue New Patch (20,18) for queue:2
+Enqueue New Patch (21,18) for queue:3
+Enqueue New Patch (22,18) for queue:3
+Enqueue New Patch (9,19) for queue:3
+Enqueue New Patch (10,19) for queue:3
+Enqueue New Patch (11,19) for queue:2
+Enqueue New Patch (12,19) for queue:2
+Enqueue New Patch (13,19) for queue:2
+Enqueue New Patch (14,19) for queue:1
+Enqueue New Patch (15,19) for queue:1
+Enqueue New Patch (16,19) for queue:1
+Enqueue New Patch (17,19) for queue:2
+Enqueue New Patch (18,19) for queue:2
+Enqueue New Patch (19,19) for queue:2
+Enqueue New Patch (20,19) for queue:3
+Enqueue New Patch (21,19) for queue:3
+Enqueue New Patch (10,20) for queue:3
+Enqueue New Patch (11,20) for queue:3
+Enqueue New Patch (12,20) for queue:2
+Enqueue New Patch (13,20) for queue:2
+Enqueue New Patch (14,20) for queue:2
+Enqueue New Patch (15,20) for queue:2
+Enqueue New Patch (16,20) for queue:2
+Enqueue New Patch (17,20) for queue:2
+Enqueue New Patch (18,20) for queue:2
+Enqueue New Patch (19,20) for queue:3
+Enqueue New Patch (20,20) for queue:3
+Enqueue New Patch (21,20) for queue:3
+Enqueue New Patch (10,21) for queue:3
+Enqueue New Patch (11,21) for queue:3
+Enqueue New Patch (12,21) for queue:3
+Enqueue New Patch (13,21) for queue:3
+Enqueue New Patch (14,21) for queue:2
+Enqueue New Patch (15,21) for queue:2
+Enqueue New Patch (16,21) for queue:2
+Enqueue New Patch (17,21) for queue:3
+Enqueue New Patch (18,21) for queue:3
+Enqueue New Patch (19,21) for queue:3
+Enqueue New Patch (20,21) for queue:3
+Enqueue New Patch (11,22) for queue:3
+Enqueue New Patch (12,22) for queue:3
+Enqueue New Patch (13,22) for queue:3
+Enqueue New Patch (14,22) for queue:3
+Enqueue New Patch (15,22) for queue:3
+Enqueue New Patch (16,22) for queue:3
+Enqueue New Patch (17,22) for queue:3
+Enqueue New Patch (18,22) for queue:3
+Enqueue New Patch (19,22) for queue:3
+Enqueue New Patch (14,23) for queue:3
+Enqueue New Patch (15,23) for queue:3
+Enqueue New Patch (16,23) for queue:3
+Enqueue New Patch (17,23) for queue:3
+FileQueueReadThread just loaded Data\Terrain_13_14.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_15_15.datfrom queue:0
+FileQueueReadThread just loaded Data\Terrain_15_15.datfrom queue:0
+FileQueueReadThread just dequeued Data\Terrain_16_14.datfrom queue:0
+LoadTerrainPatch loaded patch (15,15) and deleting objectFileQueueReadThread just loaded Data\Terrain_16_14.datfrom queue:0
+FileQueueReadThread just dequeued Data\Terrain_16_15.datfrom queue:0
+LoadTerrainPatch loaded patch (14,16) and deleting objectFileQueueReadThread just loaded Data\Terrain_16_15.datfrom queue:0
+FileQueueReadThread just dequeued Data\Terrain_16_16.datfrom queue:0
+LoadTerrainPatch loaded patch (15,16) and deleting objectFileQueueReadThread just loaded Data\Terrain_16_16.datfrom queue:0
+FileQueueReadThread just dequeued Data\Terrain_17_15.datfrom queue:0
+LoadTerrainPatch loaded patch (16,16) and deleting objectFileQueueReadThread just loaded Data\Terrain_17_15.datfrom queue:0
+FileQueueReadThread just dequeued Data\Terrain_17_16.datfrom queue:0
+LoadTerrainPatch loaded patch (15,17) and deleting objectFileQueueReadThread just loaded Data\Terrain_17_16.datfrom queue:0
+FileQueueReadThread just dequeued Data\Terrain_13_15.datfrom queue:1
+LoadTerrainPatch loaded patch (16,17) and deleting objectFileQueueReadThread just loaded Data\Terrain_13_15.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_13_16.datfrom queue:1
+FileQueueReadThread just loaded Data\Terrain_13_16.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_14_13.datfrom queue:1
+FileQueueReadThread just loaded Data\Terrain_14_13.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_14_14.datfrom queue:1
+FileQueueReadThread just loaded Data\Terrain_14_14.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_14_15.datfrom queue:1
+FileQueueReadThread just loaded Data\Terrain_14_15.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_14_16.datfrom queue:1
+FileQueueReadThread just loaded Data\Terrain_14_16.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_14_17.datfrom queue:1
+FileQueueReadThread just loaded Data\Terrain_14_17.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_15_13.datfrom queue:1
+FileQueueReadThread just loaded Data\Terrain_15_13.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_15_14.datfrom queue:1
+FileQueueReadThread just loaded Data\Terrain_15_14.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_15_16.datfrom queue:1
+FileQueueReadThread just loaded Data\Terrain_15_16.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_15_17.datfrom queue:1
+FileQueueReadThread just loaded Data\Terrain_15_17.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_15_18.datfrom queue:1
+FileQueueReadThread just loaded Data\Terrain_15_18.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_16_12.datfrom queue:1
+FileQueueReadThread just loaded Data\Terrain_16_12.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_16_13.datfrom queue:1
+FileQueueReadThread just loaded Data\Terrain_16_13.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_16_17.datfrom queue:1
+LoadTerrainPatch loaded patch (13,16) and deleting objectFileQueueReadThread just loaded Data\Terrain_16_17.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_16_18.datfrom queue:1
+FileQueueReadThread just loaded Data\Terrain_16_18.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_17_13.datfrom queue:1
+FileQueueReadThread just loaded Data\Terrain_17_13.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_17_14.datfrom queue:1
+LoadTerrainPatch loaded patch (13,17) and deleting objectFileQueueReadThread just loaded Data\Terrain_17_14.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_17_17.datfrom queue:1
+LoadTerrainPatch loaded patch (14,17) and deleting objectFileQueueReadThread just loaded Data\Terrain_17_17.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_17_18.datfrom queue:1
+FileQueueReadThread just loaded Data\Terrain_17_18.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_18_13.datfrom queue:1
+Enqueue New Patch (13,23) for queue:3
+FileQueueReadThread just loaded Data\Terrain_18_13.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_18_14.datfrom queue:1
+Cancel patch:Data\Terrain_16_8.dat
+[SUCCESS] Requeue Existing Patch (10,16) to queue:3 from queue:2
+LoadTerrainPatch loaded patch (13,18) and deleting objectCancel patch:Data\Terrain_11_10.dat
+[SUCCESS] Requeue Existing Patch (17,21) to queue:2 from queue:3
+[SUCCESS] Requeue Existing Patch (11,13) to queue:3 from queue:2
+Enqueue New Patch (22,19) for queue:3
+[SUCCESS] Requeue Existing Patch (18,18) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (12,12) to queue:3 from queue:2
+Enqueue New Patch (22,13) for queue:3
+FileQueueReadThread just loaded Data\Terrain_18_14.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_18_15.datfrom queue:1
+LoadTerrainPatch loaded patch (14,18) and deleting object[SUCCESS] Requeue Existing Patch (11,19) to queue:3 from queue:2
+Cancel patch:Data\Terrain_21_10.dat
+Cancel patch:Data\Terrain_22_11.dat
+Enqueue New Patch (17,9) for queue:3
+Cancel patch:Data\Terrain_23_13.dat
+[SUCCESS] Requeue Existing Patch (18,14) to queue:1 from queue:2
+LoadTerrainPatch loaded patch (16,15) and deleting object[SUCCESS] Requeue Existing Patch (12,12) to queue:2 from queue:3
+[SUCCESS] Requeue Existing Patch (17,11) to queue:2 from queue:3
+[SUCCESS] Requeue Existing Patch (17,21) to queue:3 from queue:2
+[SUCCESS] Requeue Existing Patch (14,19) to queue:2 from queue:1
+[SUCCESS] Requeue Existing Patch (12,20) to queue:3 from queue:2
+FileQueueReadThread just loaded Data\Terrain_18_15.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_18_16.datfrom queue:1
+LoadTerrainPatch loaded patch (15,18) and deleting object[SUCCESS] Requeue Existing Patch (14,19) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (12,20) to queue:2 from queue:3
+[SUCCESS] Requeue Existing Patch (17,21) to queue:2 from queue:3
+[SUCCESS] Requeue Existing Patch (17,11) to queue:3 from queue:2
+[SUCCESS] Requeue Existing Patch (12,12) to queue:3 from queue:2
+FileQueueReadThread just loaded Data\Terrain_18_16.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_18_17.datfrom queue:1
+LoadTerrainPatch loaded patch (16,18) and deleting object[SUCCESS] Requeue Existing Patch (18,14) to queue:2 from queue:1
+Cancel patch:Data\Terrain_9_17.dat
+Enqueue New Patch (13,23) for queue:3
+Enqueue New Patch (10,21) for queue:3
+Enqueue New Patch (11,22) for queue:3
+[SUCCESS] Requeue Existing Patch (11,19) to queue:2 from queue:3
+Cancel patch:Data\Terrain_10_19.dat
+[SUCCESS] Requeue Existing Patch (14,11) to queue:3 from queue:2
+Cancel patch:Data\Terrain_13_22.dat
+[SUCCESS] Requeue Existing Patch (13,21) to queue:2 from queue:3
+[SUCCESS] Requeue Existing Patch (17,19) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (19,20) to queue:2 from queue:3
+FileQueueReadThread just loaded Data\Terrain_18_17.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_19_15.datfrom queue:1
+[SUCCESS] Requeue Existing Patch (16,11) to queue:3 from queue:2
+Enqueue New Patch (18,23) for queue:3
+[SUCCESS] Requeue Existing Patch (15,11) to queue:3 from queue:2
+[SUCCESS] Requeue Existing Patch (18,12) to queue:3 from queue:2
+Enqueue New Patch (9,20) for queue:3
+Enqueue New Patch (12,23) for queue:3
+[SUCCESS] Requeue Existing Patch (20,14) to queue:3 from queue:2
+Cancel patch:Data\Terrain_11_20.dat
+FileQueueReadThread just loaded Data\Terrain_19_15.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_19_16.datfrom queue:1
+LoadTerrainPatch loaded patch (15,19) and deleting objectCancel patch:Data\Terrain_12_21.dat
+Enqueue New Patch (8,16) for queue:3
+[SUCCESS] Requeue Existing Patch (10,16) to queue:2 from queue:3
+Enqueue New Patch (8,17) for queue:3
+[SUCCESS] Requeue Existing Patch (10,17) to queue:2 from queue:3
+[SUCCESS] Requeue Existing Patch (13,19) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (12,17) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (19,13) to queue:3 from queue:2
+Cancel patch:Data\Terrain_10_18.dat
+Cancel patch:Data\Terrain_14_22.dat
+FileQueueReadThread just loaded Data\Terrain_19_16.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_18_18.datfrom queue:1
+LoadTerrainPatch loaded patch (16,19) and deleting object[SUCCESS] Requeue Existing Patch (12,21) to queue:2 from queue:3
+[SUCCESS] Requeue Existing Patch (18,21) to queue:2 from queue:3
+Enqueue New Patch (20,22) for queue:3
+[SUCCESS] Requeue Existing Patch (11,20) to queue:2 from queue:3
+Enqueue New Patch (8,18) for queue:3
+[SUCCESS] Requeue Existing Patch (10,18) to queue:2 from queue:3
+Enqueue New Patch (10,22) for queue:3
+[SUCCESS] Requeue Existing Patch (15,20) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (15,22) to queue:2 from queue:3
+Enqueue New Patch (15,24) for queue:3
+Cancel patch:Data\Terrain_19_22.dat
+Enqueue New Patch (14,24) for queue:3
+[SUCCESS] Requeue Existing Patch (17,12) to queue:3 from queue:2
+FileQueueReadThread just loaded Data\Terrain_18_18.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_19_14.datfrom queue:1
+[SUCCESS] Requeue Existing Patch (14,22) to queue:2 from queue:3
+Enqueue New Patch (11,23) for queue:3
+[SUCCESS] Requeue Existing Patch (12,18) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (14,20) to queue:1 from queue:2
+Enqueue New Patch (8,15) for queue:3
+Enqueue New Patch (16,24) for queue:3
+[SUCCESS] Requeue Existing Patch (20,15) to queue:3 from queue:2
+[SUCCESS] Requeue Existing Patch (16,22) to queue:2 from queue:3
+Enqueue New Patch (9,21) for queue:3
+Cancel patch:Data\Terrain_11_19.dat
+Cancel patch:Data\Terrain_10_17.dat
+[SUCCESS] Requeue Existing Patch (16,20) to queue:1 from queue:2
+Enqueue New Patch (13,24) for queue:3
+Cancel patch:Data\Terrain_15_22.dat
+Enqueue New Patch (8,19) for queue:3
+[SUCCESS] Requeue Existing Patch (13,12) to queue:3 from queue:2
+FileQueueReadThread just loaded Data\Terrain_19_14.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_19_17.datfrom queue:1
+LoadTerrainPatch loaded patch (14,19) and deleting objectCancel patch:Data\Terrain_13_21.dat
+[SUCCESS] Requeue Existing Patch (13,22) to queue:2 from queue:3
+Enqueue New Patch (19,23) for queue:3
+[SUCCESS] Requeue Existing Patch (10,19) to queue:2 from queue:3
+Cancel patch:Data\Terrain_10_13.dat
+Cancel patch:Data\Terrain_12_20.dat
+Enqueue New Patch (17,24) for queue:3
+[SUCCESS] Requeue Existing Patch (18,13) to queue:3 from queue:2
+[SUCCESS] Requeue Existing Patch (16,12) to queue:3 from queue:2
+[SUCCESS] Requeue Existing Patch (13,20) to queue:1 from queue:2
+Cancel patch:Data\Terrain_10_16.dat
+FileQueueReadThread just loaded Data\Terrain_19_17.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_19_13.datfrom queue:1
+[SUCCESS] Requeue Existing Patch (19,14) to queue:3 from queue:2
+[SUCCESS] Requeue Existing Patch (20,16) to queue:3 from queue:2
+Enqueue New Patch (12,24) for queue:3
+[SUCCESS] Requeue Existing Patch (10,15) to queue:2 from queue:3
+Cancel patch:Data\Terrain_16_22.dat
+[SUCCESS] Requeue Existing Patch (12,19) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (11,21) to queue:2 from queue:3
+Enqueue New Patch (21,21) for queue:3
+[SUCCESS] Requeue Existing Patch (14,12) to queue:3 from queue:2
+Cancel patch:Data\Terrain_10_14.dat
+[SUCCESS] Requeue Existing Patch (17,22) to queue:2 from queue:3
+Cancel patch:Data\Terrain_10_15.dat
+[SUCCESS] Requeue Existing Patch (15,12) to queue:3 from queue:2
+Cancel patch:Data\Terrain_11_11.dat
+Enqueue New Patch (8,20) for queue:3
+[SUCCESS] Requeue Existing Patch (12,22) to queue:2 from queue:3
+Cancel patch:Data\Terrain_11_18.dat
+[SUCCESS] Requeue Existing Patch (20,18) to queue:3 from queue:2
+Cancel patch:Data\Terrain_18_22.dat
+Enqueue New Patch (10,23) for queue:3
+FileQueueReadThread just loaded Data\Terrain_19_13.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_17_12.datfrom queue:1
+LoadTerrainPatch loaded patch (13,19) and deleting object[SUCCESS] Requeue Existing Patch (20,17) to queue:3 from queue:2
+Cancel patch:Data\Terrain_17_22.dat
+Enqueue New Patch (9,22) for queue:3
+[SUCCESS] Requeue Existing Patch (10,20) to queue:2 from queue:3
+Cancel patch:Data\Terrain_14_21.dat
+Enqueue New Patch (11,24) for queue:3
+[SUCCESS] Requeue Existing Patch (17,13) to queue:3 from queue:2
+FileQueueReadThread just loaded Data\Terrain_17_12.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_20_15.datfrom queue:1
+Cancel patch:Data\Terrain_21_21.dat
+Cancel patch:Data\Terrain_12_19.dat
+Enqueue New Patch (18,24) for queue:3
+[SUCCESS] Requeue Existing Patch (12,13) to queue:3 from queue:2
+Cancel patch:Data\Terrain_13_20.dat
+Cancel patch:Data\Terrain_11_17.dat
+Enqueue New Patch (8,21) for queue:3
+[SUCCESS] Requeue Existing Patch (14,21) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (14,23) to queue:2 from queue:3
+[SUCCESS] Requeue Existing Patch (19,15) to queue:3 from queue:2
+Enqueue New Patch (14,25) for queue:3
+FileQueueReadThread just loaded Data\Terrain_20_15.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_18_12.datfrom queue:1
+LoadTerrainPatch loaded patch (15,20) and deleting object[SUCCESS] Requeue Existing Patch (12,20) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (15,23) to queue:2 from queue:3
+Enqueue New Patch (15,25) for queue:3
+[SUCCESS] Requeue Existing Patch (15,21) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (18,14) to queue:3 from queue:2
+Cancel patch:Data\Terrain_12_10.dat
+Enqueue New Patch (13,25) for queue:3
+Enqueue New Patch (10,12) for queue:3
+Cancel patch:Data\Terrain_25_13.dat
+[SUCCESS] Requeue Existing Patch (11,22) to queue:2 from queue:3
+[SUCCESS] Requeue Existing Patch (15,21) to queue:2 from queue:1
+FileQueueReadThread just loaded Data\Terrain_18_12.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_20_14.datfrom queue:1
+[SUCCESS] Requeue Existing Patch (12,13) to queue:2 from queue:3
+LoadTerrainPatch loaded patch (12,18) and deleting object[SUCCESS] Requeue Existing Patch (15,23) to queue:3 from queue:2
+Cancel patch:Data\Terrain_24_18.dat
+Cancel patch:Data\Terrain_25_15.dat
+Enqueue New Patch (15,25) for queue:3
+[SUCCESS] Requeue Existing Patch (15,23) to queue:2 from queue:3
+Enqueue New Patch (18,24) for queue:3
+Enqueue New Patch (13,25) for queue:3
+Cancel patch:Data\Terrain_15_21.dat
+[SUCCESS] Requeue Existing Patch (13,23) to queue:2 from queue:3
+[SUCCESS] Requeue Existing Patch (12,13) to queue:3 from queue:2
+[SUCCESS] Requeue Existing Patch (11,18) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (15,21) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (10,21) to queue:2 from queue:3
+[SUCCESS] Requeue Existing Patch (9,18) to queue:2 from queue:3
+Enqueue New Patch (7,18) for queue:3
+[SUCCESS] Requeue Existing Patch (13,21) to queue:1 from queue:2
+Enqueue New Patch (9,23) for queue:3
+Enqueue New Patch (10,24) for queue:3
+FileQueueReadThread just loaded Data\Terrain_20_14.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_20_16.datfrom queue:1
+Enqueue New Patch (7,17) for queue:3
+LoadTerrainPatch loaded patch (14,20) and deleting object[SUCCESS] Requeue Existing Patch (9,17) to queue:2 from queue:3
+Enqueue New Patch (7,19) for queue:3
+Enqueue New Patch (8,14) for queue:3
+[SUCCESS] Requeue Existing Patch (11,17) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (19,20) to queue:3 from queue:2
+[SUCCESS] Requeue Existing Patch (9,19) to queue:2 from queue:3
+[SUCCESS] Requeue Existing Patch (12,13) to queue:2 from queue:3
+Cancel patch:Data\Terrain_24_18.dat
+[SUCCESS] Requeue Existing Patch (11,19) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (19,16) to queue:3 from queue:2
+Enqueue New Patch (8,22) for queue:3
+Cancel patch:Data\Terrain_12_18.dat
+Cancel patch:Data\Terrain_11_16.dat
+Enqueue New Patch (16,11) for queue:3
+Cancel patch:Data\Terrain_20_21.dat
+Enqueue New Patch (7,16) for queue:3
+Cancel patch:Data\Terrain_22_20.dat
+FileQueueReadThread just loaded Data\Terrain_20_16.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_20_13.datfrom queue:1
+Cancel patch:Data\Terrain_11_16.dat
+[SUCCESS] Requeue Existing Patch (15,21) to queue:2 from queue:1
+Cancel patch:Data\Terrain_16_21.dat
+Enqueue New Patch (7,20) for queue:3
+[SUCCESS] Requeue Existing Patch (15,21) to queue:1 from queue:2
+Enqueue New Patch (12,25) for queue:3
+Cancel patch:Data\Terrain_14_20.dat
+[SUCCESS] Requeue Existing Patch (12,13) to queue:3 from queue:2
+[SUCCESS] Requeue Existing Patch (12,23) to queue:2 from queue:3
+Enqueue New Patch (18,24) for queue:3
+Enqueue New Patch (20,22) for queue:3
+Cancel patch:Data\Terrain_11_12.dat
+Enqueue New Patch (16,25) for queue:3
+FileQueueReadThread just loaded Data\Terrain_20_13.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_19_12.datfrom queue:1
+LoadTerrainPatch loaded patch (13,20) and deleting objectCancel patch:Data\Terrain_16_7.dat
+Enqueue New Patch (21,20) for queue:3
+Cancel patch:Data\Terrain_12_10.dat
+Cancel patch:Data\Terrain_14_8.dat
+[SUCCESS] Requeue Existing Patch (16,23) to queue:2 from queue:3
+Cancel patch:Data\Terrain_11_15.dat
+Cancel patch:Data\Terrain_13_19.dat
+[SUCCESS] Requeue Existing Patch (13,13) to queue:3 from queue:2
+[SUCCESS] Requeue Existing Patch (12,21) to queue:1 from queue:2
+Cancel patch:Data\Terrain_11_13.dat
+Enqueue New Patch (11,25) for queue:3
+[SUCCESS] Requeue Existing Patch (9,20) to queue:2 from queue:3
+FileQueueReadThread just loaded Data\Terrain_19_12.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_21_14.datfrom queue:1
+LoadTerrainPatch loaded patch (12,19) and deleting objectCancel patch:Data\Terrain_11_14.dat
+[SUCCESS] Requeue Existing Patch (10,22) to queue:2 from queue:3
+[SUCCESS] Requeue Existing Patch (11,20) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (11,23) to queue:2 from queue:3
+Cancel patch:Data\Terrain_12_17.dat
+[SUCCESS] Requeue Existing Patch (19,17) to queue:3 from queue:2
+Cancel patch:Data\Terrain_20_21.dat
+FileQueueReadThread just loaded Data\Terrain_21_14.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_20_12.datfrom queue:1
+LoadTerrainPatch loaded patch (14,21) and deleting objectCancel patch:Data\Terrain_17_21.dat
+Enqueue New Patch (9,24) for queue:3
+Enqueue New Patch (7,16) for queue:3
+Cancel patch:Data\Terrain_13_9.dat
+Enqueue New Patch (17,25) for queue:3
+Enqueue New Patch (7,21) for queue:3
+[SUCCESS] Requeue Existing Patch (11,14) to queue:3 from queue:2
+Enqueue New Patch (8,23) for queue:3
+Enqueue New Patch (10,25) for queue:3
+FileQueueReadThread just loaded Data\Terrain_20_12.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_18_11.datfrom queue:1
+LoadTerrainPatch loaded patch (12,20) and deleting objectCancel patch:Data\Terrain_15_20.dat
+[SUCCESS] Requeue Existing Patch (19,18) to queue:3 from queue:2
+[SUCCESS] Requeue Existing Patch (9,21) to queue:2 from queue:3
+[SUCCESS] Requeue Existing Patch (16,21) to queue:1 from queue:2
+Cancel patch:Data\Terrain_18_21.dat
+Cancel patch:Data\Terrain_13_18.dat
+Cancel patch:Data\Terrain_19_21.dat
+[SUCCESS] Requeue Existing Patch (19,19) to queue:3 from queue:2
+[SUCCESS] Requeue Existing Patch (13,22) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (14,22) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (13,24) to queue:2 from queue:3
+[SUCCESS] Requeue Existing Patch (14,24) to queue:2 from queue:3
+Enqueue New Patch (13,26) for queue:3
+Enqueue New Patch (14,26) for queue:3
+Cancel patch:Data\Terrain_12_16.dat
+Cancel patch:Data\Terrain_14_19.dat
+FileQueueReadThread just loaded Data\Terrain_18_11.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_21_13.datfrom queue:1
+Cancel patch:Data\Terrain_12_11.dat
+Enqueue New Patch (12,26) for queue:3
+[SUCCESS] Requeue Existing Patch (11,21) to queue:1 from queue:2
+Enqueue New Patch (7,22) for queue:3
+[SUCCESS] Requeue Existing Patch (12,24) to queue:2 from queue:3
+[SUCCESS] Requeue Existing Patch (16,21) to queue:2 from queue:1
+Enqueue New Patch (11,12) for queue:3
+[SUCCESS] Requeue Existing Patch (10,23) to queue:2 from queue:3
+[SUCCESS] Requeue Existing Patch (9,16) to queue:2 from queue:3
+Enqueue New Patch (8,14) for queue:3
+Cancel patch:Data\Terrain_22_20.dat
+[SUCCESS] Requeue Existing Patch (12,22) to queue:1 from queue:2
+Cancel patch:Data\Terrain_12_11.dat
+FileQueueReadThread just loaded Data\Terrain_21_13.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_17_11.datfrom queue:1
+Cancel patch:Data\Terrain_14_8.dat
+Enqueue New Patch (15,26) for queue:3
+LoadTerrainPatch loaded patch (13,21) and deleting object[SUCCESS] Requeue Existing Patch (9,16) to queue:3 from queue:2
+Enqueue New Patch (20,22) for queue:3
+[SUCCESS] Requeue Existing Patch (16,21) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (15,24) to queue:2 from queue:3
+Cancel patch:Data\Terrain_12_15.dat
+Enqueue New Patch (11,26) for queue:3
+Enqueue New Patch (8,24) for queue:3
+Enqueue New Patch (9,25) for queue:3
+[SUCCESS] Requeue Existing Patch (10,15) to queue:3 from queue:2
+[SUCCESS] Requeue Existing Patch (9,22) to queue:2 from queue:3
+Cancel patch:Data\Terrain_13_17.dat
+[SUCCESS] Requeue Existing Patch (12,14) to queue:3 from queue:2
+[SUCCESS] Requeue Existing Patch (17,23) to queue:2 from queue:3
+[SUCCESS] Requeue Existing Patch (15,22) to queue:1 from queue:2
+Cancel patch:Data\Terrain_12_12.dat
+Cancel patch:Data\Terrain_16_20.dat
+[SUCCESS] Requeue Existing Patch (11,24) to queue:2 from queue:3
+FileQueueReadThread just loaded Data\Terrain_17_11.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_19_11.datfrom queue:1
+Cancel patch:Data\Terrain_12_14.dat
+[SUCCESS] Requeue Existing Patch (17,23) to queue:3 from queue:2
+[SUCCESS] Requeue Existing Patch (17,23) to queue:2 from queue:3
+Cancel patch:Data\Terrain_12_13.dat
+Enqueue New Patch (16,26) for queue:3
+Enqueue New Patch (10,26) for queue:3
+Enqueue New Patch (7,23) for queue:3
+FileQueueReadThread just loaded Data\Terrain_19_11.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_21_15.datfrom queue:1
+Cancel patch:Data\Terrain_14_18.dat
+Cancel patch:Data\Terrain_15_19.dat
+Enqueue New Patch (18,25) for queue:3
+[SUCCESS] Requeue Existing Patch (16,24) to queue:2 from queue:3
+[SUCCESS] Requeue Existing Patch (11,22) to queue:1 from queue:2
+Enqueue New Patch (19,24) for queue:3
+Cancel patch:Data\Terrain_13_10.dat
+[SUCCESS] Requeue Existing Patch (18,22) to queue:2 from queue:3
+FileQueueReadThread just loaded Data\Terrain_21_15.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_21_12.datfrom queue:1
+Cancel patch:Data\Terrain_16_7.dat
+[SUCCESS] Requeue Existing Patch (13,23) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (10,24) to queue:2 from queue:3
+Enqueue New Patch (7,16) for queue:3
+[SUCCESS] Requeue Existing Patch (13,25) to queue:2 from queue:3
+[SUCCESS] Requeue Existing Patch (10,20) to queue:1 from queue:2
+Enqueue New Patch (6,20) for queue:3
+[SUCCESS] Requeue Existing Patch (8,20) to queue:2 from queue:3
+Enqueue New Patch (13,27) for queue:3
+Cancel patch:Data\Terrain_17_20.dat
+[SUCCESS] Requeue Existing Patch (18,22) to queue:3 from queue:2
+Enqueue New Patch (6,19) for queue:3
+[SUCCESS] Requeue Existing Patch (8,19) to queue:2 from queue:3
+[SUCCESS] Requeue Existing Patch (10,19) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (9,23) to queue:2 from queue:3
+Enqueue New Patch (8,25) for queue:3
+Enqueue New Patch (6,21) for queue:3
+Enqueue New Patch (12,27) for queue:3
+FileQueueReadThread just loaded Data\Terrain_21_12.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_20_11.datfrom queue:1
+[SUCCESS] Requeue Existing Patch (12,25) to queue:2 from queue:3
+Enqueue New Patch (14,27) for queue:3
+LoadTerrainPatch loaded patch (12,21) and deleting object[SUCCESS] Requeue Existing Patch (8,21) to queue:2 from queue:3
+[SUCCESS] Requeue Existing Patch (12,23) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (14,25) to queue:2 from queue:3
+Enqueue New Patch (9,26) for queue:3
+[SUCCESS] Requeue Existing Patch (10,21) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (14,23) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (11,15) to queue:3 from queue:2
+Enqueue New Patch (7,24) for queue:3
+Enqueue New Patch (17,26) for queue:3
+Enqueue New Patch (11,27) for queue:3
+FileQueueReadThread just loaded Data\Terrain_20_11.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_22_13.datfrom queue:1
+LoadTerrainPatch loaded patch (11,20) and deleting object[SUCCESS] Requeue Existing Patch (11,25) to queue:2 from queue:3
+Cancel patch:Data\Terrain_18_20.dat
+Enqueue New Patch (6,22) for queue:3
+Cancel patch:Data\Terrain_13_11.dat
+Cancel patch:Data\Terrain_16_19.dat
+Enqueue New Patch (15,27) for queue:3
+Cancel patch:Data\Terrain_22_20.dat
+Enqueue New Patch (6,18) for queue:3
+[SUCCESS] Requeue Existing Patch (8,22) to queue:2 from queue:3
+FileQueueReadThread just loaded Data\Terrain_22_13.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_22_14.datfrom queue:1
+[SUCCESS] Requeue Existing Patch (11,23) to queue:1 from queue:2
+LoadTerrainPatch loaded patch (13,22) and deleting objectCancel patch:Data\Terrain_14_9.dat
+[SUCCESS] Requeue Existing Patch (15,25) to queue:2 from queue:3
+Enqueue New Patch (10,27) for queue:3
+[SUCCESS] Requeue Existing Patch (12,15) to queue:3 from queue:2
+Cancel patch:Data\Terrain_13_12.dat
+Cancel patch:Data\Terrain_13_13.dat
+[SUCCESS] Requeue Existing Patch (18,19) to queue:3 from queue:2
+[SUCCESS] Requeue Existing Patch (9,24) to queue:2 from queue:3
+[SUCCESS] Requeue Existing Patch (10,22) to queue:1 from queue:2
+Cancel patch:Data\Terrain_19_20.dat
+[SUCCESS] Requeue Existing Patch (10,25) to queue:2 from queue:3
+FileQueueReadThread just loaded Data\Terrain_22_14.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_21_11.datfrom queue:1
+LoadTerrainPatch loaded patch (14,22) and deleting objectEnqueue New Patch (6,23) for queue:3
+Enqueue New Patch (8,26) for queue:3
+Enqueue New Patch (7,25) for queue:3
+[SUCCESS] Requeue Existing Patch (16,21) to queue:2 from queue:1
+[SUCCESS] Requeue Existing Patch (18,21) to queue:3 from queue:2
+[SUCCESS] Requeue Existing Patch (18,20) to queue:3 from queue:2
+Cancel patch:Data\Terrain_20_20.dat
+Cancel patch:Data\Terrain_21_20.dat
+Enqueue New Patch (9,27) for queue:3
+FileQueueReadThread just loaded Data\Terrain_21_11.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_22_12.datfrom queue:1
+LoadTerrainPatch loaded patch (11,21) and deleting object[SUCCESS] Requeue Existing Patch (8,23) to queue:2 from queue:3
+Cancel patch:Data\Terrain_17_19.dat
+Enqueue New Patch (16,27) for queue:3
+[SUCCESS] Requeue Existing Patch (10,16) to queue:3 from queue:2
+Cancel patch:Data\Terrain_16_7.dat
+Cancel patch:Data\Terrain_15_8.dat
+[SUCCESS] Requeue Existing Patch (12,24) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (12,26) to queue:2 from queue:3
+Enqueue New Patch (12,28) for queue:3
+FileQueueReadThread just loaded Data\Terrain_22_12.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_22_15.datfrom queue:1
+LoadTerrainPatch loaded patch (12,22) and deleting object[SUCCESS] Requeue Existing Patch (13,24) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (13,26) to queue:2 from queue:3
+Enqueue New Patch (13,28) for queue:3
+Enqueue New Patch (6,24) for queue:3
+[SUCCESS] Requeue Existing Patch (10,23) to queue:1 from queue:2
+Enqueue New Patch (11,28) for queue:3
+[SUCCESS] Requeue Existing Patch (11,26) to queue:2 from queue:3
+Cancel patch:Data\Terrain_14_10.dat
+[SUCCESS] Requeue Existing Patch (9,25) to queue:2 from queue:3
+Enqueue New Patch (14,28) for queue:3
+FileQueueReadThread just loaded Data\Terrain_22_15.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_22_11.datfrom queue:1
+[SUCCESS] Requeue Existing Patch (11,24) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (15,23) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (14,26) to queue:2 from queue:3
+Enqueue New Patch (7,26) for queue:3
+[SUCCESS] Requeue Existing Patch (8,24) to queue:2 from queue:3
+Enqueue New Patch (10,28) for queue:3
+Enqueue New Patch (8,27) for queue:3
+Cancel patch:Data\Terrain_18_19.dat
+FileQueueReadThread just loaded Data\Terrain_22_11.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_23_13.datfrom queue:1
+LoadTerrainPatch loaded patch (11,22) and deleting object[SUCCESS] Requeue Existing Patch (10,26) to queue:2 from queue:3
+[SUCCESS] Requeue Existing Patch (11,16) to queue:3 from queue:2
+[SUCCESS] Requeue Existing Patch (9,17) to queue:3 from queue:2
+Cancel patch:Data\Terrain_14_11.dat
+[SUCCESS] Requeue Existing Patch (14,24) to queue:1 from queue:2
+Enqueue New Patch (6,25) for queue:3
+Cancel patch:Data\Terrain_14_12.dat
+[SUCCESS] Requeue Existing Patch (9,21) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (7,21) to queue:2 from queue:3
+FileQueueReadThread just loaded Data\Terrain_23_13.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_20_10.datfrom queue:1
+LoadTerrainPatch loaded patch (13,23) and deleting objectEnqueue New Patch (5,21) for queue:3
+Enqueue New Patch (15,28) for queue:3
+Enqueue New Patch (9,28) for queue:3
+Enqueue New Patch (5,22) for queue:3
+[SUCCESS] Requeue Existing Patch (7,22) to queue:2 from queue:3
+Cancel patch:Data\Terrain_24_19.dat
+[SUCCESS] Requeue Existing Patch (16,25) to queue:2 from queue:3
+[SUCCESS] Requeue Existing Patch (9,22) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (10,24) to queue:1 from queue:2
+Cancel patch:Data\Terrain_19_19.dat
+FileQueueReadThread just loaded Data\Terrain_20_10.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_19_10.datfrom queue:1
+Enqueue New Patch (5,23) for queue:3
+Enqueue New Patch (5,20) for queue:3
+[SUCCESS] Requeue Existing Patch (9,26) to queue:2 from queue:3
+[SUCCESS] Requeue Existing Patch (8,25) to queue:2 from queue:3
+[SUCCESS] Requeue Existing Patch (7,23) to queue:2 from queue:3
+Enqueue New Patch (7,27) for queue:3
+Cancel patch:Data\Terrain_15_9.dat
+FileQueueReadThread just loaded Data\Terrain_19_10.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_23_12.datfrom queue:1
+[SUCCESS] Requeue Existing Patch (15,26) to queue:2 from queue:3
+[SUCCESS] Requeue Existing Patch (9,23) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (12,25) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (12,27) to queue:2 from queue:3
+Enqueue New Patch (12,29) for queue:3
+[SUCCESS] Requeue Existing Patch (17,20) to queue:3 from queue:2
+Enqueue New Patch (8,28) for queue:3
+Enqueue New Patch (11,29) for queue:3
+[SUCCESS] Requeue Existing Patch (11,27) to queue:2 from queue:3
+[SUCCESS] Requeue Existing Patch (7,20) to queue:2 from queue:3
+Enqueue New Patch (6,26) for queue:3
+[SUCCESS] Requeue Existing Patch (7,20) to queue:3 from queue:2
+[SUCCESS] Requeue Existing Patch (11,25) to queue:1 from queue:2
+Enqueue New Patch (17,27) for queue:3
+Enqueue New Patch (13,29) for queue:3
+[SUCCESS] Requeue Existing Patch (13,27) to queue:2 from queue:3
+Cancel patch:Data\Terrain_20_19.dat
+Enqueue New Patch (5,24) for queue:3
+FileQueueReadThread just loaded Data\Terrain_23_12.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_21_10.datfrom queue:1
+LoadTerrainPatch loaded patch (12,23) and deleting objectEnqueue New Patch (10,29) for queue:3
+[SUCCESS] Requeue Existing Patch (7,20) to queue:2 from queue:3
+[SUCCESS] Requeue Existing Patch (13,25) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (11,23) to queue:0 from queue:1
+[SUCCESS] Requeue Existing Patch (10,27) to queue:2 from queue:3
+[SUCCESS] Requeue Existing Patch (10,17) to queue:3 from queue:2
+[SUCCESS] Requeue Existing Patch (7,24) to queue:2 from queue:3
+FileQueueReadThread just loaded Data\Terrain_21_10.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_23_11.datfrom queue:0
+Cancel patch:Data\Terrain_15_10.dat
+[SUCCESS] Requeue Existing Patch (15,23) to queue:2 from queue:1
+[SUCCESS] Requeue Existing Patch (10,25) to queue:1 from queue:2
+Enqueue New Patch (16,28) for queue:3
+Enqueue New Patch (14,29) for queue:3
+[SUCCESS] Requeue Existing Patch (17,21) to queue:3 from queue:2
+Cancel patch:Data\Terrain_21_19.dat
+Enqueue New Patch (9,29) for queue:3
+[SUCCESS] Requeue Existing Patch (9,24) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (8,26) to queue:2 from queue:3
+[SUCCESS] Requeue Existing Patch (17,23) to queue:3 from queue:2
+Cancel patch:Data\Terrain_23_19.dat
+Enqueue New Patch (5,25) for queue:3
+FileQueueReadThread just loaded Data\Terrain_23_11.datfrom queue:0
+FileQueueReadThread just dequeued Data\Terrain_23_14.datfrom queue:1
+Cancel patch:Data\Terrain_15_11.dat
+LoadTerrainPatch loaded patch (11,23) and deleting objectCancel patch:Data\Terrain_15_12.dat
+[SUCCESS] Requeue Existing Patch (9,27) to queue:2 from queue:3
+[SUCCESS] Requeue Existing Patch (14,27) to queue:2 from queue:3
+Cancel patch:Data\Terrain_22_19.dat
+[SUCCESS] Requeue Existing Patch (17,22) to queue:3 from queue:2
+Enqueue New Patch (7,28) for queue:3
+Cancel patch:Data\Terrain_16_8.dat
+Enqueue New Patch (6,27) for queue:3
+[SUCCESS] Requeue Existing Patch (7,25) to queue:2 from queue:3
+FileQueueReadThread just loaded Data\Terrain_23_14.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_22_10.datfrom queue:1
+Cancel patch:Data\Terrain_19_18.dat
+Enqueue New Patch (8,29) for queue:3
+FileQueueReadThread just loaded Data\Terrain_22_10.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_24_12.datfrom queue:1
+LoadTerrainPatch loaded patch (10,22) and deleting objectEnqueue New Patch (5,26) for queue:3
+Enqueue New Patch (15,29) for queue:3
+[SUCCESS] Requeue Existing Patch (11,24) to queue:0 from queue:1
+[SUCCESS] Requeue Existing Patch (9,25) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (11,26) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (11,28) to queue:2 from queue:3
+Enqueue New Patch (11,30) for queue:3
+[SUCCESS] Requeue Existing Patch (9,18) to queue:3 from queue:2
+Enqueue New Patch (12,30) for queue:3
+[SUCCESS] Requeue Existing Patch (12,28) to queue:2 from queue:3
+[SUCCESS] Requeue Existing Patch (12,26) to queue:1 from queue:2
+Enqueue New Patch (10,30) for queue:3
+FileQueueReadThread just loaded Data\Terrain_24_12.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_24_11.datfrom queue:0
+[SUCCESS] Requeue Existing Patch (8,27) to queue:2 from queue:3
+LoadTerrainPatch loaded patch (12,24) and deleting object[SUCCESS] Requeue Existing Patch (10,28) to queue:2 from queue:3
+Cancel patch:Data\Terrain_17_7.dat
+[SUCCESS] Requeue Existing Patch (10,26) to queue:1 from queue:2
+Cancel patch:Data\Terrain_20_18.dat
+[SUCCESS] Requeue Existing Patch (7,26) to queue:2 from queue:3
+Cancel patch:Data\Terrain_16_9.dat
+Enqueue New Patch (6,28) for queue:3
+Enqueue New Patch (13,30) for queue:3
+[SUCCESS] Requeue Existing Patch (10,23) to queue:0 from queue:1
+Enqueue New Patch (7,29) for queue:3
+FileQueueReadThread just loaded Data\Terrain_24_11.datfrom queue:0
+FileQueueReadThread just dequeued Data\Terrain_23_10.datfrom queue:0
+LoadTerrainPatch loaded patch (11,24) and deleting objectEnqueue New Patch (9,30) for queue:3
+[SUCCESS] Requeue Existing Patch (8,23) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (6,23) to queue:2 from queue:3
+[SUCCESS] Requeue Existing Patch (13,28) to queue:2 from queue:3
+Enqueue New Patch (4,23) for queue:3
+[SUCCESS] Requeue Existing Patch (9,28) to queue:2 from queue:3
+Cancel patch:Data\Terrain_18_6.dat
+[SUCCESS] Requeue Existing Patch (10,18) to queue:3 from queue:2
+Cancel patch:Data\Terrain_16_10.dat
+[SUCCESS] Requeue Existing Patch (7,20) to queue:3 from queue:2
+[SUCCESS] Requeue Existing Patch (8,19) to queue:3 from queue:2
+Cancel patch:Data\Terrain_23_4.dat
+[SUCCESS] Requeue Existing Patch (14,25) to queue:1 from queue:2
+FileQueueReadThread just loaded Data\Terrain_23_10.datfrom queue:0
+FileQueueReadThread just dequeued Data\Terrain_24_13.datfrom queue:1
+[SUCCESS] Requeue Existing Patch (6,23) to queue:3 from queue:2
+LoadTerrainPatch loaded patch (10,23) and deleting objectCancel patch:Data\Terrain_16_11.dat
+[SUCCESS] Requeue Existing Patch (8,23) to queue:2 from queue:1
+[SUCCESS] Requeue Existing Patch (13,26) to queue:1 from queue:2
+Enqueue New Patch (18,26) for queue:3
+Enqueue New Patch (14,30) for queue:3
+[SUCCESS] Requeue Existing Patch (15,27) to queue:2 from queue:3
+[SUCCESS] Requeue Existing Patch (9,21) to queue:2 from queue:1
+Enqueue New Patch (16,29) for queue:3
+[SUCCESS] Requeue Existing Patch (14,28) to queue:2 from queue:3
+Enqueue New Patch (17,28) for queue:3
+Cancel patch:Data\Terrain_17_8.dat
+[SUCCESS] Requeue Existing Patch (16,26) to queue:2 from queue:3
+Cancel patch:Data\Terrain_20_5.dat
+FileQueueReadThread just loaded Data\Terrain_24_13.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_24_14.datfrom queue:1
+LoadTerrainPatch loaded patch (13,24) and deleting objectEnqueue New Patch (15,30) for queue:3
+[SUCCESS] Requeue Existing Patch (9,19) to queue:3 from queue:2
+Enqueue New Patch (18,27) for queue:3
+Cancel patch:Data\Terrain_18_7.dat
+Enqueue New Patch (18,20) for queue:3
+[SUCCESS] Requeue Existing Patch (7,21) to queue:3 from queue:2
+Cancel patch:Data\Terrain_19_6.dat
+Cancel patch:Data\Terrain_17_9.dat
+[SUCCESS] Requeue Existing Patch (7,26) to queue:3 from queue:2
+[SUCCESS] Requeue Existing Patch (14,26) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (8,20) to queue:3 from queue:2
+[SUCCESS] Requeue Existing Patch (15,24) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (17,24) to queue:2 from queue:3
+Enqueue New Patch (19,24) for queue:3
+Enqueue New Patch (19,23) for queue:3
+FileQueueReadThread just loaded Data\Terrain_24_14.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_22_9.datfrom queue:1
+LoadTerrainPatch loaded patch (14,24) and deleting objectCancel patch:Data\Terrain_21_5.dat
+[SUCCESS] Requeue Existing Patch (15,23) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (17,23) to queue:2 from queue:3
+Cancel patch:Data\Terrain_28_6.dat
+[SUCCESS] Requeue Existing Patch (15,28) to queue:2 from queue:3
+LoadTerrainPatch loaded patch (14,23) and deleting objectEnqueue New Patch (15,17) for queue:3
+[SUCCESS] Requeue Existing Patch (16,27) to queue:2 from queue:3
+Cancel patch:Data\Terrain_29_7.dat
+Enqueue New Patch (19,25) for queue:3
+[SUCCESS] Requeue Existing Patch (9,28) to queue:3 from queue:2
+Enqueue New Patch (17,29) for queue:3
+[SUCCESS] Requeue Existing Patch (17,25) to queue:2 from queue:3
+Cancel patch:Data\Terrain_26_5.dat
+Enqueue New Patch (19,22) for queue:3
+Enqueue New Patch (9,17) for queue:3
+[SUCCESS] Requeue Existing Patch (15,25) to queue:1 from queue:2
+Cancel patch:Data\Terrain_17_9.dat
+[SUCCESS] Requeue Existing Patch (7,22) to queue:3 from queue:2
+[SUCCESS] Requeue Existing Patch (17,22) to queue:2 from queue:3
+Enqueue New Patch (18,28) for queue:3
+[SUCCESS] Requeue Existing Patch (9,25) to queue:2 from queue:1
+FileQueueReadThread just loaded Data\Terrain_22_9.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_24_10.datfrom queue:1
+Cancel patch:Data\Terrain_22_5.dat
+Enqueue New Patch (19,26) for queue:3
+[SUCCESS] Requeue Existing Patch (12,25) to queue:0 from queue:1
+Cancel patch:Data\Terrain_17_15.dat
+Cancel patch:Data\Terrain_20_6.dat
+[SUCCESS] Requeue Existing Patch (12,27) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (17,26) to queue:2 from queue:3
+[SUCCESS] Requeue Existing Patch (12,29) to queue:2 from queue:3
+Enqueue New Patch (16,30) for queue:3
+[SUCCESS] Requeue Existing Patch (7,25) to queue:3 from queue:2
+Enqueue New Patch (12,31) for queue:3
+[SUCCESS] Requeue Existing Patch (9,23) to queue:2 from queue:1
+Cancel patch:Data\Terrain_25_5.dat
+Enqueue New Patch (13,31) for queue:3
+[SUCCESS] Requeue Existing Patch (13,29) to queue:2 from queue:3
+FileQueueReadThread just loaded Data\Terrain_24_10.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_25_12.datfrom queue:0
+Cancel patch:Data\Terrain_18_8.dat
+Cancel patch:Data\Terrain_19_7.dat
+[SUCCESS] Requeue Existing Patch (7,23) to queue:3 from queue:2
+[SUCCESS] Requeue Existing Patch (13,27) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (8,27) to queue:3 from queue:2
+Cancel patch:Data\Terrain_23_5.dat
+[SUCCESS] Requeue Existing Patch (13,25) to queue:0 from queue:1
+[SUCCESS] Requeue Existing Patch (8,21) to queue:3 from queue:2
+Cancel patch:Data\Terrain_24_5.dat
+[SUCCESS] Requeue Existing Patch (7,24) to queue:3 from queue:2
+Enqueue New Patch (11,31) for queue:3
+[SUCCESS] Requeue Existing Patch (15,26) to queue:1 from queue:2
+Cancel patch:Data\Terrain_17_10.dat
+[SUCCESS] Requeue Existing Patch (9,24) to queue:2 from queue:1
+Enqueue New Patch (19,27) for queue:3
+[SUCCESS] Requeue Existing Patch (9,20) to queue:3 from queue:2
+Enqueue New Patch (14,31) for queue:3
+[SUCCESS] Requeue Existing Patch (11,29) to queue:2 from queue:3
+Enqueue New Patch (19,21) for queue:3
+FileQueueReadThread just loaded Data\Terrain_25_12.datfrom queue:0
+FileQueueReadThread just dequeued Data\Terrain_25_13.datfrom queue:0
+LoadTerrainPatch loaded patch (12,25) and deleting object[SUCCESS] Requeue Existing Patch (14,29) to queue:2 from queue:3
+[SUCCESS] Requeue Existing Patch (9,28) to queue:2 from queue:3
+[SUCCESS] Requeue Existing Patch (16,28) to queue:2 from queue:3
+Enqueue New Patch (18,29) for queue:3
+[SUCCESS] Requeue Existing Patch (14,27) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (17,27) to queue:2 from queue:3
+Cancel patch:Data\Terrain_21_6.dat
+FileQueueReadThread just loaded Data\Terrain_25_13.datfrom queue:0
+FileQueueReadThread just dequeued Data\Terrain_25_11.datfrom queue:1
+LoadTerrainPatch loaded patch (13,25) and deleting objectEnqueue New Patch (17,30) for queue:3
+Enqueue New Patch (15,31) for queue:3
+[SUCCESS] Requeue Existing Patch (11,27) to queue:1 from queue:2
+Cancel patch:Data\Terrain_18_9.dat
+Enqueue New Patch (19,28) for queue:3
+[SUCCESS] Requeue Existing Patch (15,29) to queue:2 from queue:3
+[SUCCESS] Requeue Existing Patch (8,22) to queue:3 from queue:2
+FileQueueReadThread just loaded Data\Terrain_25_11.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_25_10.datfrom queue:1
+Cancel patch:Data\Terrain_20_7.dat
+[SUCCESS] Requeue Existing Patch (9,28) to queue:3 from queue:2
+[SUCCESS] Requeue Existing Patch (16,24) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (18,24) to queue:2 from queue:3
+Enqueue New Patch (20,24) for queue:3
+Enqueue New Patch (20,25) for queue:3
+[SUCCESS] Requeue Existing Patch (18,25) to queue:2 from queue:3
+[SUCCESS] Requeue Existing Patch (16,25) to queue:1 from queue:2
+Cancel patch:Data\Terrain_19_8.dat
+Enqueue New Patch (10,31) for queue:3
+[SUCCESS] Requeue Existing Patch (14,25) to queue:0 from queue:1
+Cancel patch:Data\Terrain_27_6.dat
+FileQueueReadThread just loaded Data\Terrain_25_10.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_25_14.datfrom queue:0
+[SUCCESS] Requeue Existing Patch (9,21) to queue:3 from queue:2
+Cancel patch:Data\Terrain_22_6.dat
+Enqueue New Patch (20,23) for queue:3
+[SUCCESS] Requeue Existing Patch (10,26) to queue:2 from queue:1
+[SUCCESS] Requeue Existing Patch (18,26) to queue:2 from queue:3
+Enqueue New Patch (20,26) for queue:3
+[SUCCESS] Requeue Existing Patch (15,27) to queue:1 from queue:2
+[SUCCESS] Requeue Existing Patch (17,28) to queue:2 from queue:3
+Enqueue New Patch (16,31) for queue:3
+[SUCCESS] Requeue Existing Patch (18,23) to queue:2 from queue:3
+FileQueueReadThread just loaded Data\Terrain_25_14.datfrom queue:0
+FileQueueReadThread just dequeued Data\Terrain_26_11.datfrom queue:1
+LoadTerrainPatch loaded patch (14,25) and deleting objectFileQueueReadThread just loaded Data\Terrain_26_11.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_26_12.datfrom queue:1
+FileQueueReadThread just loaded Data\Terrain_26_12.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_26_13.datfrom queue:1
+FileQueueReadThread just loaded Data\Terrain_26_13.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_26_14.datfrom queue:1
+LoadTerrainPatch loaded patch (13,26) and deleting objectFileQueueReadThread just loaded Data\Terrain_26_14.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_24_15.datfrom queue:1
+LoadTerrainPatch loaded patch (14,26) and deleting objectFileQueueReadThread just loaded Data\Terrain_24_15.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_23_15.datfrom queue:1
+LoadTerrainPatch loaded patch (15,24) and deleting objectFileQueueReadThread just loaded Data\Terrain_23_15.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_25_15.datfrom queue:1
+FileQueueReadThread just loaded Data\Terrain_25_15.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_27_12.datfrom queue:1
+LoadTerrainPatch loaded patch (15,25) and deleting objectFileQueueReadThread just loaded Data\Terrain_27_12.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_27_13.datfrom queue:1
+FileQueueReadThread just loaded Data\Terrain_27_13.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_26_15.datfrom queue:1
+LoadTerrainPatch loaded patch (13,27) and deleting objectFileQueueReadThread just loaded Data\Terrain_26_15.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_27_14.datfrom queue:1
+LoadTerrainPatch loaded patch (15,26) and deleting objectFileQueueReadThread just loaded Data\Terrain_27_14.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_27_11.datfrom queue:1
+LoadTerrainPatch loaded patch (14,27) and deleting objectFileQueueReadThread just loaded Data\Terrain_27_11.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_24_16.datfrom queue:1
+FileQueueReadThread just loaded Data\Terrain_24_16.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_25_16.datfrom queue:1
+LoadTerrainPatch loaded patch (16,24) and deleting objectFileQueueReadThread just loaded Data\Terrain_25_16.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_27_15.datfrom queue:1
+LoadTerrainPatch loaded patch (16,25) and deleting objectFileQueueReadThread just loaded Data\Terrain_27_15.datfrom queue:1
+FileQueueReadThread just dequeued Data\Terrain_22_16.datfrom queue:2
+LoadTerrainPatch loaded patch (15,27) and deleting objectFileQueueReadThread just loaded Data\Terrain_22_16.datfrom queue:2
+FileQueueReadThread just dequeued Data\Terrain_23_16.datfrom queue:2
+FileQueueReadThread just loaded Data\Terrain_23_16.datfrom queue:2
+FileQueueReadThread just dequeued Data\Terrain_21_16.datfrom queue:2
+FileQueueReadThread just loaded Data\Terrain_21_16.datfrom queue:2
+FileQueueReadThread just dequeued Data\Terrain_24_8.datfrom queue:2
+FileQueueReadThread just loaded Data\Terrain_24_8.datfrom queue:2
+FileQueueReadThread just dequeued Data\Terrain_26_9.datfrom queue:2
+FileQueueReadThread just loaded Data\Terrain_26_9.datfrom queue:2
+FileQueueReadThread just dequeued Data\Terrain_25_8.datfrom queue:2
+FileQueueReadThread just loaded Data\Terrain_25_8.datfrom queue:2
+FileQueueReadThread just dequeued Data\Terrain_27_10.datfrom queue:2
+FileQueueReadThread just loaded Data\Terrain_27_10.datfrom queue:2
+FileQueueReadThread just dequeued Data\Terrain_26_8.datfrom queue:2
+FileQueueReadThread just loaded Data\Terrain_26_8.datfrom queue:2
+FileQueueReadThread just dequeued Data\Terrain_27_9.datfrom queue:2
+FileQueueReadThread just loaded Data\Terrain_27_9.datfrom queue:2
+FileQueueReadThread just dequeued Data\Terrain_28_11.datfrom queue:2
+FileQueueReadThread just loaded Data\Terrain_28_11.datfrom queue:2
+FileQueueReadThread just dequeued Data\Terrain_28_12.datfrom queue:2
+FileQueueReadThread just loaded Data\Terrain_28_12.datfrom queue:2
+FileQueueReadThread just dequeued Data\Terrain_28_10.datfrom queue:2
+FileQueueReadThread just loaded Data\Terrain_28_10.datfrom queue:2
+FileQueueReadThread just dequeued Data\Terrain_28_13.datfrom queue:2
+FileQueueReadThread just loaded Data\Terrain_28_13.datfrom queue:2
+FileQueueReadThread just dequeued Data\Terrain_23_8.datfrom queue:2
+LoadTerrainPatch loaded patch (13,28) and deleting objectFileQueueReadThread just loaded Data\Terrain_23_8.datfrom queue:2
+FileQueueReadThread just dequeued Data\Terrain_28_14.datfrom queue:2
+FileQueueReadThread just loaded Data\Terrain_28_14.datfrom queue:2
+FileQueueReadThread just dequeued Data\Terrain_26_16.datfrom queue:2
+LoadTerrainPatch loaded patch (14,28) and deleting objectFileQueueReadThread just loaded Data\Terrain_26_16.datfrom queue:2
+FileQueueReadThread just dequeued Data\Terrain_24_17.datfrom queue:2
+LoadTerrainPatch loaded patch (16,26) and deleting objectFileQueueReadThread just loaded Data\Terrain_24_17.datfrom queue:2
+FileQueueReadThread just dequeued Data\Terrain_23_17.datfrom queue:2
+FileQueueReadThread just loaded Data\Terrain_23_17.datfrom queue:2
+FileQueueReadThread just dequeued Data\Terrain_28_15.datfrom queue:2
+LoadTerrainPatch loaded patch (17,24) and deleting objectFileQueueReadThread just loaded Data\Terrain_28_15.datfrom queue:2
+FileQueueReadThread just dequeued Data\Terrain_27_16.datfrom queue:2
+LoadTerrainPatch loaded patch (15,28) and deleting objectFileQueueReadThread just loaded Data\Terrain_27_16.datfrom queue:2
+FileQueueReadThread just dequeued Data\Terrain_25_17.datfrom queue:2
+FileQueueReadThread just loaded Data\Terrain_25_17.datfrom queue:2
+FileQueueReadThread just dequeued Data\Terrain_22_17.datfrom queue:2
+FileQueueReadThread just loaded Data\Terrain_22_17.datfrom queue:2
+FileQueueReadThread just dequeued Data\Terrain_25_9.datfrom queue:2
+LoadTerrainPatch loaded patch (16,27) and deleting objectFileQueueReadThread just loaded Data\Terrain_25_9.datfrom queue:2
+FileQueueReadThread just dequeued Data\Terrain_26_17.datfrom queue:2
+LoadTerrainPatch loaded patch (17,25) and deleting objectFileQueueReadThread just loaded Data\Terrain_26_17.datfrom queue:2
+FileQueueReadThread just dequeued Data\Terrain_29_12.datfrom queue:2
+FileQueueReadThread just loaded Data\Terrain_29_12.datfrom queue:2
+FileQueueReadThread just dequeued Data\Terrain_23_9.datfrom queue:2
+LoadTerrainPatch loaded patch (15,23) and deleting objectLoadTerrainPatch loaded patch (16,23) and deleting objectLoadTerrainPatch loaded patch (17,23) and deleting objectLoadTerrainPatch loaded patch (12,26) and deleting objectLoadTerrainPatch loaded patch (17,26) and deleting objectLoadTerrainPatch loaded patch (12,27) and deleting objectLoadTerrainPatch loaded patch (12,28) and deleting objectFileQueueReadThread just loaded Data\Terrain_23_9.datfrom queue:2
+FileQueueReadThread just dequeued Data\Terrain_29_13.datfrom queue:2
+LoadTerrainPatch loaded patch (12,29) and deleting objectFileQueueReadThread just loaded Data\Terrain_29_13.datfrom queue:2
+FileQueueReadThread just dequeued Data\Terrain_24_9.datfrom queue:2
+FileQueueReadThread just loaded Data\Terrain_24_9.datfrom queue:2
+FileQueueReadThread just dequeued Data\Terrain_29_11.datfrom queue:2
+LoadTerrainPatch loaded patch (13,29) and deleting objectFileQueueReadThread just loaded Data\Terrain_29_11.datfrom queue:2
+FileQueueReadThread just dequeued Data\Terrain_29_14.datfrom queue:2
+FileQueueReadThread just loaded Data\Terrain_29_14.datfrom queue:2
+FileQueueReadThread just dequeued Data\Terrain_28_16.datfrom queue:2
+FileQueueReadThread just loaded Data\Terrain_28_16.datfrom queue:2
+FileQueueReadThread just dequeued Data\Terrain_27_17.datfrom queue:2
+LoadTerrainPatch loaded patch (14,29) and deleting objectFileQueueReadThread just loaded Data\Terrain_27_17.datfrom queue:2
+FileQueueReadThread just dequeued Data\Terrain_29_15.datfrom queue:2
+LoadTerrainPatch loaded patch (16,28) and deleting objectFileQueueReadThread just loaded Data\Terrain_29_15.datfrom queue:2
+FileQueueReadThread just dequeued Data\Terrain_24_18.datfrom queue:2
+FileQueueReadThread just loaded Data\Terrain_24_18.datfrom queue:2
+FileQueueReadThread just dequeued Data\Terrain_25_18.datfrom queue:2
+LoadTerrainPatch loaded patch (17,27) and deleting objectLoadTerrainPatch loaded patch (15,29) and deleting objectFileQueueReadThread just loaded Data\Terrain_25_18.datfrom queue:2
+FileQueueReadThread just dequeued Data\Terrain_26_10.datfrom queue:2
+FileQueueReadThread just loaded Data\Terrain_26_10.datfrom queue:2
+FileQueueReadThread just dequeued Data\Terrain_26_18.datfrom queue:2
+LoadTerrainPatch loaded patch (18,24) and deleting objectLoadTerrainPatch loaded patch (18,25) and deleting objectFileQueueReadThread just loaded Data\Terrain_26_18.datfrom queue:2
+FileQueueReadThread just dequeued Data\Terrain_28_17.datfrom queue:2
+FileQueueReadThread just loaded Data\Terrain_28_17.datfrom queue:2
+FileQueueReadThread just dequeued Data\Terrain_23_18.datfrom queue:2
+LoadTerrainPatch loaded patch (18,26) and deleting objectLoadTerrainPatch loaded patch (17,28) and deleting objectFileQueueReadThread just loaded Data\Terrain_23_18.datfrom queue:2
+FileQueueReadThread just dequeued Data\Terrain_22_18.datfrom queue:3
+FileQueueReadThread just loaded Data\Terrain_22_18.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_21_18.datfrom queue:3
+LoadTerrainPatch loaded patch (18,23) and deleting objectFileQueueReadThread just loaded Data\Terrain_21_18.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_24_6.datfrom queue:3
+FileQueueReadThread just loaded Data\Terrain_24_6.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_25_6.datfrom queue:3
+FileQueueReadThread just loaded Data\Terrain_25_6.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_27_7.datfrom queue:3
+FileQueueReadThread just loaded Data\Terrain_27_7.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_20_17.datfrom queue:3
+FileQueueReadThread just loaded Data\Terrain_20_17.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_28_8.datfrom queue:3
+FileQueueReadThread just loaded Data\Terrain_28_8.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_26_6.datfrom queue:3
+FileQueueReadThread just loaded Data\Terrain_26_6.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_29_10.datfrom queue:3
+FileQueueReadThread just loaded Data\Terrain_29_10.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_21_17.datfrom queue:3
+FileQueueReadThread just loaded Data\Terrain_21_17.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_29_9.datfrom queue:3
+FileQueueReadThread just loaded Data\Terrain_29_9.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_28_7.datfrom queue:3
+FileQueueReadThread just loaded Data\Terrain_28_7.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_29_8.datfrom queue:3
+FileQueueReadThread just loaded Data\Terrain_29_8.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_30_11.datfrom queue:3
+FileQueueReadThread just loaded Data\Terrain_30_11.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_30_12.datfrom queue:3
+FileQueueReadThread just loaded Data\Terrain_30_12.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_30_10.datfrom queue:3
+FileQueueReadThread just loaded Data\Terrain_30_10.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_30_13.datfrom queue:3
+LoadTerrainPatch loaded patch (12,30) and deleting objectFileQueueReadThread just loaded Data\Terrain_30_13.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_30_9.datfrom queue:3
+FileQueueReadThread just loaded Data\Terrain_30_9.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_18_10.datfrom queue:3
+LoadTerrainPatch loaded patch (13,30) and deleting objectFileQueueReadThread just loaded Data\Terrain_18_10.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_23_6.datfrom queue:3
+FileQueueReadThread just loaded Data\Terrain_23_6.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_30_14.datfrom queue:3
+FileQueueReadThread just loaded Data\Terrain_30_14.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_29_16.datfrom queue:3
+FileQueueReadThread just loaded Data\Terrain_29_16.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_30_15.datfrom queue:3
+LoadTerrainPatch loaded patch (14,30) and deleting objectLoadTerrainPatch loaded patch (16,29) and deleting objectFileQueueReadThread just loaded Data\Terrain_30_15.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_19_9.datfrom queue:3
+LoadTerrainPatch loaded patch (15,30) and deleting objectFileQueueReadThread just loaded Data\Terrain_19_9.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_27_18.datfrom queue:3
+FileQueueReadThread just loaded Data\Terrain_27_18.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_20_18.datfrom queue:3
+FileQueueReadThread just loaded Data\Terrain_20_18.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_21_7.datfrom queue:3
+LoadTerrainPatch loaded patch (18,27) and deleting objectFileQueueReadThread just loaded Data\Terrain_21_7.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_26_7.datfrom queue:3
+FileQueueReadThread just loaded Data\Terrain_26_7.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_20_8.datfrom queue:3
+FileQueueReadThread just loaded Data\Terrain_20_8.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_24_19.datfrom queue:3
+FileQueueReadThread just loaded Data\Terrain_24_19.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_23_19.datfrom queue:3
+FileQueueReadThread just loaded Data\Terrain_23_19.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_25_19.datfrom queue:3
+LoadTerrainPatch loaded patch (19,24) and deleting objectFileQueueReadThread just loaded Data\Terrain_25_19.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_29_17.datfrom queue:3
+LoadTerrainPatch loaded patch (19,23) and deleting objectLoadTerrainPatch loaded patch (19,25) and deleting objectFileQueueReadThread just loaded Data\Terrain_29_17.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_22_19.datfrom queue:3
+FileQueueReadThread just loaded Data\Terrain_22_19.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_22_7.datfrom queue:3
+LoadTerrainPatch loaded patch (17,29) and deleting objectFileQueueReadThread just loaded Data\Terrain_22_7.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_28_18.datfrom queue:3
+FileQueueReadThread just loaded Data\Terrain_28_18.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_26_19.datfrom queue:3
+FileQueueReadThread just loaded Data\Terrain_26_19.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_30_16.datfrom queue:3
+LoadTerrainPatch loaded patch (18,28) and deleting objectFileQueueReadThread just loaded Data\Terrain_30_16.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_25_7.datfrom queue:3
+LoadTerrainPatch loaded patch (19,26) and deleting objectFileQueueReadThread just loaded Data\Terrain_25_7.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_31_12.datfrom queue:3
+LoadTerrainPatch loaded patch (16,30) and deleting objectApplication terminated
+FileQueueReadThread just loaded Data\Terrain_31_12.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_31_13.datfrom queue:3
+FileQueueReadThread just loaded Data\Terrain_31_13.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_23_7.datfrom queue:3
+FileQueueReadThread just loaded Data\Terrain_23_7.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_27_8.datfrom queue:3
+FileQueueReadThread just loaded Data\Terrain_27_8.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_21_8.datfrom queue:3
+FileQueueReadThread just loaded Data\Terrain_21_8.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_24_7.datfrom queue:3
+FileQueueReadThread just loaded Data\Terrain_24_7.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_31_11.datfrom queue:3
+FileQueueReadThread just loaded Data\Terrain_31_11.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_27_19.datfrom queue:3
+FileQueueReadThread just loaded Data\Terrain_27_19.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_20_9.datfrom queue:3
+FileQueueReadThread just loaded Data\Terrain_20_9.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_31_14.datfrom queue:3
+FileQueueReadThread just loaded Data\Terrain_31_14.datfrom queue:3
+FileQueueReadThread just dequeued Data\Terrain_21_19.datfrom queue:3

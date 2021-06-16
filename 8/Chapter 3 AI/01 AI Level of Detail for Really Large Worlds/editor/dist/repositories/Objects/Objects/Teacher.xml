@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EntTemplate name="Teacher" existenceLevel="3" viewLevel="3" objectClass="/person/teacher" substantial="true">
+  <attributes>
+    <IntAttribute name="sex" value="0" />
+    <IntAttribute name="type" value="0" />
+    <FuzzyAttribute name="peeDrive" value="false" />
+    <FuzzyAttribute name="tiredness" value="false" />
+    <IntAttribute name="mouth" value="0" />
+    <ObjectAttribute name="arm" />
+    <FuzzyAttribute name="standing" value="true" />
+    <IntAttribute name="state" value="0" />
+    <IntAttribute name="sleepBegin" value="0" />
+    <IntAttribute name="sleepEnd" value="0" />
+    <ObjectAttribute name="address.house" />
+    <IntAttribute name="schoolBegin" value="0" />
+    <IntAttribute name="schoolEnd" value="0" />
+    <IntAttribute name="onTheWay1Begin" value="0" />
+    <IntAttribute name="onTheWay1End" value="0" />
+    <IntAttribute name="onTheWay2Begin" value="0" />
+    <IntAttribute name="onTheWay2End" value="0" />
+    <IntAttribute name="firstLessonBegin" value="0" />
+    <IntAttribute name="firstLessonEnd" value="0" />
+    <IntAttribute name="secondLessonBegin" value="0" />
+    <IntAttribute name="secondLessonEnd" value="0" />
+    <IntAttribute name="thirdLessonBegin" value="0" />
+    <IntAttribute name="thirdLessonEnd" value="0" />
+    <IntAttribute name="fourthLessonBegin" value="0" />
+    <IntAttribute name="fourthLessonEnd" value="0" />
+    <ObjectAttribute name="firstLessonClassroom" />
+    <ObjectAttribute name="secondLessonClassroom" />
+    <ObjectAttribute name="thirdLessonClassroom" />
+    <ObjectAttribute name="fourthLessonClassroom" />
+    <IntAttribute name="workBegin" value="0" />
+    <IntAttribute name="workEnd" value="0" />
+  </attributes>
+  <sensors>
+    <Sensor name="SensorArchitecture" template="SensorArchitecture" minLod="3" maxLod="4" />
+    <Sensor name="SensorEye" template="SensorEye" minLod="4" maxLod="5" />
+    <Sensor name="SensorTopography" template="SensorTopography" minLod="2" maxLod="3" />
+  </sensors>
+  <Kind>
+    <KindItem kindValue="floor" />
+  </Kind>
+  <graphicInfo template="GrTeacher" />
+  <Genius geniusId="Teachergenius" />
+</EntTemplate>
+

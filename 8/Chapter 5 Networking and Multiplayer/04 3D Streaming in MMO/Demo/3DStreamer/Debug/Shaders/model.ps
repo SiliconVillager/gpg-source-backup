@@ -1,0 +1,9 @@
+sampler modelTexture;
+sampler lightMap;
+
+float4 Main(float2 UV : TEXCOORD0, float2 worldUV : TEXCOORD1, float shade : TEXCOORD2) : COLOR
+{
+    float4 color  = tex2D(modelTexture, UV);
+    float4 light    = tex2D(lightMap, worldUV); 
+    return color * shade * light;
+}

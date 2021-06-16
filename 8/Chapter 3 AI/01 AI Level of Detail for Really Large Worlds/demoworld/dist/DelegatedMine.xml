@@ -1,0 +1,1468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IveWorld>
+    <!-- Graphics for Mine -->
+    <graphicTemplates>
+        <!-- MINE.XML -->
+        <!-- Graphics for Mine objects -->
+        <GraphicTemplate name="GrCoal" src="cz/ive/resources/images/coal-piece.gif" center_x="8" center_y="8"/>
+        <GraphicTemplate name="GrRock" src="cz/ive/resources/images/mining_place.gif" center_x="16" center_y="16"/>
+        <GraphicTemplate name="GrHole" src="cz/ive/resources/images/hole.gif" center_x="16" center_y="16"/>
+        <AnimatedGraphicTemplate name="GrSignalLight" frameAttribute="state">
+            <image src="cz/ive/resources/images/semaphore-down.gif" center_x="16" center_y="16"/>
+            <image src="cz/ive/resources/images/semaphore-moving.gif" center_x="16" center_y="16"/>
+            <image src="cz/ive/resources/images/semaphore-up.gif" center_x="16" center_y="16"/>
+        </AnimatedGraphicTemplate>
+        <AnimatedGraphicTemplate name="GrLever" frameAttribute="pushed">
+            <image src="cz/ive/resources/images/lever-off.gif" center_x="16" center_y="16"/>
+            <image src="cz/ive/resources/images/lever-on.gif" center_x="16" center_y="16"/>
+        </AnimatedGraphicTemplate>
+        <AnimatedGraphicTemplate name="GrCoalPile" frameAttribute="coal">
+            <image src="cz/ive/resources/images/coal_pile-small.gif" center_x="16" center_y="16"/>
+            <image src="cz/ive/resources/images/coal_pile-small.gif" center_x="16" center_y="16"/>
+            <image src="cz/ive/resources/images/coal_pile-medium.gif" center_x="16" center_y="16"/>
+            <image src="cz/ive/resources/images/coal_pile-big.gif" center_x="16" center_y="16"/>
+        </AnimatedGraphicTemplate>
+        <AnimatedGraphicTemplate name="GrCart" frameAttribute="coal">
+            <image src="cz/ive/resources/images/cart-empty.gif" center_x="16" center_y="16"/>
+            <image src="cz/ive/resources/images/cart-full.gif" center_x="16" center_y="16"/>
+            <image src="cz/ive/resources/images/cart-full.gif" center_x="16" center_y="16"/>
+            <image src="cz/ive/resources/images/cart-full.gif" center_x="16" center_y="16"/>
+        </AnimatedGraphicTemplate>
+        <!-- Graphics for Mine WayPoints LOD 5 -->
+        <GraphicTemplate name="GrTrack" src="cz/ive/resources/images/rail.gif" center_x="16" center_y="16"/>
+        <GraphicTemplate name="GrMineFloor" src="cz/ive/resources/images/mine-floor.gif" center_x="16" center_y="16"/>
+        <GraphicTemplate name="GrMineWallUp" src="cz/ive/resources/images/mine-wall-up.gif" center_x="16" center_y="16"/>
+        <GraphicTemplate name="GrMineWallDown" src="cz/ive/resources/images/mine-wall-down.gif" center_x="16" center_y="16"/>
+        <GraphicTemplate name="GrMineWallRight" src="cz/ive/resources/images/mine-wall-right.gif" center_x="16" center_y="16"/>
+        <GraphicTemplate name="GrMineWallLeft" src="cz/ive/resources/images/mine-wall-left.gif" center_x="16" center_y="16"/>
+        <GraphicTemplate name="GrMineWallC1" src="cz/ive/resources/images/mine-wall-c-1.gif" center_x="16" center_y="16"/>
+        <GraphicTemplate name="GrMineWallC2" src="cz/ive/resources/images/mine-wall-c-2.gif" center_x="16" center_y="16"/>
+        <GraphicTemplate name="GrMineWallC3" src="cz/ive/resources/images/mine-wall-c-3.gif" center_x="16" center_y="16"/>
+        <GraphicTemplate name="GrMineWallC4" src="cz/ive/resources/images/mine-wall-c-4.gif" center_x="16" center_y="16"/>
+        <GraphicTemplate name="GrMineWallIC1" src="cz/ive/resources/images/mine-wall-ic1.gif" center_x="16" center_y="16"/>
+        <GraphicTemplate name="GrMineWallIC2" src="cz/ive/resources/images/mine-wall-ic2.gif" center_x="16" center_y="16"/>
+        <GraphicTemplate name="GrMineWallIC3" src="cz/ive/resources/images/mine-wall-ic3.gif" center_x="16" center_y="16"/>
+        <GraphicTemplate name="GrMineWallIC4" src="cz/ive/resources/images/mine-wall-ic4.gif" center_x="16" center_y="16"/>
+        <!-- Graphics for Mine WayPoints LOD 4 -->
+        <GraphicTemplate name="GrMineUp" src="cz/ive/resources/images/mine-up.gif" center_x="32" center_y="32"/>
+        <GraphicTemplate name="GrMineDown" src="cz/ive/resources/images/mine-down.gif" center_x="32" center_y="32"/>
+        <GraphicTemplate name="GrMinePath" src="cz/ive/resources/images/mine-way.gif" center_x="32" center_y="32"/>
+        <!-- Graphics for Mine itself LOD 3 -->
+        <GraphicTemplate name="GrMine" src="cz/ive/resources/images/mine_main.gif" center_x="48" center_y="48"/>
+    </graphicTemplates>
+    <!-- ObjectTemplates for Mine -->
+    <objectTemplates>
+        <!-- MINE.XML -->
+        <ObjectTemplate name="LeverUp" existenceLevel="4" viewLevel="4" objectClass="/object/Lever" substantial="true">
+            <graphicInfo template="GrLever" className="cz.ive.gui.AnimatedGraphicInfo"/>
+            <attributes>
+                <FuzzyAttribute name="pushed" value="false"/>
+            </attributes>
+            <links>
+                <Link goal="*" process="*" slot="leverUp"/>
+                <Link goal="*" process="*" slot="lever"/>
+            </links>
+        </ObjectTemplate>
+        <ObjectTemplate name="LeverDown" existenceLevel="4" viewLevel="4" objectClass="/object/Lever" substantial="true">
+            <graphicInfo template="GrLever" className="cz.ive.gui.AnimatedGraphicInfo"/>
+            <attributes>
+                <FuzzyAttribute name="pushed" value="false"/>
+            </attributes>
+            <links>
+                <Link goal="*" process="*" slot="leverDown"/>
+                <Link goal="*" process="*" slot="lever"/>
+            </links>
+        </ObjectTemplate>
+        <ObjectTemplate name="SignalLightUp" existenceLevel="4" viewLevel="4" objectClass="/object/SignalLight">
+            <graphicInfo template="GrSignalLight" className="cz.ive.gui.AnimatedGraphicInfo"/>
+            <attributes>
+                <IntAttribute name="state" value="0"/>
+            </attributes>
+            <links>
+                <Link goal="*" process="*" slot="signalLightUp"/>
+                <Link goal="*" process="*" slot="signalLight1"/>
+                <Link goal="*" process="*" slot="signalLight2"/>
+            </links>
+        </ObjectTemplate>
+        <ObjectTemplate name="SignalLightDown" existenceLevel="4" viewLevel="4" objectClass="/object/SignalLight">
+            <graphicInfo template="GrSignalLight" className="cz.ive.gui.AnimatedGraphicInfo"/>
+            <attributes>
+                <IntAttribute name="state" value="0"/>
+            </attributes>
+            <links>
+                <Link goal="*" process="*" slot="signalLightDown"/>
+                <Link goal="*" process="*" slot="signalLight1"/>
+                <Link goal="*" process="*" slot="signalLight2"/>
+            </links>
+        </ObjectTemplate>
+        <ObjectTemplate name="CoalPile" existenceLevel="5" viewLevel="5" objectClass="/object/CoalPile" substantial="false">
+            <graphicInfo template="GrCoalPile" className="cz.ive.gui.AnimatedGraphicInfo"/>
+            <attributes>
+                <IntAttribute name="coal" value="3"/>
+            </attributes>
+            <links>
+                <Link goal="PickUpCoalGoal" process="*" slot="from"/>
+                <Link goal="*" process="*" slot="coalPile"/>
+            </links>
+        </ObjectTemplate>
+        <ObjectTemplate name="Coal" existenceLevel="5" viewLevel="5" objectClass="/object/Coal">
+            <graphicInfo template="GrCoal"/>
+            <links>
+                <Link goal="*" process="*" slot="coal"/>
+            </links>
+        </ObjectTemplate>
+        <ObjectTemplate name="Hole" existenceLevel="4" viewLevel="4" objectClass="/object/Hole" substantial="true">
+            <graphicInfo template="GrHole"/>
+            <links>
+                <Link goal="*" process="*" slot="hole"/>
+                <Link goal="DropCoalGoal" process="*" slot="to"/>
+            </links>
+        </ObjectTemplate>
+        <ObjectTemplate name="Rock" existenceLevel="4" viewLevel="4" objectClass="/object/Rock" substantial="true">
+            <graphicInfo template="GrRock"/>
+            <links>
+                <Link goal="*" process="*" slot="rock"/>
+            </links>
+        </ObjectTemplate>
+        <EntTemplate name="Cart" existenceLevel="4" viewLevel="4" objectClass="/vehicle/Cart" substantial="true">
+            <links>
+                <Link goal="*" process="*" slot="actor"/>
+                <Link goal="*" process="*" slot="cart"/>
+                <Link goal="DropCoalGoal" process="*" slot="to"/>
+                <Link goal="PickUpCoalGoal" process="*" slot="from"/>
+            </links>
+            <sensors>
+                <Sensor name="Knowledge" template="SensorKnowledge" minLod="3" maxLod="5"/>
+            </sensors>
+            <attributes>
+                <IntAttribute name="coal" value="0"/>
+            </attributes>
+            <Kind>
+                <KindItem kindValue="track"/>
+            </Kind>
+            <Genius>
+                <TopLevelGoal goalId="CartDriverGoal"/>
+            </Genius>
+            <graphicInfo template="GrCart"/>
+        </EntTemplate>
+    </objectTemplates>
+    <!-- ObjectTemplates for Mine -->
+    <locationTemplates>
+        <!-- Mine GridLocations at LOD 4 -->
+        <GridLocation name="MineUp" height="10" width="10" lod="4">
+            <links>
+                <Link goal="*" process="*" slot="mineUp"/>
+            </links>
+            <objects>
+                <Object name="Lever" template="LeverUp" number="1"/>
+                <Object name="Semaphore" template="SignalLightUp" number="1"/>
+                <Object name="Hole" template="Hole" number="1"/>
+            </objects>
+            <inherentObjects>
+            </inherentObjects>
+            <Kind>
+                <KindItem kindValue="floor"/>
+                <KindItem kindValue="track"/>
+            </Kind>
+            <subLocations>
+                <defaultGraphicInfo template="GrGrass"/>
+                <defaultKind>
+                    <Kind>
+                        <KindItem kindValue="floor"/>
+                    </Kind>
+                </defaultKind>
+                <rectangle x="1" y="5" x2="5" y2="5">
+                    <Kind>
+                        <KindItem kindValue="track"/>
+                    </Kind>
+                    <graphicInfo template="GrTrack"/>
+                </rectangle>
+                <rectangle x="1" y="1">
+                    <ObjectPlacement objectTemplate="/system"/>
+                </rectangle>
+                <rectangle x="5" y="5">
+                    <ObjectPlacement objectTemplate="/vehicle/Cart"/>
+                </rectangle>
+                <rectangle x="6" y="6">
+                    <ObjectPlacement objectTemplate="/object/Lever"/>
+                </rectangle>
+                <rectangle x="1" y="4">
+                    <ObjectPlacement objectTemplate="/object/SignalLight"/>
+                </rectangle>
+                <rectangle x="9" y="2">
+                    <ObjectPlacement objectTemplate="/object/Hole"/>
+                </rectangle>
+                <rectangle x="4" y="4">
+                    <ObjectPlacement objectTemplate="/person/Miner"/>
+                </rectangle>
+                <rectangle x="6" y="5">
+                    <ObjectPlacement objectTemplate="/person/Miner"/>
+                </rectangle>
+                <rectangle x="5" y="4">
+                    <ObjectPlacement objectTemplate="/person/Miner"/>
+                </rectangle>
+                <rectangle x="5" y="6">
+                    <ObjectPlacement objectTemplate="/person/Miner"/>
+                </rectangle>
+            </subLocations>
+            <graphicInfo template="GrMineUp"/>
+        </GridLocation>
+        <GridLocation name="MinePath" height="10" width="10" lod="4">
+            <inherentObjects/>
+            <Kind>
+                <KindItem kindValue="floor"/>
+                <KindItem kindValue="track"/>
+            </Kind>
+            <subLocations>
+                <defaultGraphicInfo template="GrMineFloor"/>
+                <defaultKind>
+                    <Kind>
+                        <KindItem kindValue="floor"/>
+                    </Kind>
+                </defaultKind>
+                <rectangle x="1" y="1" x2="10" y2="3">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrEmpty"/>
+                </rectangle>
+                <rectangle x="1" y="4" x2="10">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrMineWallUp"/>
+                </rectangle>
+                <rectangle x="1" y="8" x2="10">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrMineWallDown"/>
+                </rectangle>
+                <rectangle x="1" y="9" x2="10" y2="10">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrEmpty"/>
+                </rectangle>
+                <rectangle x="1" y="5" x2="10" y2="5">
+                    <Kind>
+                        <KindItem kindValue="track"/>
+                    </Kind>
+                    <ObjectPlacement objectTemplate="/vehicle/Cart"/>
+                    <graphicInfo template="GrTrack"/>
+                </rectangle>
+                <rectangle x="1" y="4">
+                    <ObjectPlacement objectTemplate="/system"/>
+                </rectangle>
+                <rectangle x="1" y="6" x2="10" y2="7">
+                    <ObjectPlacement objectTemplate="/person/Miner"/>
+                </rectangle>
+            </subLocations>
+            <graphicInfo template="GrMinePath"/>
+        </GridLocation>
+        <!-- Mine GridLocations at LOD 4 -->
+        <GridLocation name="MineDown" height="10" width="10" lod="4">
+            <links>
+                <Link goal="*" process="*" slot="mineDown"/>
+            </links>
+            <objects>
+                <Object name="Lever" template="LeverDown" number="1"/>
+                <Object name="Semaphore" template="SignalLightDown" number="1"/>
+                <Object name="Cart" template="Cart" number="1"/>
+                <Object name="Rock" template="Rock" number="1"/>
+            </objects>
+            <inherentObjects>
+            </inherentObjects>
+            <Kind>
+                <KindItem kindValue="floor"/>
+                <KindItem kindValue="track"/>
+            </Kind>
+            <subLocations>
+                <defaultGraphicInfo template="GrMineFloor"/>
+                <defaultKind>
+                    <Kind>
+                        <KindItem kindValue="floor"/>
+                    </Kind>
+                </defaultKind>
+                <rectangle x="5" y="5" x2="10" y2="5">
+                    <Kind>
+                        <KindItem kindValue="track"/>
+                    </Kind>
+                    <graphicInfo template="GrTrack"/>
+                </rectangle>
+                <rectangle x="1" y="1">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrMineWallC1"/>
+                </rectangle>
+                <rectangle x="1" y="2" y2="8">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrMineWallLeft"/>
+                </rectangle>
+                <rectangle x="1" y="9">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrMineWallC2"/>
+                </rectangle>
+                <rectangle x="2" y="9">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrMineWallIC2"/>
+                </rectangle>
+                <rectangle x="2" y="10">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrMineWallC2"/>
+                </rectangle>
+                <rectangle x="1" y="10">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrEmpty"/>
+                </rectangle>
+                <rectangle x="3" y="10" x2="5">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrMineWallDown"/>
+                </rectangle>
+                <rectangle x="6" y="10">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrMineWallC3"/>
+                </rectangle>
+                <rectangle x="6" y="9">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrMineWallRight"/>
+                </rectangle>
+                <rectangle x="6" y="8">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrMineWallIC3"/>
+                </rectangle>
+                <rectangle x="7" y="8">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrMineWallIC2"/>
+                </rectangle>
+                <rectangle x="7" y="9">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrMineWallC2"/>
+                </rectangle>
+                <rectangle x="8" y="9">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrMineWallIC2"/>
+                </rectangle>
+                <rectangle x="8" y="10">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrMineWallC2"/>
+                </rectangle>
+                <rectangle x="7" y="10">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrEmpty"/>
+                </rectangle>
+                <rectangle x="9" y="10">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrMineWallDown"/>
+                </rectangle>
+                <rectangle x="10" y="10">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrMineWallC3"/>
+                </rectangle>
+                <rectangle x="10" y="2" y2="3">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrMineWallRight"/>
+                </rectangle>
+                <rectangle x="10" y="4">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrMineWallIC4"/>
+                </rectangle>
+                <rectangle x="10" y="8">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrMineWallIC3"/>
+                </rectangle>
+                <rectangle x="10" y="9">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrMineWallRight"/>
+                </rectangle>
+                <rectangle x="10" y="1">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrMineWallC4"/>
+                </rectangle>
+                <rectangle x="2" y="1" x2="9">
+                    <Kind>
+                        <KindItem kindValue="wall"/>
+                    </Kind>
+                    <graphicInfo template="GrMineWallUp"/>
+                </rectangle>
+                <rectangle x="10" y="1">
+                    <ObjectPlacement objectTemplate="/system"/>
+                </rectangle>
+                <rectangle x="5" y="5">
+                    <ObjectPlacement objectTemplate="/vehicle/Cart"/>
+                </rectangle>
+                <rectangle x="10" y="4">
+                    <ObjectPlacement objectTemplate="/object/SignalLight"/>
+                </rectangle>
+                <rectangle x="4" y="6">
+                    <ObjectPlacement objectTemplate="/object/Lever"/>
+                </rectangle>
+                <rectangle x="2" y="2">
+                    <ObjectPlacement objectTemplate="/object/Rock"/>
+                </rectangle>
+                <rectangle x="2" y="3">
+                    <ObjectPlacement objectTemplate="/object/CoalPile"/>
+                </rectangle>
+                <rectangle x="3" y="3">
+                    <ObjectPlacement objectTemplate="/object/CoalPile"/>
+                </rectangle>
+                <rectangle x="3" y="2">
+                    <ObjectPlacement objectTemplate="/object/CoalPile"/>
+                </rectangle>
+                <rectangle x="5" y="6">
+                    <ObjectPlacement objectTemplate="/person/Miner"/>
+                </rectangle>
+                <rectangle x="6" y="6">
+                    <ObjectPlacement objectTemplate="/person/Miner"/>
+                </rectangle>
+                <rectangle x="4" y="5">
+                    <ObjectPlacement objectTemplate="/person/Miner"/>
+                </rectangle>
+            </subLocations>
+            <graphicInfo template="GrMineDown"/>
+        </GridLocation>
+        <!-- Mine GraphLocation at LOD 3 -->
+        <GraphLocation name="Mine" lod="3">
+            <links>
+                <Link goal="*" process="*" slot="mine"/>
+            </links>
+            <inherentObjects>
+                
+            </inherentObjects>
+            <subLocations>
+                <Location name="Up" template="MineUp" x="15" y="0">
+                    <placement>
+                        <ObjectPlacement objectTemplate="/person/Miner"/>
+                        <ObjectPlacement objectTemplate="/system"/>
+                    </placement>
+                </Location>
+                <Location name="Path" template="MinePath" x="0" y="0"/>
+                <Location name="Down" template="MineDown" x="-15" y="0">
+                    <placement>
+                        <ObjectPlacement objectTemplate="/person/Miner"/>
+                        <ObjectPlacement objectTemplate="/system"/>
+                    </placement>
+                </Location>
+            </subLocations>
+            <neighbours>
+                <!-- LOD 4 -->
+                <Joint first="Path" second="Up" dx="15" dy="0"/>
+                <Joint first="Path" second="Down" dx="-15" dy="0"/>
+                <!-- LOD 5 -->
+                <Joint first="Path.wp_10_5" second="Up.wp_1_5" dx="5" dy="0"/>
+                <Joint first="Path.wp_10_6" second="Up.wp_1_6" dx="5" dy="0"/>
+                <Joint first="Path.wp_10_7" second="Up.wp_1_7" dx="5" dy="0"/>
+                <Joint first="Path.wp_1_5" second="Down.wp_10_5" dx="-5" dy="0"/>
+                <Joint first="Path.wp_1_6" second="Down.wp_10_6" dx="-5" dy="0"/>
+                <Joint first="Path.wp_1_7" second="Down.wp_10_7" dx="-5" dy="0"/>
+            </neighbours>
+            <influences/>
+            <Kind>
+                <KindItem kindValue="floor"/>
+            </Kind>
+            <graphicInfo template="GrMine"/>
+        </GraphLocation>
+    </locationTemplates>
+    <processTemplates>
+        <!-- CORE.XML -->
+        <ProcessTemplate processId="MineWorkTaxi" goalId="WorkTaxiGoal" minLod="2" maxLod="2" className="cz.ive.process.NeverAtomicProcessTemplate">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="TransportGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <notin obj="actor" waypoint="mine"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="targetPosition" valueFrom="mine"/>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="WorkMineGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="miner" actor="true" valueFrom="actor"/>
+                            <Slot name="mine" valueFrom="mine"/>
+                            <!--to keep the same mine-->
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <sources>
+                <Slot name="mine"/>
+                <Slot name="actor" actor="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <eq>
+                        <objectlink role="actor" attrib="address.work"/>
+                        <source role="mine"/>
+                    </eq>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+        </ProcessTemplate>
+        <!--WorkMineTaxi-->
+        <ProcessTemplate processId="WorkMine" goalId="WorkMineGoal" minLod="3" maxLod="3" className="cz.ive.process.PermanentProcess">
+            <sources>
+                <Slot name="miner" actor="true"/>
+            </sources>
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="MineWorkTaxiGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="miner" actor="true" valueFrom="miner"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+        </ProcessTemplate>
+        <!--MineWork-->
+        
+        <!-- Delegated MineWork-->
+        <ProcessTemplate processId="DelegatedMineWorkTaxi" goalId="MineWorkTaxiGoal" minLod="3" maxLod="5" className="cz.ive.process.CommonDelegatedProcessTemplate">
+            <sources>
+                <Slot name="miner" actor="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+            <expansion/>
+        </ProcessTemplate>
+        
+        <!-- Nondelegated MineWork-->
+        <ProcessTemplate processId="MineUpWorkTaxi" goalId="MineWorkTaxiGoal" minLod="3" maxLod="3" className="cz.ive.process.NeverAtomicProcessTemplate">
+            <sources>
+                <Slot name="miner" actor="true"/>
+                <Slot name="mineUp"/>
+                <Slot name="cart" optional="true" variable="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="TransportGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <notin obj="miner" waypoint="mineUp"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="targetPosition" valueFrom="mineUp"/>
+                            <Slot name="actor" actor="true" valueFrom="miner"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="MineUpWorkGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <or>
+                                    <doisee role="cart"/>
+                                    <fuzzy value="true"/>
+                                </or>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="miner" actor="true" valueFrom="miner"/>
+                            <Slot name="cart" valueFrom="cart"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+        </ProcessTemplate>
+        <ProcessTemplate processId="MineUpWork" goalId="MineUpWorkGoal" minLod="4" maxLod="4" className="cz.ive.process.MineUpWork">
+            <sources>
+                <Slot name="miner" actor="true"/>
+                <Slot name="mineUp"/>
+                <Slot name="leverUp"/>
+                <Slot name="signalLightUp"/>
+                <Slot name="hole"/>
+                <Slot name="cart" optional="true" variable="true"/>
+                <Slot name="coal" optional="true" variable="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="FollowGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <and>
+                                    <or>
+                                        <fuzzylink role="leverUp" attrib="pushed"/>
+                                        <noteq>
+                                            <int value="2"/>
+                                            <intlink role="signalLightUp" attrib="state"/>
+                                        </noteq>
+                                    </or>
+                                    <notnear obj1="miner" obj2="leverUp"/>
+                                </and>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="targetObject" valueFrom="leverUp"/>
+                            <Slot name="actor" actor="true" valueFrom="miner"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="WaitGoal">
+                        <!--We see the cart but it is moving, lets wait-->
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <or>
+                                    <fuzzylink role="leverUp" attrib="pushed"/>
+                                    <noteq>
+                                        <int value="2"/>
+                                        <intlink role="signalLightUp" attrib="state"/>
+                                    </noteq>
+                                </or>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="miner"/>
+                        </sources>
+                        <parameters>
+                            <Parameter name="time">
+                                <OntologyToken ontology="java.int">
+                                    <Value value="60000"/>
+                                </OntologyToken>
+                            </Parameter>
+                        </parameters>
+                    </Goal>
+                    <!--Throw the coal to the hole-->
+                    <Goal goalId="MineCleaningGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <not>
+                                    <emptysource source="coal"/>
+                                </not>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="miner" actor="true" valueFrom="miner"/>
+                            <Slot name="coal" valueFrom="coal"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <!--Lets move towards the cart-->
+                    <Goal goalId="FollowGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <and>
+                                    <doisee role="cart"/>
+                                    <and>
+                                        <gt>
+                                            <intlink role="cart" attrib="coal"/>
+                                            <int value="0"/>
+                                        </gt>
+                                        <notnear obj1="miner" obj2="cart"/>
+                                    </and>
+                                </and>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="targetObject" valueFrom="cart"/>
+                            <Slot name="actor" actor="true" valueFrom="miner"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <!--Pickup one coal-->
+                    <Goal goalId="PickUpCoalGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <and>
+                                    <doisee role="cart"/>
+                                    <gt>
+                                        <intlink role="cart" attrib="coal"/>
+                                        <int value="0"/>
+                                    </gt>
+                                </and>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="from" valueFrom="cart"/>
+                            <Slot name="coal" valueFrom="coal"/>
+                            <Slot name="miner" actor="true" valueFrom="miner"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <!--Lets move towards the lever, the cart is empty-->
+                    <Goal goalId="FollowGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <notnear obj1="miner" obj2="leverUp"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="miner"/>
+                            <Slot name="targetObject" valueFrom="leverUp"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <!--Send the cart down-->
+                    <Goal goalId="PullGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="miner" actor="true" valueFrom="miner"/>
+                            <Slot name="lever" valueFrom="leverUp"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+        </ProcessTemplate>
+        <ProcessTemplate processId="MineDownWorkTaxi" goalId="MineWorkTaxiGoal" minLod="3" maxLod="3" className="cz.ive.process.NeverAtomicProcessTemplate">
+            <sources>
+                <Slot name="miner" actor="true"/>
+                <Slot name="mineDown"/>
+                <Slot name="cart" optional="true" variable="true"/>
+                <Slot name="coalPile" optional="true" variable="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="TransportGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <notin obj="miner" waypoint="mineDown"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="targetPosition" valueFrom="mineDown"/>
+                            <Slot name="actor" actor="true" valueFrom="miner"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="MineDownWorkGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <or>
+                                    <doisee role="coalPile"/>
+                                    <or>
+                                        <doisee role="cart"/>
+                                        <fuzzy value="true"/>
+                                    </or>
+                                </or>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="miner" actor="true" valueFrom="miner"/>
+                            <Slot name="cart" valueFrom="cart"/>
+                            <Slot name="coalPile" valueFrom="coalPile"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+        </ProcessTemplate>
+        <ProcessTemplate processId="MineDownWork" goalId="MineDownWorkGoal" minLod="4" maxLod="4" className="cz.ive.process.MineDownWork">
+            <sources>
+                <Slot name="miner" actor="true"/>
+                <Slot name="mineDown"/>
+                <Slot name="leverDown"/>
+                <Slot name="rock"/>
+                <Slot name="signalLightDown"/>
+                <Slot name="cart" optional="true" variable="true"/>
+                <Slot name="coalPile" optional="true" variable="true"/>
+                <Slot name="coal" optional="true" variable="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <!-- Sending the full cart up -->
+                    <Goal goalId="FollowGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <and>
+                                    <and>
+                                        <not>
+                                            <fuzzylink role="leverDown" attrib="pushed"/>
+                                        </not>
+                                        <eq>
+                                            <int value="0"/>
+                                            <intlink role="signalLightDown" attrib="state"/>
+                                        </eq>
+                                    </and>
+                                    <and>
+                                        <doisee role="cart"/>
+                                        <and>
+                                            <gt>
+                                                <intlink role="cart" attrib="coal"/>
+                                                <int value="2"/>
+                                            </gt>
+                                            <notnear obj1="miner" obj2="leverDown"/>
+                                        </and>
+                                    </and>
+                                </and>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="miner"/>
+                            <Slot name="targetObject" valueFrom="leverDown"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="PullGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <and>
+                                    <and>
+                                        <not>
+                                            <fuzzylink role="leverDown" attrib="pushed"/>
+                                        </not>
+                                        <eq>
+                                            <int value="0"/>
+                                            <intlink role="signalLightDown" attrib="state"/>
+                                        </eq>
+                                    </and>
+                                    <and>
+                                        <doisee role="cart"/>
+                                        <gt>
+                                            <intlink role="cart" attrib="coal"/>
+                                            <int value="2"/>
+                                        </gt>
+                                    </and>
+                                </and>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="miner" actor="true" valueFrom="miner"/>
+                            <Slot name="lever" valueFrom="leverDown"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <!--Digging the coal-->
+                    <Goal goalId="FollowGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <and>
+                                    <emptysource source="coal"/>
+                                    <and>
+                                        <emptysource source="coalPile"/>
+                                        <notnear obj1="miner" obj2="rock"/>
+                                    </and>
+                                </and>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="miner"/>
+                            <Slot name="targetObject" valueFrom="rock"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="DigGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <and>
+                                    <emptysource source="coal"/>
+                                    <emptysource source="coalPile"/>
+                                </and>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="miner" actor="true" valueFrom="miner"/>
+                            <Slot name="rock" valueFrom="rock"/>
+                            <Slot name="coalPile" valueFrom="coalPile"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <!-- Picking up the coal -->
+                    <Goal goalId="FollowGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <and>
+                                    <emptysource source="coal"/>
+                                    <notnear obj1="miner" obj2="coalPile"/>
+                                </and>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="miner"/>
+                            <Slot name="targetObject" valueFrom="coalPile"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="PickUpCoalGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <emptysource source="coal"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="miner" actor="true" valueFrom="miner"/>
+                            <Slot name="coal" valueFrom="coal"/>
+                            <Slot name="from" valueFrom="coalPile"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <!--Dropping-->
+                    <Goal goalId="WaitGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <or>
+                                    <fuzzylink role="leverDown" attrib="pushed"/>
+                                    <noteq>
+                                        <int value="0"/>
+                                        <intlink role="signalLightDown" attrib="state"/>
+                                    </noteq>
+                                </or>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="miner"/>
+                        </sources>
+                        <parameters>
+                            <Parameter name="time">
+                                <OntologyToken ontology="java.int">
+                                    <Value value="60000"/>
+                                </OntologyToken>
+                            </Parameter>
+                        </parameters>
+                    </Goal>
+                    <Goal goalId="FollowGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <and>
+                                    <doisee role="cart"/>
+                                    <and>
+                                        <lt>
+                                            <intlink role="cart" attrib="coal"/>
+                                            <int value="3"/>
+                                        </lt>
+                                        <notnear obj1="miner" obj2="cart"/>
+                                    </and>
+                                </and>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="miner"/>
+                            <Slot name="targetObject" valueFrom="cart"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="DropCoalGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <and>
+                                    <doisee role="cart"/>
+                                    <lt>
+                                        <intlink role="cart" attrib="coal"/>
+                                        <int value="3"/>
+                                    </lt>
+                                </and>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="miner" actor="true" valueFrom="miner"/>
+                            <Slot name="to" valueFrom="cart"/>
+                            <Slot name="coal" valueFrom="coal"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="WaitGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="miner"/>
+                        </sources>
+                        <parameters>
+                            <Parameter name="time">
+                                <OntologyToken ontology="java.int">
+                                    <Value value="60000"/>
+                                </OntologyToken>
+                            </Parameter>
+                        </parameters>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+        </ProcessTemplate>
+        <ProcessTemplate processId="CartDriver" goalId="CartDriverGoal" minLod="3" maxLod="3" className="cz.ive.process.NeverAtomicProcessTemplate">
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <!-- GoingUp -->
+                    <Goal goalId="SwitchLightsGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <and>
+                                    <fuzzylink role="leverDown" attrib="pushed"/>
+                                    <and>
+                                        <notnear obj1="actor" obj2="leverUp"/>
+                                        <noteq>
+                                            <int value="1"/>
+                                            <intlink role="signalLightDown" attrib="state"/>
+                                        </noteq>
+                                    </and>
+                                </and>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                            <Slot name="signalLight1" valueFrom="signalLightUp"/>
+                            <Slot name="signalLight2" valueFrom="signalLightDown"/>
+                        </sources>
+                        <parameters>
+                            <Parameter name="state">
+                                <OntologyToken ontology="java.int">
+                                    <Value value="1"/>
+                                </OntologyToken>
+                            </Parameter>
+                        </parameters>
+                    </Goal>
+                    <Goal goalId="FollowGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <and>
+                                    <fuzzylink role="leverDown" attrib="pushed"/>
+                                    <notnear obj1="actor" obj2="leverUp"/>
+                                </and>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                            <Slot name="targetObject" valueFrom="leverUp"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="SwitchLightsGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <and>
+                                    <fuzzylink role="leverDown" attrib="pushed"/>
+                                    <noteq>
+                                        <int value="2"/>
+                                        <intlink role="signalLightDown" attrib="state"/>
+                                    </noteq>
+                                </and>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                            <Slot name="signalLight1" valueFrom="signalLightUp"/>
+                            <Slot name="signalLight2" valueFrom="signalLightDown"/>
+                        </sources>
+                        <parameters>
+                            <Parameter name="state">
+                                <OntologyToken ontology="java.int">
+                                    <Value value="2"/>
+                                </OntologyToken>
+                            </Parameter>
+                        </parameters>
+                    </Goal>
+                    <Goal goalId="PullGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzylink role="leverDown" attrib="pushed"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                            <Slot name="lever" valueFrom="leverDown"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <!-- GoingDown -->
+                    <Goal goalId="SwitchLightsGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <and>
+                                    <fuzzylink role="leverUp" attrib="pushed"/>
+                                    <and>
+                                        <notnear obj2="actor" obj1="leverDown"/>
+                                        <noteq>
+                                            <int value="1"/>
+                                            <intlink role="signalLightDown" attrib="state"/>
+                                        </noteq>
+                                    </and>
+                                </and>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                            <Slot name="signalLight1" valueFrom="signalLightUp"/>
+                            <Slot name="signalLight2" valueFrom="signalLightDown"/>
+                        </sources>
+                        <parameters>
+                            <Parameter name="state">
+                                <OntologyToken ontology="java.int">
+                                    <Value value="1"/>
+                                </OntologyToken>
+                            </Parameter>
+                        </parameters>
+                    </Goal>
+                    <Goal goalId="FollowGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <and>
+                                    <fuzzylink role="leverUp" attrib="pushed"/>
+                                    <notnear obj2="actor" obj1="leverDown"/>
+                                </and>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                            <Slot name="targetObject" valueFrom="leverDown"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="SwitchLightsGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <and>
+                                    <fuzzylink role="leverUp" attrib="pushed"/>
+                                    <noteq>
+                                        <int value="0"/>
+                                        <intlink role="signalLightDown" attrib="state"/>
+                                    </noteq>
+                                </and>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                            <Slot name="signalLight1" valueFrom="signalLightUp"/>
+                            <Slot name="signalLight2" valueFrom="signalLightDown"/>
+                        </sources>
+                        <parameters>
+                            <Parameter name="state">
+                                <OntologyToken ontology="java.int">
+                                    <Value value="0"/>
+                                </OntologyToken>
+                            </Parameter>
+                        </parameters>
+                    </Goal>
+                    <Goal goalId="PullGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzylink role="leverUp" attrib="pushed"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                            <Slot name="lever" valueFrom="leverUp"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="WaitGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="actor"/>
+                        </sources>
+                        <parameters>
+                            <Parameter name="time">
+                                <OntologyToken ontology="java.int">
+                                    <Value value="60000"/>
+                                </OntologyToken>
+                            </Parameter>
+                        </parameters>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+            <sources>
+                <Slot name="actor" actor="true"/>
+                <Slot name="leverUp"/>
+                <Slot name="leverDown"/>
+                <Slot name="signalLightDown"/>
+                <Slot name="signalLightUp"/>
+            </sources>
+        </ProcessTemplate>
+        <!-- LOD 5 -->
+        <ProcessTemplate processId="PickUpCoal" goalId="PickUpCoalGoal" className="cz.ive.process.PickUpCoal" minLod="5" maxLod="5">
+            <sources>
+                <Slot name="miner" actor="true"/>
+                <Slot name="from" variable="true"/>
+                <Slot name="coal" optional="true" variable="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+            <expansion/>
+        </ProcessTemplate>
+        <ProcessTemplate processId="DropCoal" goalId="DropCoalGoal" className="cz.ive.process.DropCoal" minLod="5" maxLod="5">
+            <sources>
+                <Slot name="miner" actor="true"/>
+                <Slot name="to"/>
+                <Slot name="coal" optional="true" variable="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+            <expansion/>
+        </ProcessTemplate>
+        <ProcessTemplate processId="Pull" goalId="PullGoal" className="cz.ive.process.Pull" minLod="4" maxLod="5">
+            <sources>
+                <Slot name="miner" actor="true"/>
+                <Slot name="lever"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+            <expansion/>
+        </ProcessTemplate>
+        <ProcessTemplate processId="Dig" goalId="DigGoal" className="cz.ive.process.Dig" minLod="5" maxLod="5">
+            <sources>
+                <Slot name="miner" actor="true"/>
+                <Slot name="rock"/>
+                <Slot name="coalPile" optional="true" variable="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+            <expansion/>
+        </ProcessTemplate>
+        <ProcessTemplate processId="SwitchLights" goalId="SwitchLightsGoal" className="cz.ive.process.SwitchLights" minLod="4" maxLod="5">
+            <sources>
+                <Slot name="miner" actor="true"/>
+                <Slot name="signalLight1"/>
+                <Slot name="signalLight2"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+            <expansion/>
+        </ProcessTemplate>
+        
+        
+        <!-- Cleaning process for the mine -->
+        <ProcessTemplate processId="MineCleaningTaxi" goalId="MineCleaningTaxiGoal" minLod="3" maxLod="3" className="cz.ive.process.NeverAtomicProcessTemplate">
+            <sources>
+                <Slot name="miner" actor="true"/>
+                <Slot name="mineUp"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <boolobjectlink role="miner" attrib="arm"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="TransportGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <notin obj="miner" waypoint="mineUp"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="targetPosition" valueFrom="mineUp"/>
+                            <Slot name="actor" actor="true" valueFrom="miner"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="MineCleaningGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <fuzzy value="true"/>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="miner" actor="true" valueFrom="miner"/>
+                            <Slot name="coal" valueFrom="miner->arm"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+        </ProcessTemplate>
+        <ProcessTemplate processId="MineCleaning" goalId="MineCleaningGoal" minLod="3" maxLod="3" className="cz.ive.process.NeverAtomicProcessTemplate">
+            <sources>
+                <Slot name="miner" actor="true"/>
+                <Slot name="hole"/>
+                <Slot name="coal" optional="true" variable="true"/>
+            </sources>
+            <suitability>
+                <OntologyToken ontology="jBRP.expression">
+                    <fuzzy value="true"/>
+                </OntologyToken>
+            </suitability>
+            <pcontext sameAsSuitability="true"/>
+            <expansion>
+                <OntologyToken ontology="jBRP.expansion">
+                    <Goal goalId="FollowGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <and>
+                                    <not>
+                                        <emptysource source="coal"/>
+                                    </not>
+                                    <notnear obj1="miner" obj2="hole"/>
+                                </and>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="actor" actor="true" valueFrom="miner"/>
+                            <Slot name="targetObject" valueFrom="hole"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                    <Goal goalId="DropCoalGoal">
+                        <gtrigger>
+                            <OntologyToken ontology="jBRP.expression">
+                                <not>
+                                    <emptysource source="coal"/>
+                                </not>
+                            </OntologyToken>
+                        </gtrigger>
+                        <gcontext sameAsTrigger="true"/>
+                        <sources>
+                            <Slot name="miner" actor="true" valueFrom="miner"/>
+                            <Slot name="to" valueFrom="hole"/>
+                            <Slot name="coal" valueFrom="coal"/>
+                        </sources>
+                        <parameters/>
+                    </Goal>
+                </OntologyToken>
+            </expansion>
+        </ProcessTemplate>
+    </processTemplates>
+</IveWorld>

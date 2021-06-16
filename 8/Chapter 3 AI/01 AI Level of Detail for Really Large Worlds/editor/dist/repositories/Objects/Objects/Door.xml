@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObjectTemplate name="Door" existenceLevel="5" viewLevel="5" objectClass="/object/door" substantial="false">
+  <attributes />
+  <graphicInfo template="GrDoor" />
+</ObjectTemplate>
+

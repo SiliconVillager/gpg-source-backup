@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='us-ascii'?>
+<project basedir="." default="dist" name="IVE">
+  <description>Intelligent Virtual Environment</description>
+
+  <property name="src" location="./src"/>
+  <property name="lib" location="./lib"/>
+  <property name="build" location="./build"/>
+  <property name="classes" location="./build/classes"/>
+  <property name="dist" location="./dist"/>
+  <property name="javadoc" location="./dist/javadoc/"/>
+
+
+  <path id="project.cp">
+    <pathelement location="./lib/jdom.jar"/>
+  </path>
+
+  <target name="initDirs">
+  	<mkdir dir="${build}"/>
+  	<mkdir dir="${classes}"/>
+  	<mkdir dir="${dist}"/>
+  	<mkdir dir="${javadoc}"/>
+  </target>
+  
+  <target name="compile" description="Compiles kernel sources">
+  	<mkdir dir="${build}"/>
+  	<mkdir dir="${classes}"/>
+    <depend srcdir="${src}"
+            destdir="${classes}"
+            cache="${build}/depcache"
+            closure="yes"/>
+    <javac srcdir="${src}" destdir="${classes}" encoding="windows-1250">
+      <classpath refid="project.cp"/>
+    </javac>
+  </target>
+ 
+  <target name="dist" depends="compile, javadoc">
+      <mkdir dir="${dist}"/>
+      <mkdir dir="${dist}/lib"/>
+      <copy todir="${dist}/lib">
+         <fileset dir="lib">
+           <include name="*.jar"/>
+         </fileset>
+      </copy>
+      <copy todir="${dist}">
+         <fileset dir="dirstructure">
+           <include name="**/*.java"/>
+           <include name="**/*.jar"/>
+           <include name="**/*.class"/>
+           <include name="**/*.gif"/>
+           <include name="**/*.xml"/>
+           <include name="**/*.xsd"/>
+           <include name="**/*.dat"/>
+           <include name="**/*.jpg"/>
+           <include name="**/*.png"/>
+           <include name="**/*.PNG"/>
+           <include name="**/*.dat"/>
+         </fileset>
+      </copy>
+
+      <pathconvert property="mf.cp" pathsep=" ">
+        <path refid="project.cp" />
+        <flattenmapper/>
+      </pathconvert>
+
+      <jar destfile="${dist}/lib/ive_editor.jar">
+           <fileset dir="${classes}"/>
+           <fileset dir="${src}">
+              <include name="**/*.gif"/>
+              <include name="**/*.png"/>
+           </fileset>
+           <manifest>
+                <attribute name="Main-Class" value="IVE_Editor.Main"/>
+                <attribute name="Class-Path" value="${mf.cp}"/>
+           </manifest>
+      </jar>
+  </target>
+  
+  <target name="clean" description="Deletes .class files">
+    <delete dir="${classes}"/>
+    <delete dir="${build}"/>
+  </target>
+ 
+  <target name="totalclean" description="Deletes .class files" depends="clean">
+    <delete dir="${dist}"/>
+  </target>
+
+  <target name="javadoc" description="Creates IVE Editor Javadocs">
+	<mkdir dir="${javadoc}"/>
+        <javadoc 
+            destdir="${javadoc}"
+            additionalparam="-private"
+            encoding="windows-1250">
+            <classpath refid="project.cp"/>
+            <fileset dir="${src}/" includes="**/*.java" />
+        </javadoc>
+    </target>
+
+</project>

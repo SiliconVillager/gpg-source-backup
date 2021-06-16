@@ -1,0 +1,24 @@
+sampler alpha;
+sampler texture1;
+sampler texture2;
+sampler texture3;
+sampler light;
+
+float4 Main(float2 alphaUV : TEXCOORD0, float2 colorUV : TEXCOORD1, float shade : TEXCOORD2) : COLOR
+{
+    float4 a	  = tex2D(alpha, alphaUV);      // alpha map
+    float4 c1	  = tex2D(texture1, colorUV);   // dirt
+    float4 c2     = tex2D(texture2, colorUV);   // grass
+    float4 c3     = tex2D(texture3, colorUV);   // stone
+    float4 l	  = tex2D(light, alphaUV);      // shadow map
+
+    float inverse = 1.0f / (a.r + a.g + a.b);  
+    
+    // RGB of alpha map are alpha values of 3 layers
+    c1 *= a.b * inverse;
+    c2 *= a.g * inverse;
+    c3 *= a.r * inverse;
+
+    // Blended pixel
+    return (c1 + c2 + c3) * shade * l;
+}

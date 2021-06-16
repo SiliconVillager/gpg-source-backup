@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EntTemplate name="Jukebox" existenceLevel="4" viewLevel="4" objectClass="/object/Jukebox" substantial="true">
+  <attributes>
+    <FuzzyAttribute name="on" value="false" />
+  </attributes>
+  <sensors>
+    <Sensor name="Eye" template="Eye" minLod="4" maxLod="5" />
+  </sensors>
+  <graphicInfo template="GrJukebox" />
+  <Genius geniusId="Jukeboxgenius" />
+</EntTemplate>
+
